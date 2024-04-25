@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IOOP_assignment.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,12 @@ namespace IOOP_assignment
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Administrator.AddUser("abc", "abc@gmail.com", "abc", Role.Manager);
+            User user = User.Login("abc@gmail.com", "abc");
+            Console.WriteLine(user.UserID);
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new LoginForm());
         }
     }
 }
