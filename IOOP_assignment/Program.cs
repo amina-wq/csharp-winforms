@@ -1,4 +1,5 @@
-﻿using IOOP_assignment.Models;
+﻿using IOOP_assignment.Forms;
+using IOOP_assignment.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,12 +16,12 @@ namespace IOOP_assignment
         [STAThread]
         static void Main()
         {
-            Administrator.AddUser("abc", "abc@gmail.com", "abc", Role.Manager);
-            User user = User.Login("abc@gmail.com", "abc");
-            Console.WriteLine(user.UserID);
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginForm());
+            // Administrator.AddUser("abc", "abc@gmail.com", "abc", Role.Manager);
+            // User user = User.Login("abc@gmail.com", "abc");
+            // Console.WriteLine(user.UserID);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new LoginForm());
         }
     }
 }
