@@ -33,9 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,25 +48,71 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\CustomerNavBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CustomerNavBar.Designer.cs">
+      <DependentUpon>CustomerNavBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\DBManager.cs" />
+    <Compile Include="Core\MenuRepository.cs" />
+    <Compile Include="Core\OrderRepository.cs" />
+    <Compile Include="Core\ShoppingCart.cs" />
+    <Compile Include="Core\UserRepository.cs" />
+    <Compile Include="Forms\CartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CartForm.Designer.cs">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerMenu.Designer.cs">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UpdateProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateProfile.Designer.cs">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Administrator.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Chef.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Core\DBManager.cs" />
+    <Compile Include="Models\Feedback.cs" />
+    <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\Manager.cs" />
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Components\CustomerNavBar.resx">
+      <DependentUpon>CustomerNavBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CartForm.resx">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerMenu.resx">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateProfile.resx">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +122,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ioop.ddl" />
     <None Include="Properties\Settings.settings">
@@ -88,6 +138,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\128-1280406_view-user-icon-png-user-circle-icon-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurants-at-the-corners-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cart-Transparent-Images-PNG.png" />
+  </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\menuBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingCart.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

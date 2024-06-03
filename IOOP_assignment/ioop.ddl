@@ -110,6 +110,7 @@ CREATE TABLE [dbo].[MenuItem](
 	[ItemName] [nvarchar](50) NOT NULL,
 	[CategoryID] [uniqueidentifier] NOT NULL,
 	[Price] [decimal](10, 2) NOT NULL,
+	[Image] [nvarchar](MAX),
  CONSTRAINT [PK_MenuItems] PRIMARY KEY CLUSTERED 
 (
 	[ItemID] ASC

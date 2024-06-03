@@ -1,6 +1,6 @@
 ﻿using IOOP_assignment.Core;
 using IOOP_assignment.Models;
-using System; 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -13,21 +13,24 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment.Forms
 {
-    internal partial class LoginForm : Form
+    internal partial class UpdateProfile : Form
     {
         public User UserData { get; set; }
         public UserRepository _userRepository;
 
-        public LoginForm()
+        public UpdateProfile(User user)
         {
             DBManager database = new DBManager(ConfigurationManager.ConnectionStrings["ioop"].ToString());
             _userRepository = new UserRepository(database);
+            UserData = user;
             InitializeComponent();
+            nameTextBox.Text = UserData.UserName;
+            emailTextBox.Text = UserData.Email;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void submitButton_Click(object sender, EventArgs e)
         {
-            UserData = _userRepository.Login(email: emailTextBox.Text, password: passwordTextBox.Text);
+            _userRepository.UpdateProfile(userId: UserData.UserID, newName: nameTextBox.Text, newEmail: emailTextBox.Text, newPassword: passwordTextBox.Text);
         }
     }
 }

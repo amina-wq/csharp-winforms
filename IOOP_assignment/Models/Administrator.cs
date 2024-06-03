@@ -13,7 +13,7 @@ namespace IOOP_assignment.Models
 {
     internal class Administrator : User
     {
-        public Administrator(string userID, string userName, string email, string password)
+        public Administrator(Guid userID, string userName, string email, string password)
         : base(userID, userName, email, password, Role.Administrator)
         {
             
@@ -26,13 +26,15 @@ namespace IOOP_assignment.Models
 
         public static User AddUser(string userName, string email, string password, Role role)
         {
-            return new User("93bf2433-f4cf-450e-9cbc-0e853b098143", userName, email, password, role);
+            return new User(Guid.NewGuid(), userName, email, password, role);
         }
 
         public void DeleteUser(string userID)
         {
 
         }
+
+        
 
     }
 }
