@@ -47,7 +47,7 @@
             this.btnCheckout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(206)))), ((int)(((byte)(170)))));
             this.btnCheckout.FlatAppearance.BorderSize = 0;
             this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCheckout.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
             this.btnCheckout.Location = new System.Drawing.Point(548, 426);
             this.btnCheckout.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckout.Name = "btnCheckout";
@@ -59,7 +59,7 @@
             // 
             // lblTotal
             // 
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.lblTotal.Font = new System.Drawing.Font("Segoe Print", 14F, System.Drawing.FontStyle.Bold);
             this.lblTotal.Location = new System.Drawing.Point(16, 426);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
@@ -73,7 +73,7 @@
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(206)))), ((int)(((byte)(170)))));
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnClose.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
             this.btnClose.Location = new System.Drawing.Point(658, 8);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
@@ -86,7 +86,7 @@
             // cartLabel
             // 
             this.cartLabel.AutoSize = true;
-            this.cartLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.cartLabel.Font = new System.Drawing.Font("Segoe Print", 20F);
             this.cartLabel.Location = new System.Drawing.Point(312, 9);
             this.cartLabel.Name = "cartLabel";
             this.cartLabel.Size = new System.Drawing.Size(81, 39);

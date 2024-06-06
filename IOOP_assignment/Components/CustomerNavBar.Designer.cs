@@ -43,51 +43,54 @@ namespace IOOP_assignment.Components
             this.viewProfileButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.viewProfileButton.FlatAppearance.BorderSize = 0;
             this.viewProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewProfileButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.viewProfileButton.Font = new System.Drawing.Font("Segoe Print", 13F);
             this.viewProfileButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.viewProfileButton.Location = new System.Drawing.Point(15, 438);
+            this.viewProfileButton.Location = new System.Drawing.Point(15, 400);
             this.viewProfileButton.Name = "viewProfileButton";
             this.viewProfileButton.Size = new System.Drawing.Size(170, 40);
             this.viewProfileButton.TabIndex = 5;
             this.viewProfileButton.Text = "Profile";
             this.viewProfileButton.UseVisualStyleBackColor = false;
+            this.viewProfileButton.Click += new System.EventHandler(this.viewProfileButton_Click);
             // 
             // viewFeedbackButton
             // 
             this.viewFeedbackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.viewFeedbackButton.FlatAppearance.BorderSize = 0;
             this.viewFeedbackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewFeedbackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.viewFeedbackButton.Font = new System.Drawing.Font("Segoe Print", 13F);
             this.viewFeedbackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.viewFeedbackButton.Location = new System.Drawing.Point(15, 356);
+            this.viewFeedbackButton.Location = new System.Drawing.Point(15, 330);
             this.viewFeedbackButton.Name = "viewFeedbackButton";
             this.viewFeedbackButton.Size = new System.Drawing.Size(170, 40);
             this.viewFeedbackButton.TabIndex = 4;
             this.viewFeedbackButton.Text = "Feedback";
             this.viewFeedbackButton.UseVisualStyleBackColor = false;
+            this.viewFeedbackButton.Click += new System.EventHandler(this.viewFeedbackButton_Click);
             // 
             // viewReservationButton
             // 
             this.viewReservationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.viewReservationButton.FlatAppearance.BorderSize = 0;
             this.viewReservationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewReservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.viewReservationButton.Font = new System.Drawing.Font("Segoe Print", 13F);
             this.viewReservationButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.viewReservationButton.Location = new System.Drawing.Point(15, 277);
+            this.viewReservationButton.Location = new System.Drawing.Point(15, 260);
             this.viewReservationButton.Name = "viewReservationButton";
             this.viewReservationButton.Size = new System.Drawing.Size(170, 40);
             this.viewReservationButton.TabIndex = 3;
             this.viewReservationButton.Text = "Reservations ";
             this.viewReservationButton.UseVisualStyleBackColor = false;
+            this.viewReservationButton.Click += new System.EventHandler(this.viewReservationButton_Click);
             // 
             // viewOrdersButton
             // 
             this.viewOrdersButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.viewOrdersButton.FlatAppearance.BorderSize = 0;
             this.viewOrdersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewOrdersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.viewOrdersButton.Font = new System.Drawing.Font("Segoe Print", 13F);
             this.viewOrdersButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.viewOrdersButton.Location = new System.Drawing.Point(15, 202);
+            this.viewOrdersButton.Location = new System.Drawing.Point(15, 190);
             this.viewOrdersButton.Name = "viewOrdersButton";
             this.viewOrdersButton.Size = new System.Drawing.Size(170, 40);
             this.viewOrdersButton.TabIndex = 2;
@@ -100,23 +103,24 @@ namespace IOOP_assignment.Components
             this.menuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.menuButton.FlatAppearance.BorderSize = 0;
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.menuButton.Font = new System.Drawing.Font("Segoe Print", 13F);
             this.menuButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.menuButton.Location = new System.Drawing.Point(15, 123);
+            this.menuButton.Location = new System.Drawing.Point(15, 120);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(170, 40);
             this.menuButton.TabIndex = 1;
             this.menuButton.Text = "Menu";
             this.menuButton.UseVisualStyleBackColor = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
             // homeButton
             // 
             this.homeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.homeButton.FlatAppearance.BorderSize = 0;
             this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.homeButton.Font = new System.Drawing.Font("Segoe Print", 13F);
             this.homeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.homeButton.Location = new System.Drawing.Point(15, 44);
+            this.homeButton.Location = new System.Drawing.Point(15, 50);
             this.homeButton.Name = "homeButton";
             this.homeButton.Size = new System.Drawing.Size(170, 40);
             this.homeButton.TabIndex = 0;
@@ -136,7 +140,7 @@ namespace IOOP_assignment.Components
             this.Controls.Add(this.menuButton);
             this.Controls.Add(this.viewOrdersButton);
             this.Name = "CustomerNavBar";
-            this.Size = new System.Drawing.Size(200, 591);
+            this.Size = new System.Drawing.Size(200, 473);
             this.ResumeLayout(false);
 
         }

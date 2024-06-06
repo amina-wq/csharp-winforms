@@ -32,8 +32,7 @@ namespace IOOP_assignment.Forms
             _customerNavBar.BackColor = Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(206)))), ((int)(((byte)(170)))));
             _customerNavBar.Location = new Point(12, 85);
             _customerNavBar.Name = "customerNavBar";
-            _customerNavBar.Size = new System.Drawing.Size(0, 591);
-            _customerNavBar.Click += this.viewCustomerMenuButton_Click;
+            _customerNavBar.Size = new Size(0, 591);
 
             this.Controls.Add(_customerNavBar);
             LoadMenuItems();
@@ -50,7 +49,7 @@ namespace IOOP_assignment.Forms
                 var categoryLabel = new Label
                 {
                     Text = group.Key.ToUpper(),
-                    Font = new Font("Open Sans", 16, FontStyle.Bold),
+                    Font = new Font("Segoe Print", 12, FontStyle.Bold),
                     Width = (int)(this.Width * 0.7),
                     Margin = new Padding(0, 10, 0, 10),
                     BackColor = Color.Transparent,
@@ -83,7 +82,7 @@ namespace IOOP_assignment.Forms
             var lblName = new Label
             {
                 Text = item.ItemName,
-                Font = new Font("Open Sans", 14, FontStyle.Bold),
+                Font = new Font("Segoe Print", 12, FontStyle.Bold),
                 Width = lblNameWidth,
                 Top = 10,
             };
@@ -95,7 +94,7 @@ namespace IOOP_assignment.Forms
             var lblPrice = new Label
             {
                 Text = $"RM {item.Price} x {quantity}",
-                Font = new Font("Open Sans", 14, FontStyle.Bold),
+                Font = new Font("Segoe Print", 12, FontStyle.Bold),
                 Width = lblPriceWidth,
                 Top = 10,
                 Left = lblPriceLeft,
@@ -108,6 +107,7 @@ namespace IOOP_assignment.Forms
             var btnAddToCart = new Button
             {
                 Text = "Add to Cart",
+                Font = new Font("Segoe Print", 8, FontStyle.Bold),
                 Width = btnAddToCartWidth,
                 Top = 10,
                 Left = btnAddToCartLeft,
@@ -163,11 +163,6 @@ namespace IOOP_assignment.Forms
             {
                 _customerNavBar.Width = 0;
             }
-        }
-
-        private void restarauntLogo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

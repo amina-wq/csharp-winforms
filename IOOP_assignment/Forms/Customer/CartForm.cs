@@ -63,7 +63,7 @@ namespace IOOP_assignment.Forms
             var lblName = new Label
             {
                 Text = $"{menuItem.ItemName} x {quantity}",
-                Font = new Font("Open Sans", 12, FontStyle.Bold),
+                Font = new Font("Segoe Print", 12, FontStyle.Bold),
                 Width = (int)(panelWidth * 0.5),
                 Top = 10,
             };
@@ -71,7 +71,7 @@ namespace IOOP_assignment.Forms
             var lblPrice = new Label
             {
                 Text = $"RM {menuItem.Price * quantity}",
-                Font = new Font("Open Sans", 12, FontStyle.Bold),
+                Font = new Font("Segoe Print", 12, FontStyle.Bold),
                 Width = (int)(panelWidth * 0.2),
                 Top = 10,
                 Left = (int)(panelWidth * 0.5),
@@ -80,6 +80,7 @@ namespace IOOP_assignment.Forms
             var btnRemove = new Button
             {
                 Text = "Remove",
+                Font = new Font("Segoe Print", 8, FontStyle.Bold),
                 Width = 80,
                 Top = 10,
                 Left = panelWidth - 90,

@@ -28,83 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.loginLabel = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // emailLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.label1.Location = new System.Drawing.Point(213, 128);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Email:";
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.BackColor = System.Drawing.Color.Transparent;
+            this.emailLabel.Font = new System.Drawing.Font("Segoe Print", 14F);
+            this.emailLabel.ForeColor = System.Drawing.Color.White;
+            this.emailLabel.Location = new System.Drawing.Point(380, 139);
+            this.emailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(76, 33);
+            this.emailLabel.TabIndex = 0;
+            this.emailLabel.Text = "Email:";
             // 
-            // label2
+            // passwordLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.label2.Location = new System.Drawing.Point(213, 230);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 30);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Password:";
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passwordLabel.Font = new System.Drawing.Font("Segoe Print", 14F);
+            this.passwordLabel.ForeColor = System.Drawing.Color.White;
+            this.passwordLabel.Location = new System.Drawing.Point(357, 192);
+            this.passwordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(112, 33);
+            this.passwordLabel.TabIndex = 1;
+            this.passwordLabel.Text = "Password:";
             // 
             // emailTextBox
             // 
             this.emailTextBox.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTextBox.Location = new System.Drawing.Point(218, 174);
+            this.emailTextBox.Location = new System.Drawing.Point(466, 142);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(326, 38);
+            this.emailTextBox.Size = new System.Drawing.Size(195, 32);
             this.emailTextBox.TabIndex = 2;
+            this.emailTextBox.Text = "admin@gmail.com";
             // 
             // passwordTextBox
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(218, 274);
+            this.passwordTextBox.Location = new System.Drawing.Point(466, 195);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(326, 38);
+            this.passwordTextBox.Size = new System.Drawing.Size(195, 32);
             this.passwordTextBox.TabIndex = 3;
+            this.passwordTextBox.Text = "admin";
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // loginButton
             // 
-            this.loginButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.loginButton.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.Location = new System.Drawing.Point(302, 350);
+            this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(206)))), ((int)(((byte)(170)))));
+            this.loginButton.Font = new System.Drawing.Font("Segoe Print", 14.2F);
+            this.loginButton.Location = new System.Drawing.Point(498, 257);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(151, 40);
+            this.loginButton.Size = new System.Drawing.Size(123, 42);
             this.loginButton.TabIndex = 4;
-            this.loginButton.Text = "Submit";
+            this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
-            this.loginButton.Click += new System.EventHandler(this.button1_Click);
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
-            // label3
+            // loginLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe Print", 15F);
-            this.label3.Location = new System.Drawing.Point(322, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 43);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Log In";
+            this.loginLabel.AutoSize = true;
+            this.loginLabel.BackColor = System.Drawing.Color.Transparent;
+            this.loginLabel.Font = new System.Drawing.Font("Segoe Print", 24F);
+            this.loginLabel.ForeColor = System.Drawing.Color.White;
+            this.loginLabel.Location = new System.Drawing.Point(471, 40);
+            this.loginLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.loginLabel.Name = "loginLabel";
+            this.loginLabel.Size = new System.Drawing.Size(124, 56);
+            this.loginLabel.TabIndex = 5;
+            this.loginLabel.Text = "Log In";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(206)))), ((int)(((byte)(170)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
+            this.btnClose.Location = new System.Drawing.Point(641, 11);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(30, 32);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
+            this.BackgroundImage = global::IOOP_assignment.Properties.Resources.loginBackground;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(682, 366);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.emailTextBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.emailLabel);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.ResumeLayout(false);
@@ -114,11 +148,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button loginButton;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label loginLabel;
+        private System.Windows.Forms.Button btnClose;
     }
 }

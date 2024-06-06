@@ -58,6 +58,7 @@
             this.viewCustomerMenuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.viewCustomerMenuButton.TabIndex = 5;
             this.viewCustomerMenuButton.TabStop = false;
+            this.viewCustomerMenuButton.Click += new System.EventHandler(this.viewCustomerMenuButton_Click);
             // 
             // restarauntLogo
             // 
@@ -85,7 +86,7 @@
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(206)))), ((int)(((byte)(170)))));
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnClose.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
             this.btnClose.Location = new System.Drawing.Point(922, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(40, 40);
@@ -97,11 +98,11 @@
             // titleOrders
             // 
             this.titleOrders.AutoSize = true;
-            this.titleOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.titleOrders.Font = new System.Drawing.Font("Segoe Print", 20F);
             this.titleOrders.ForeColor = System.Drawing.SystemColors.Control;
-            this.titleOrders.Location = new System.Drawing.Point(458, 117);
+            this.titleOrders.Location = new System.Drawing.Point(444, 97);
             this.titleOrders.Name = "titleOrders";
-            this.titleOrders.Size = new System.Drawing.Size(129, 39);
+            this.titleOrders.Size = new System.Drawing.Size(150, 59);
             this.titleOrders.TabIndex = 7;
             this.titleOrders.Text = "Orders:";
             // 

@@ -25,10 +25,12 @@ namespace IOOP_assignment
             Application.Run(new CustomerMenu(new Customer(user.UserID, user.UserName, user.Email, user.Password)));
             */
 
+            /*
             DBManager database = new DBManager(ConfigurationManager.ConnectionStrings["ioop"].ToString());
             UserRepository userRepository = new UserRepository(database);
             Customer customer = userRepository.Login("admin@gmail.com", "admin") as Customer; 
-            Application.Run(new CustomerMenu(customer));
+            */
+            Application.Run(new LoginForm());
 
 
         }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace IOOP_assignment.Models
 {
-    internal class Feedback
+    public class Feedback
     {
+        public Guid FeedbackID { get; set; }
+        public Customer Customer { get; set; }
+        public string FeedbackMessage { get; set; }
+        public DateTime FeedbackDateTime { get; set; }
     }
 }

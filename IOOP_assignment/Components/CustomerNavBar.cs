@@ -16,10 +16,10 @@ namespace IOOP_assignment.Components
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-            if(!(this.ParentForm is Forms.CustomerMenu))
+            if (!(this.ParentForm is Forms.CustomerHomePage))
             {
 
-                Forms.CustomerMenu customerMenuForm = new Forms.CustomerMenu(_customer);
+                Forms.CustomerHomePage customerMenuForm = new Forms.CustomerHomePage(_customer);
                 customerMenuForm.Show();
                 this.ParentForm.Close();
             }
@@ -35,6 +35,48 @@ namespace IOOP_assignment.Components
             }
         }
 
+        private void menuButton_Click(object sender, EventArgs e)
+        {
+            if (!(this.ParentForm is Forms.CustomerMenu))
+            {
 
+                Forms.CustomerMenu customerMenuForm = new Forms.CustomerMenu(_customer);
+                customerMenuForm.Show();
+                this.ParentForm.Close();
+            }
+        }
+
+        private void viewReservationButton_Click(object sender, EventArgs e)
+        {
+            if (!(this.ParentForm is Forms.CustomerReservations))
+            {
+
+                Forms.CustomerReservations customerMenuForm = new Forms.CustomerReservations(_customer);
+                customerMenuForm.Show();
+                this.ParentForm.Close();
+            }
+        }
+
+        private void viewFeedbackButton_Click(object sender, EventArgs e)
+        {
+            if (!(this.ParentForm is Forms.CustomerFeedback))
+            {
+
+                Forms.CustomerFeedback customerMenuForm = new Forms.CustomerFeedback(_customer);
+                customerMenuForm.Show();
+                this.ParentForm.Close();
+            }
+        }
+
+        private void viewProfileButton_Click(object sender, EventArgs e)
+        {
+            if (!(this.ParentForm is Forms.UpdateProfile))
+            {
+
+                Forms.UpdateProfile customerMenuForm = new Forms.UpdateProfile(_customer);
+                customerMenuForm.Show();
+                this.ParentForm.Close();
+            }
+        }
     }
 }

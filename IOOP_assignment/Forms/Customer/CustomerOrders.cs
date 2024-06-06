@@ -32,10 +32,8 @@ namespace IOOP_assignment.Forms
         {
             _customerNavBar = new CustomerNavBar(_customer);
             _customerNavBar.BackColor = Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(206)))), ((int)(((byte)(170)))));
-            _customerNavBar.Location = new Point(12, 85);
+            _customerNavBar.Location = new Point(12, viewCustomerMenuButton.Location.Y + viewCustomerMenuButton.Size.Height);
             _customerNavBar.TabIndex = 0;
-            _customerNavBar.Click += this.viewCustomerMenuButton_Click;
-
             this.Controls.Add(_customerNavBar);
             LoadOrders();
         }
@@ -59,21 +57,21 @@ namespace IOOP_assignment.Forms
             var orderDateTimeLabel = new Label
             {
                 Text = $"Date&Time: {order.DateTime.ToString("dd.MM.yyyy, HH:mm")}",
-                Font = new Font("Open Sans", 10, FontStyle.Bold),
+                Font = new Font("Segoe Print", 10, FontStyle.Bold),
                 Width = panelWidth,
             };
 
             var orderStatusLabel = new Label
             {
                 Text = $"Status: {order.OrderStatus}",
-                Font = new Font("Open Sans", 10, FontStyle.Bold),
+                Font = new Font("Segoe Print", 10, FontStyle.Bold),
                 Width = panelWidth,
             };
 
             var orderDetailsLabel = new Label
             {
                 Text = "Order Details:",
-                Font = new Font("Open Sans", 10, FontStyle.Bold),
+                Font = new Font("Segoe Print", 10, FontStyle.Bold),
                 Width = panelWidth,
             };
 
@@ -89,7 +87,7 @@ namespace IOOP_assignment.Forms
             var orderItemsPanel = new FlowLayoutPanel
             {
                 Width = panelWidth - 20,
-                Height = items.Count * 25,
+                Height = items.Count * 30,
                 AutoScroll = true,
                 FlowDirection = FlowDirection.TopDown,
                 BackColor = Color.FromArgb(234, 206, 170),
@@ -103,7 +101,7 @@ namespace IOOP_assignment.Forms
                 var label = new Label
                 {
                     Text = $"{item.ItemName} x {quantity} : RM {item.Price * quantity}",
-                    Font = new Font("Open Sans", 12, FontStyle.Bold),
+                    Font = new Font("Segoe Print", 12, FontStyle.Bold),
                     AutoSize = true,
                 };
 
@@ -114,14 +112,15 @@ namespace IOOP_assignment.Forms
             var orderTotalSum = new Label
             {
                 Text = $"Total: {orderItems.GetTotal()}",
-                Font = new Font("Open Sans", 14, FontStyle.Bold),
+                Font = new Font("Segoe Print", 14, FontStyle.Bold),
                 Width = panelWidth,
+                Height = 50
             };
 
             FlowLayoutPanel panel = new FlowLayoutPanel
             {
                 Width = panelWidth,
-                Height = orderDateTimeLabel.Height + orderItemsPanel.Height + orderStatusLabel.Height + orderDetailsLabel.Height + orderTotalSum.Height + 20,
+                Height = orderDateTimeLabel.Height + orderItemsPanel.Height + orderStatusLabel.Height + orderDetailsLabel.Height + orderTotalSum.Height,
                 BorderStyle = BorderStyle.FixedSingle,
                 BackColor = Color.FromArgb(234, 206, 170),
                 Margin = new Padding(10),

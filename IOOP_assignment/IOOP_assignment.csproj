@@ -58,9 +58,11 @@
       <DependentUpon>CustomerNavBar.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\DBManager.cs" />
+    <Compile Include="Core\FeedbackRepository.cs" />
     <Compile Include="Core\MenuRepository.cs" />
     <Compile Include="Core\OrderRepository.cs" />
     <Compile Include="Core\MenuItemsContainer.cs" />
+    <Compile Include="Core\ReservationRepository.cs" />
     <Compile Include="Core\UserRepository.cs" />
     <Compile Include="Forms\BorderlessForm.cs">
       <SubType>Form</SubType>
@@ -68,29 +70,41 @@
     <Compile Include="Forms\BorderlessForm.Designer.cs">
       <DependentUpon>BorderlessForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CartForm.cs">
+    <Compile Include="Forms\Customer\CartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CartForm.Designer.cs">
+    <Compile Include="Forms\Customer\CartForm.Designer.cs">
       <DependentUpon>CartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerHomePage.cs">
+    <Compile Include="Forms\Customer\CustomerFeedback.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerHomePage.Designer.cs">
+    <Compile Include="Forms\Customer\CustomerFeedback.Designer.cs">
+      <DependentUpon>CustomerFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerHomePage.Designer.cs">
       <DependentUpon>CustomerHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerMenu.cs">
+    <Compile Include="Forms\Customer\CustomerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerMenu.Designer.cs">
+    <Compile Include="Forms\Customer\CustomerMenu.Designer.cs">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerOrders.cs">
+    <Compile Include="Forms\Customer\CustomerOrders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerOrders.Designer.cs">
+    <Compile Include="Forms\Customer\CustomerOrders.Designer.cs">
       <DependentUpon>CustomerOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerReservations.Designer.cs">
+      <DependentUpon>CustomerReservations.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -124,17 +138,23 @@
     <EmbeddedResource Include="Forms\BorderlessForm.resx">
       <DependentUpon>BorderlessForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CartForm.resx">
+    <EmbeddedResource Include="Forms\Customer\CartForm.resx">
       <DependentUpon>CartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerHomePage.resx">
+    <EmbeddedResource Include="Forms\Customer\CustomerFeedback.resx">
+      <DependentUpon>CustomerFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerHomePage.resx">
       <DependentUpon>CustomerHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerMenu.resx">
+    <EmbeddedResource Include="Forms\Customer\CustomerMenu.resx">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerOrders.resx">
+    <EmbeddedResource Include="Forms\Customer\CustomerOrders.resx">
       <DependentUpon>CustomerOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerReservations.resx">
+      <DependentUpon>CustomerReservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -186,6 +206,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ioop img1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updateProfileBackground.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -57,9 +57,8 @@ namespace IOOP_assignment.Core
                     using (var md5Hash = MD5.Create())
                     {
                         var hashedPasswordBytes = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(newPassword));
-                        string hashedPasswordBase64 = Convert.ToBase64String(hashedPasswordBytes);
                         cmd.CommandText += ", Password = @newPassword";
-                        cmd.Parameters.AddWithValue("@newPassword", hashedPasswordBase64);
+                        cmd.Parameters.AddWithValue("@newPassword", hashedPasswordBytes);
                     }
                 }
 

@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment.Forms
 {
-    internal partial class LoginForm : Form
+    internal partial class LoginForm : BorderlessForm
     {
         public User UserData { get; set; }
         public UserRepository _userRepository;
@@ -25,12 +25,24 @@ namespace IOOP_assignment.Forms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
-            UserData = _userRepository.Login(email: emailTextBox.Text, password: passwordTextBox.Text);
-            Forms.CustomerOrders customerOrderForm = new Forms.CustomerOrders(UserData as Customer);
-            // Forms.CustomerMenu customerMenuForm = new Forms.CustomerMenu(UserData as Customer);
-            customerOrderForm.Show();
+            try
+            {
+                UserData = _userRepository.Login(email: emailTextBox.Text, password: passwordTextBox.Text);
+                CustomerHomePage customerHomePage = new CustomerHomePage(UserData as Customer);
+                customerHomePage.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Email or Password. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
