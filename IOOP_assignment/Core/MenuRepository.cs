@@ -42,6 +42,36 @@ namespace IOOP_assignment.Core
 
             return menuItems;
         }
+
+        public MenuItem GetItem(Guid itemId)
+        {
+            MenuItem item = null;
+
+            using (SqlConnection conn = _database.GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT * FROM MenuItem WHERE ItemID = @ItemID";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@ItemID", itemId);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        item = new MenuItem
+                        {
+                            ItemID = reader.GetGuid(0),
+                            ItemName = reader.GetString(1),
+                            ItemCategory = GetCategory(reader.GetGuid(2)),
+                            Price = reader.GetDecimal(3),
+                            Ingredients = GetIngredients(reader.GetGuid(0)),
+                        };
+                    }
+                }
+            }
+
+            return item;
+        }
+
         private Category GetCategory(Guid categoryId)
         {
             Category category = null;

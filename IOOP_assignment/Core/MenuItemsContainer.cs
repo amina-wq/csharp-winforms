@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace IOOP_assignment.Core
 {
-    public class ShoppingCart
+    public class MenuItemsContainer
     {
         private Dictionary<MenuItem, int> _items;
 
-        public ShoppingCart()
+        public MenuItemsContainer()
         {
             _items = new Dictionary<MenuItem, int>(new MenuItemComparer());
         }

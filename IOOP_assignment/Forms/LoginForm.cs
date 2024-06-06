@@ -28,6 +28,9 @@ namespace IOOP_assignment.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             UserData = _userRepository.Login(email: emailTextBox.Text, password: passwordTextBox.Text);
+            Forms.CustomerOrders customerOrderForm = new Forms.CustomerOrders(UserData as Customer);
+            // Forms.CustomerMenu customerMenuForm = new Forms.CustomerMenu(UserData as Customer);
+            customerOrderForm.Show();
         }
     }
 }

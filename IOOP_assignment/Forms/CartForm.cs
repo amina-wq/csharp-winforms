@@ -10,29 +10,19 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment.Forms
 {
-    public partial class CartForm : Form
+    public partial class CartForm : BorderlessForm
     {
         private Customer _customer;
-        private ShoppingCart _shoppingCart;
+        private MenuItemsContainer _shoppingCart;
         private OrderRepository _orderRepository;
 
-        // Variables to track mouse movement
-        private bool _dragging = false;
-        private Point _dragCursorPoint;
-        private Point _dragFormPoint;
-
-        public CartForm(ShoppingCart shoppingCart, Customer customer)
+        public CartForm(MenuItemsContainer shoppingCart, Customer customer)
         {
             InitializeComponent();
             DBManager database = new DBManager(ConfigurationManager.ConnectionStrings["ioop"].ToString());
             _orderRepository = new OrderRepository(database);
             _shoppingCart = shoppingCart;
             _customer = customer;
-
-            // Add handlers to enable form dragging
-            this.MouseDown += new MouseEventHandler(CartForm_MouseDown);
-            this.MouseMove += new MouseEventHandler(CartForm_MouseMove);
-            this.MouseUp += new MouseEventHandler(CartForm_MouseUp);
         }
 
         private void CartForm_Load(object sender, EventArgs e)
@@ -142,28 +132,6 @@ namespace IOOP_assignment.Forms
         {
             var total = _shoppingCart.GetItems().Sum(i => i.Key.Price * i.Value);
             lblTotal.Text = $"Total: RM {total:0.00}";
-        }
-
-        // Methods to enable dragging of the form
-        private void CartForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            _dragging = true;
-            _dragCursorPoint = Cursor.Position;
-            _dragFormPoint = this.Location;
-        }
-
-        private void CartForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (_dragging)
-            {
-                Point diff = Point.Subtract(Cursor.Position, new Size(_dragCursorPoint));
-                this.Location = Point.Add(_dragFormPoint, new Size(diff));
-            }
-        }
-
-        private void CartForm_MouseUp(object sender, MouseEventArgs e)
-        {
-            _dragging = false;
         }
     }
 }

@@ -60,19 +60,37 @@
     <Compile Include="Core\DBManager.cs" />
     <Compile Include="Core\MenuRepository.cs" />
     <Compile Include="Core\OrderRepository.cs" />
-    <Compile Include="Core\ShoppingCart.cs" />
+    <Compile Include="Core\MenuItemsContainer.cs" />
     <Compile Include="Core\UserRepository.cs" />
+    <Compile Include="Forms\BorderlessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BorderlessForm.Designer.cs">
+      <DependentUpon>BorderlessForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CartForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\CartForm.Designer.cs">
       <DependentUpon>CartForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CustomerHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerHomePage.Designer.cs">
+      <DependentUpon>CustomerHomePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CustomerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\CustomerMenu.Designer.cs">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerOrders.Designer.cs">
+      <DependentUpon>CustomerOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -94,6 +112,7 @@
     <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\User.cs" />
@@ -102,11 +121,20 @@
     <EmbeddedResource Include="Components\CustomerNavBar.resx">
       <DependentUpon>CustomerNavBar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BorderlessForm.resx">
+      <DependentUpon>BorderlessForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CartForm.resx">
       <DependentUpon>CartForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerHomePage.resx">
+      <DependentUpon>CustomerHomePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerMenu.resx">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerOrders.resx">
+      <DependentUpon>CustomerOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -116,19 +144,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="ioop.ddl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -145,17 +173,19 @@
     <None Include="Resources\restaurants-at-the-corners-logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Cart-Transparent-Images-PNG.png" />
+    <None Include="Resources\menu_button_icon.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\menuBackground.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\image %281%29.png" />
+    <None Include="Resources\shoppingCart.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\shoppingCart.png" />
+    <None Include="Resources\ioop img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ioop img1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

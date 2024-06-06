@@ -20,18 +20,15 @@ namespace IOOP_assignment.Forms
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMenuItems;
         private System.Windows.Forms.Button btnShowCart;
-        private CustomerNavBar customerNavBar;
         private System.Windows.Forms.Button btnClose;
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerMenu));
             this.flowLayoutPanelMenuItems = new System.Windows.Forms.FlowLayoutPanel();
             this.btnShowCart = new System.Windows.Forms.Button();
             this.restarauntLogo = new System.Windows.Forms.PictureBox();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.viewCustomerMenuButton = new System.Windows.Forms.PictureBox();
-            this.customerNavBar = new IOOP_assignment.Components.CustomerNavBar();
             this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.restarauntLogo)).BeginInit();
             this.headerPanel.SuspendLayout();
@@ -82,25 +79,20 @@ namespace IOOP_assignment.Forms
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(795, 78);
             this.headerPanel.TabIndex = 4;
+            this.headerPanel.Controls.SetChildIndex(this.btnShowCart, 0);
+            this.headerPanel.Controls.SetChildIndex(this.restarauntLogo, 0);
+            this.headerPanel.Controls.SetChildIndex(this.viewCustomerMenuButton, 0);
             // 
             // viewCustomerMenuButton
             // 
-            this.viewCustomerMenuButton.Image = ((System.Drawing.Image)(resources.GetObject("viewCustomerMenuButton.Image")));
+            this.viewCustomerMenuButton.Image = global::IOOP_assignment.Properties.Resources.menu_button_icon;
             this.viewCustomerMenuButton.Location = new System.Drawing.Point(18, 16);
             this.viewCustomerMenuButton.Name = "viewCustomerMenuButton";
             this.viewCustomerMenuButton.Size = new System.Drawing.Size(58, 51);
             this.viewCustomerMenuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.viewCustomerMenuButton.TabIndex = 3;
             this.viewCustomerMenuButton.TabStop = false;
-            this.viewCustomerMenuButton.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // customerNavBar
-            // 
-            this.customerNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(206)))), ((int)(((byte)(170)))));
-            this.customerNavBar.Location = new System.Drawing.Point(12, 85);
-            this.customerNavBar.Name = "customerNavBar";
-            this.customerNavBar.Size = new System.Drawing.Size(0, 591);
-            this.customerNavBar.TabIndex = 0;
+            this.viewCustomerMenuButton.Click += new System.EventHandler(this.viewCustomerMenuButton_Click);
             // 
             // btnClose
             // 
@@ -122,10 +114,8 @@ namespace IOOP_assignment.Forms
             this.BackgroundImage = global::IOOP_assignment.Properties.Resources.menuBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(819, 590);
-            this.Controls.Add(this.customerNavBar);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.flowLayoutPanelMenuItems);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomerMenu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.CustomerMenu_Load);

@@ -27,8 +27,8 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.cartLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.divider = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +74,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnClose.Location = new System.Drawing.Point(655, 13);
+            this.btnClose.Location = new System.Drawing.Point(658, 8);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(53, 49);
@@ -93,6 +93,16 @@
             this.cartLabel.TabIndex = 4;
             this.cartLabel.Text = "Cart";
             // 
+            // divider
+            // 
+            this.divider.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.divider.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.divider.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.divider.Location = new System.Drawing.Point(16, 416);
+            this.divider.Name = "divider";
+            this.divider.Size = new System.Drawing.Size(692, 2);
+            this.divider.TabIndex = 6;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::IOOP_assignment.Properties.Resources.restaurants_at_the_corners_logo;
@@ -102,16 +112,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            // 
-            // divider
-            // 
-            this.divider.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.divider.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.divider.Location = new System.Drawing.Point(16, 416);
-            this.divider.Name = "divider";
-            this.divider.Size = new System.Drawing.Size(692, 2);
-            this.divider.TabIndex = 6;
-            this.divider.BackColor = System.Drawing.SystemColors.ControlDark;
             // 
             // CartForm
             // 
@@ -126,10 +126,8 @@
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.flowLayoutPanelCartItems);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CartForm";
-            this.Text = "Shopping Cart";
             this.Load += new System.EventHandler(this.CartForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using IOOP_assignment.Core;
+﻿using IOOP_assignment.Components;
+using IOOP_assignment.Core;
 using IOOP_assignment.Models;
 using System;
 using System.Collections.Generic;
@@ -9,33 +10,32 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment.Forms
 {
-    public partial class CustomerMenu : Form
+    public partial class CustomerMenu : BorderlessForm
     {
         private Customer _customer;
         private MenuRepository _menuRepository;
-        private ShoppingCart _shoppingCart;
-
-        // Variables to track mouse movement
-        private bool _dragging = false;
-        private Point _dragCursorPoint;
-        private Point _dragFormPoint;
+        private MenuItemsContainer _shoppingCart;
+        private CustomerNavBar _customerNavBar;
 
         public CustomerMenu(Customer customer)
         {
-            InitializeComponent();
             _customer = customer;
+            InitializeComponent();
             DBManager database = new DBManager(ConfigurationManager.ConnectionStrings["ioop"].ToString());
             _menuRepository = new MenuRepository(database);
-            _shoppingCart = new ShoppingCart();
-
-            // Add handlers to enable form dragging
-            this.MouseDown += new MouseEventHandler(CustomerMenu_MouseDown);
-            this.MouseMove += new MouseEventHandler(CustomerMenu_MouseMove);
-            this.MouseUp += new MouseEventHandler(CustomerMenu_MouseUp);
+            _shoppingCart = new MenuItemsContainer();
         }
 
         private void CustomerMenu_Load(object sender, EventArgs e)
         {
+            _customerNavBar = new CustomerNavBar(_customer);
+            _customerNavBar.BackColor = Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(206)))), ((int)(((byte)(170)))));
+            _customerNavBar.Location = new Point(12, 85);
+            _customerNavBar.Name = "customerNavBar";
+            _customerNavBar.Size = new System.Drawing.Size(0, 591);
+            _customerNavBar.Click += this.viewCustomerMenuButton_Click;
+
+            this.Controls.Add(_customerNavBar);
             LoadMenuItems();
         }
 
@@ -152,38 +152,22 @@ namespace IOOP_assignment.Forms
             this.Close();
         }
 
-        // Methods to enable dragging of the form
-        private void CustomerMenu_MouseDown(object sender, MouseEventArgs e)
+        private void viewCustomerMenuButton_Click(object sender, EventArgs e)
         {
-            _dragging = true;
-            _dragCursorPoint = Cursor.Position;
-            _dragFormPoint = this.Location;
-        }
-
-        private void CustomerMenu_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (_dragging)
+            if (_customerNavBar.Width == 0)
             {
-                Point diff = Point.Subtract(Cursor.Position, new Size(_dragCursorPoint));
-                this.Location = Point.Add(_dragFormPoint, new Size(diff));
-            }
-        }
-
-        private void CustomerMenu_MouseUp(object sender, MouseEventArgs e)
-        {
-            _dragging = false;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            if (customerNavBar.Width == 0)
-            {
-                customerNavBar.Width = 150;
+                _customerNavBar.BringToFront();
+                _customerNavBar.Width = 150;
             }
             else
             {
-                customerNavBar.Width = 0;
+                _customerNavBar.Width = 0;
             }
+        }
+
+        private void restarauntLogo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

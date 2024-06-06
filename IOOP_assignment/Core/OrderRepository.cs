@@ -11,10 +11,81 @@ namespace IOOP_assignment.Core
     internal class OrderRepository
     {
         private readonly DBManager _database;
+        private readonly MenuRepository _menuRepository;
+
 
         public OrderRepository(DBManager dbManager)
         {
             _database = dbManager;
+            _menuRepository = new MenuRepository(dbManager);
+        }
+
+        public List<Order> GetOrders(Customer customer)
+        {
+            List<Order> orders = new List<Order>();
+
+            using (SqlConnection con = new SqlConnection(_database.GetConnection().ConnectionString))
+            {
+                con.Open();
+
+                string queryOrders = @"
+                    SELECT OrderID, CustomerID, OrderDateTime, OrderStatus
+                    FROM [Order]
+                    WHERE CustomerID = @CustomerID
+                    ORDER BY OrderDateTime DESC";
+
+                using (SqlCommand cmd = new SqlCommand(queryOrders, con))
+                {
+                    cmd.Parameters.AddWithValue("@CustomerID", customer.UserID);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Order order = new Order
+                            {
+                                OrderID = reader.GetGuid(0),
+                                Customer = customer,
+                                DateTime = reader.GetDateTime(2),
+                                OrderStatus = reader.GetString(3),
+                                MenuItems = new List<MenuItem>()
+                            };
+
+                            orders.Add(order);
+                        }
+                    }
+                }
+
+                if (orders.Count > 0)
+                {
+                    string orderIds = string.Join(",", orders.Select(o => $"'{o.OrderID}'"));
+                    string queryOrderItems = $@"
+                        SELECT oi.OrderID, oi.ItemID
+                        FROM [OrderItem] oi
+                        WHERE oi.OrderID IN ({orderIds})";
+
+                    using (SqlCommand cmd = new SqlCommand(queryOrderItems, con))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Guid orderId = reader.GetGuid(0);
+                                Guid itemId = reader.GetGuid(1);
+
+                                Order order = orders.FirstOrDefault(o => o.OrderID == orderId);
+                                if (order != null)
+                                {
+                                    MenuItem menuItem = _menuRepository.GetItem(itemId);
+                                    order.MenuItems.Add(menuItem);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return orders;
         }
 
         public void CreateOrder(Guid customerId, List<MenuItem> items)
