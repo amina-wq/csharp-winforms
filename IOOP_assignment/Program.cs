@@ -21,7 +21,7 @@ namespace IOOP_assignment
             // Console.WriteLine(user.UserID);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new ChefDashboard());
         }
     }
 }
