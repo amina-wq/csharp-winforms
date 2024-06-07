@@ -45,7 +45,6 @@ namespace IOOP_assignment.Forms
                 adapter.Fill(table);
                 dataGridView.DataSource = table;
 
-                // Check if the row number is within bounds
                 if (rowToShow >= 0 && rowToShow < table.Rows.Count)
                 {
                     DataRow row = table.Rows[rowToShow];
@@ -150,10 +149,8 @@ namespace IOOP_assignment.Forms
         }
         private void UpdateOrderStatus(int rowIndex, string newStatus)
         {
-            // Update DataGridView
             dataGridView.Rows[rowIndex].Cells["OrderStatus"].Value = newStatus;
 
-            // Update database
             Guid orderId = (Guid)dataGridView.Rows[rowIndex].Cells["OrderID"].Value;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

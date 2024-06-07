@@ -115,7 +115,7 @@ namespace IOOP_assignment
         {
             Button clickedButton = sender as Button;
             string tableNumber = clickedButton.Tag.ToString();
-            int rowNumber = int.Parse(tableNumber) - 1; // Convert table number to row number (0-based index)
+            int rowNumber = int.Parse(tableNumber) - 1;
 
             OrderDetails orderDetailsForm = new OrderDetails(rowNumber);
             orderDetailsForm.SetTableNumber(tableNumber);
@@ -128,11 +128,6 @@ namespace IOOP_assignment
             ChefDashboard chefDashboard = new ChefDashboard();
             chefDashboard.Show();
             this.Close();
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-
         }
     }
 }
