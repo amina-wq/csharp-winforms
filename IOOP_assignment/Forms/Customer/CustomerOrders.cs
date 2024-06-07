@@ -58,21 +58,21 @@ namespace IOOP_assignment.Forms
             {
                 Text = $"Date&Time: {order.DateTime.ToString("dd.MM.yyyy, HH:mm")}",
                 Font = new Font("Segoe Print", 10, FontStyle.Bold),
-                Width = panelWidth,
+                Width = (int)(panelWidth * 0.9),
             };
 
             var orderStatusLabel = new Label
             {
                 Text = $"Status: {order.OrderStatus}",
                 Font = new Font("Segoe Print", 10, FontStyle.Bold),
-                Width = panelWidth,
+                Width = (int)(panelWidth * 0.9),
             };
 
             var orderDetailsLabel = new Label
             {
                 Text = "Order Details:",
                 Font = new Font("Segoe Print", 10, FontStyle.Bold),
-                Width = panelWidth,
+                Width = (int)(panelWidth * 0.9),
             };
 
             MenuItemsContainer orderItems = new MenuItemsContainer();
@@ -86,9 +86,8 @@ namespace IOOP_assignment.Forms
 
             var orderItemsPanel = new FlowLayoutPanel
             {
-                Width = panelWidth - 20,
-                Height = items.Count * 30,
-                AutoScroll = true,
+                Width = (int)(panelWidth * 0.9),
+                AutoSize = true,
                 FlowDirection = FlowDirection.TopDown,
                 BackColor = Color.FromArgb(234, 206, 170),
             };
@@ -101,7 +100,7 @@ namespace IOOP_assignment.Forms
                 var label = new Label
                 {
                     Text = $"{item.ItemName} x {quantity} : RM {item.Price * quantity}",
-                    Font = new Font("Segoe Print", 12, FontStyle.Bold),
+                    Font = new Font("Segoe Print", 10, FontStyle.Bold),
                     AutoSize = true,
                 };
 
@@ -113,14 +112,14 @@ namespace IOOP_assignment.Forms
             {
                 Text = $"Total: {orderItems.GetTotal()}",
                 Font = new Font("Segoe Print", 14, FontStyle.Bold),
-                Width = panelWidth,
+                Width = (int)(panelWidth * 0.9),
                 Height = 50
             };
 
             FlowLayoutPanel panel = new FlowLayoutPanel
             {
                 Width = panelWidth,
-                Height = orderDateTimeLabel.Height + orderItemsPanel.Height + orderStatusLabel.Height + orderDetailsLabel.Height + orderTotalSum.Height,
+                AutoSize = true,
                 BorderStyle = BorderStyle.FixedSingle,
                 BackColor = Color.FromArgb(234, 206, 170),
                 Margin = new Padding(10),
