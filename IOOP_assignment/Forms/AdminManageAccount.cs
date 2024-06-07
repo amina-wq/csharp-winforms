@@ -21,8 +21,7 @@ namespace IOOP_assignment.Forms
     {
         private AdminAddAdmin adminAddAdmin;
         private AdminEditAdmin adminEditAdmin;
-        private string connectionString =
-            "Data Source=LAPTOP-GHUMDV20;Initial Catalog=ioop;Integrated Security=True;TrustServerCertificate=True";
+        private string connectionString = ConfigurationManager.ConnectionStrings["ioop"].ToString();
 
         public AdminManageAccount()
         {

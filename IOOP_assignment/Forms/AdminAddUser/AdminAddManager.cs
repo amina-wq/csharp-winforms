@@ -12,6 +12,7 @@ using System.Runtime.Remoting.Contexts;
 using IOOP_assignment.Core;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using System.Configuration;
 
 namespace IOOP_assignment.Forms
 {
@@ -19,20 +20,20 @@ namespace IOOP_assignment.Forms
     {
         private string connectionString;
         private SqlConnection c = new SqlConnection(
-                "Data Source=LAPTOP-GHUMDV20;Initial Catalog=ioop;Integrated Security=True;TrustServerCertificate=True");
+                ConfigurationManager.ConnectionStrings["ioop"].ToString());
 
         public AdminAddManager()
         {
             InitializeComponent();
             connectionString =
-                ("Data Source=LAPTOP-GHUMDV20;Initial Catalog=ioop;Integrated Security=True;TrustServerCertificate=True");
+                (ConfigurationManager.ConnectionStrings["ioop"].ToString());
         }
 
         private void InsertNewUser(Guid newUserId, Guid managerRoleId, string username, string email,
             byte[] hashedPassword)
         {
             string connectionString =
-                ("Data Source=LAPTOP-GHUMDV20;Initial Catalog=ioop;Integrated Security=True;TrustServerCertificate=True");
+                (ConfigurationManager.ConnectionStrings["ioop"].ToString());
             string query =
                 "INSERT INTO [User] (UserID, RoleID, UserName, Email, Password) VALUES (@UserID, @RoleID, @UserName, @Email, @Password)";
 

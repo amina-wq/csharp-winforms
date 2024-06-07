@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -14,7 +15,7 @@ namespace IOOP_assignment.Forms
     public partial class AdminFeedback : Form
     {
         private string connectionString =
-            "Data Source=LAPTOP-GHUMDV20;Initial Catalog=ioop;Integrated Security=True;TrustServerCertificate=True";
+            ConfigurationManager.ConnectionStrings["ioop"].ToString();
         public AdminFeedback()
         {
             InitializeComponent();

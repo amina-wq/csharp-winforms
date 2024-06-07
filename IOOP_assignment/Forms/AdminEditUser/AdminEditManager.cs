@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -17,8 +18,7 @@ namespace IOOP_assignment.Forms
 {
     public partial class AdminEditManager : UserControl
     {
-        private string connectionString =
-            "Data Source=LAPTOP-GHUMDV20;Initial Catalog=ioop;Integrated Security=True;TrustServerCertificate=True";
+        private string connectionString = ConfigurationManager.ConnectionStrings["ioop"].ToString();
         private List<string> allUsernames = new List<string>();
         public AdminEditManager()
         {
