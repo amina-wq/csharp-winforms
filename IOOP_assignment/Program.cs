@@ -2,6 +2,7 @@
 using IOOP_assignment.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,7 +22,11 @@ namespace IOOP_assignment
             // Console.WriteLine(user.UserID);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new AdminDashboard());
+
+
+
+
         }
     }
 }

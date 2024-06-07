@@ -1,0 +1,275 @@
+﻿namespace IOOP_assignment.Forms
+{
+    partial class AdminFeedback
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminFeedback));
+            this.MenuPanel = new System.Windows.Forms.Panel();
+            this.btnAdminDashboard = new System.Windows.Forms.Button();
+            this.AdminLogOut = new System.Windows.Forms.Button();
+            this.btnFeedback = new System.Windows.Forms.Button();
+            this.btnSalesReport = new System.Windows.Forms.Button();
+            this.btnManageUser = new System.Windows.Forms.Button();
+            this.btnManageAccount = new System.Windows.Forms.Button();
+            this.AdmimDropDown = new System.Windows.Forms.Button();
+            this.AdminExit = new System.Windows.Forms.Button();
+            this.dropdownTimer = new System.Windows.Forms.Timer(this.components);
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.listBoxSearch = new System.Windows.Forms.ListBox();
+            this.lblViewFeedback = new System.Windows.Forms.Label();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.feedbackBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ioopDataSet = new IOOP_assignment.ioopDataSet();
+            this.feedbackTableAdapter = new IOOP_assignment.ioopDataSetTableAdapters.FeedbackTableAdapter();
+            this.dataGridViewFeedback = new System.Windows.Forms.DataGridView();
+            this.MenuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.feedbackBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ioopDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFeedback)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // MenuPanel
+            // 
+            this.MenuPanel.Controls.Add(this.btnAdminDashboard);
+            this.MenuPanel.Controls.Add(this.AdminLogOut);
+            this.MenuPanel.Controls.Add(this.btnFeedback);
+            this.MenuPanel.Controls.Add(this.btnSalesReport);
+            this.MenuPanel.Controls.Add(this.btnManageUser);
+            this.MenuPanel.Controls.Add(this.btnManageAccount);
+            this.MenuPanel.Location = new System.Drawing.Point(12, 77);
+            this.MenuPanel.Name = "MenuPanel";
+            this.MenuPanel.Size = new System.Drawing.Size(331, 10);
+            this.MenuPanel.TabIndex = 38;
+            // 
+            // btnAdminDashboard
+            // 
+            this.btnAdminDashboard.Font = new System.Drawing.Font("Times New Roman", 16F);
+            this.btnAdminDashboard.Location = new System.Drawing.Point(21, 563);
+            this.btnAdminDashboard.Name = "btnAdminDashboard";
+            this.btnAdminDashboard.Size = new System.Drawing.Size(271, 106);
+            this.btnAdminDashboard.TabIndex = 6;
+            this.btnAdminDashboard.Text = "Admin Dashboard";
+            this.btnAdminDashboard.UseVisualStyleBackColor = true;
+            this.btnAdminDashboard.Click += new System.EventHandler(this.btnAdminDashboard_Click);
+            // 
+            // AdminLogOut
+            // 
+            this.AdminLogOut.Font = new System.Drawing.Font("Times New Roman", 16F);
+            this.AdminLogOut.Location = new System.Drawing.Point(21, 698);
+            this.AdminLogOut.Name = "AdminLogOut";
+            this.AdminLogOut.Size = new System.Drawing.Size(271, 106);
+            this.AdminLogOut.TabIndex = 5;
+            this.AdminLogOut.Text = "Log Out";
+            this.AdminLogOut.UseVisualStyleBackColor = true;
+            this.AdminLogOut.Click += new System.EventHandler(this.AdminLogOut_Click);
+            // 
+            // btnFeedback
+            // 
+            this.btnFeedback.Font = new System.Drawing.Font("Times New Roman", 16F);
+            this.btnFeedback.Location = new System.Drawing.Point(21, 277);
+            this.btnFeedback.Name = "btnFeedback";
+            this.btnFeedback.Size = new System.Drawing.Size(271, 106);
+            this.btnFeedback.TabIndex = 4;
+            this.btnFeedback.Text = "Feedback";
+            this.btnFeedback.UseVisualStyleBackColor = true;
+            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
+            // 
+            // btnSalesReport
+            // 
+            this.btnSalesReport.Font = new System.Drawing.Font("Times New Roman", 16F);
+            this.btnSalesReport.Location = new System.Drawing.Point(21, 420);
+            this.btnSalesReport.Name = "btnSalesReport";
+            this.btnSalesReport.Size = new System.Drawing.Size(271, 106);
+            this.btnSalesReport.TabIndex = 3;
+            this.btnSalesReport.Text = "Sales Report";
+            this.btnSalesReport.UseVisualStyleBackColor = true;
+            this.btnSalesReport.Click += new System.EventHandler(this.btnSalesReport_Click);
+            // 
+            // btnManageUser
+            // 
+            this.btnManageUser.Font = new System.Drawing.Font("Times New Roman", 16F);
+            this.btnManageUser.Location = new System.Drawing.Point(21, 22);
+            this.btnManageUser.Name = "btnManageUser";
+            this.btnManageUser.Size = new System.Drawing.Size(271, 106);
+            this.btnManageUser.TabIndex = 1;
+            this.btnManageUser.Text = "Manage User";
+            this.btnManageUser.UseVisualStyleBackColor = true;
+            this.btnManageUser.Click += new System.EventHandler(this.btnManageUser_Click);
+            // 
+            // btnManageAccount
+            // 
+            this.btnManageAccount.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageAccount.Location = new System.Drawing.Point(21, 146);
+            this.btnManageAccount.Name = "btnManageAccount";
+            this.btnManageAccount.Size = new System.Drawing.Size(271, 106);
+            this.btnManageAccount.TabIndex = 2;
+            this.btnManageAccount.Text = "Manage Account";
+            this.btnManageAccount.UseVisualStyleBackColor = true;
+            this.btnManageAccount.Click += new System.EventHandler(this.btnManageAccount_Click);
+            // 
+            // AdmimDropDown
+            // 
+            this.AdmimDropDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdmimDropDown.BackgroundImage")));
+            this.AdmimDropDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AdmimDropDown.Location = new System.Drawing.Point(12, 11);
+            this.AdmimDropDown.Name = "AdmimDropDown";
+            this.AdmimDropDown.Size = new System.Drawing.Size(60, 60);
+            this.AdmimDropDown.TabIndex = 37;
+            this.AdmimDropDown.UseVisualStyleBackColor = true;
+            this.AdmimDropDown.Click += new System.EventHandler(this.AdmimDropDown_Click);
+            // 
+            // AdminExit
+            // 
+            this.AdminExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminExit.Location = new System.Drawing.Point(1578, 12);
+            this.AdminExit.Name = "AdminExit";
+            this.AdminExit.Size = new System.Drawing.Size(60, 60);
+            this.AdminExit.TabIndex = 35;
+            this.AdminExit.Text = "X";
+            this.AdminExit.UseVisualStyleBackColor = true;
+            this.AdminExit.Click += new System.EventHandler(this.AdminExit_Click);
+            // 
+            // dropdownTimer
+            // 
+            this.dropdownTimer.Interval = 15;
+            this.dropdownTimer.Tick += new System.EventHandler(this.dropdownTimer_Tick);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(750, 211);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(579, 26);
+            this.txtSearch.TabIndex = 39;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // listBoxSearch
+            // 
+            this.listBoxSearch.FormattingEnabled = true;
+            this.listBoxSearch.ItemHeight = 20;
+            this.listBoxSearch.Location = new System.Drawing.Point(750, 243);
+            this.listBoxSearch.Name = "listBoxSearch";
+            this.listBoxSearch.Size = new System.Drawing.Size(579, 104);
+            this.listBoxSearch.TabIndex = 40;
+            this.listBoxSearch.SelectedIndexChanged += new System.EventHandler(this.listBoxSearch_SelectedIndexChanged);
+            // 
+            // lblViewFeedback
+            // 
+            this.lblViewFeedback.AutoSize = true;
+            this.lblViewFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewFeedback.Location = new System.Drawing.Point(853, 150);
+            this.lblViewFeedback.Name = "lblViewFeedback";
+            this.lblViewFeedback.Size = new System.Drawing.Size(352, 55);
+            this.lblViewFeedback.TabIndex = 41;
+            this.lblViewFeedback.Text = "ViewFeedback";
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Location = new System.Drawing.Point(642, 211);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(102, 29);
+            this.lblSearch.TabIndex = 42;
+            this.lblSearch.Text = "Search:";
+            // 
+            // feedbackBindingSource
+            // 
+            this.feedbackBindingSource.DataMember = "Feedback";
+            this.feedbackBindingSource.DataSource = this.ioopDataSet;
+            // 
+            // ioopDataSet
+            // 
+            this.ioopDataSet.DataSetName = "ioopDataSet";
+            this.ioopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // feedbackTableAdapter
+            // 
+            this.feedbackTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewFeedback
+            // 
+            this.dataGridViewFeedback.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewFeedback.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFeedback.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.dataGridViewFeedback.Location = new System.Drawing.Point(402, 354);
+            this.dataGridViewFeedback.Name = "dataGridViewFeedback";
+            this.dataGridViewFeedback.ReadOnly = true;
+            this.dataGridViewFeedback.RowHeadersWidth = 62;
+            this.dataGridViewFeedback.RowTemplate.Height = 28;
+            this.dataGridViewFeedback.Size = new System.Drawing.Size(1199, 515);
+            this.dataGridViewFeedback.TabIndex = 43;
+            // 
+            // AdminFeedback
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1650, 900);
+            this.Controls.Add(this.dataGridViewFeedback);
+            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.lblViewFeedback);
+            this.Controls.Add(this.listBoxSearch);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.AdminExit);
+            this.Controls.Add(this.MenuPanel);
+            this.Controls.Add(this.AdmimDropDown);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "AdminFeedback";
+            this.Text = "AdminFeedback";
+            this.Load += new System.EventHandler(this.AdminFeedback_Load);
+            this.MenuPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.feedbackBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ioopDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFeedback)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel MenuPanel;
+        private System.Windows.Forms.Button btnAdminDashboard;
+        private System.Windows.Forms.Button AdminLogOut;
+        private System.Windows.Forms.Button btnFeedback;
+        private System.Windows.Forms.Button btnSalesReport;
+        private System.Windows.Forms.Button btnManageUser;
+        private System.Windows.Forms.Button btnManageAccount;
+        private System.Windows.Forms.Button AdmimDropDown;
+        private System.Windows.Forms.Button AdminExit;
+        private System.Windows.Forms.Timer dropdownTimer;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.ListBox listBoxSearch;
+        private System.Windows.Forms.Label lblViewFeedback;
+        private System.Windows.Forms.Label lblSearch;
+        private ioopDataSet ioopDataSet;
+        private System.Windows.Forms.BindingSource feedbackBindingSource;
+        private ioopDataSetTableAdapters.FeedbackTableAdapter feedbackTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridViewFeedback;
+    }
+}
