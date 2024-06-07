@@ -193,3 +193,8 @@ GO
 
 ALTER TABLE [dbo].[OrderItem] CHECK CONSTRAINT [FK_OrderItem_Order]
 GO
+
+
+
+)
+

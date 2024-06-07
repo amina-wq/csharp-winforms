@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IOOP_assignment.Forms
+namespace IOOP_assignment
 {
-    public partial class LoginForm : System.Windows.Forms.Form
+    public partial class Category : Form
     {
-        public LoginForm()
+        public Category()
         {
             InitializeComponent();
         }

@@ -11,5 +11,7 @@ namespace IOOP_assignment.Models
         public Manager(string userID, string userName, string email, string password) : base(userID, userName, email, password, Role.Manager)
         {
         }
+
+
     }
 }

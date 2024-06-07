@@ -1,4 +1,5 @@
 ﻿using IOOP_assignment.Forms;
+using IOOP_assignment.Manager_Forms;
 using IOOP_assignment.Models;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace IOOP_assignment
             // Console.WriteLine(user.UserID);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new FrmReservation());
         }
     }
 }
