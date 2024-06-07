@@ -9,7 +9,12 @@ namespace IOOP_assignment.Models
 {
     internal class SQLConnect
     {
-        private string connectionString = "Data Source=localhost;Initial Catalog=ioop;Integrated Security=True;";
+        private string connectionString;
+
+        public SQLConnect()
+        {
+            this.connectionString = "Data Source=localhost;Initial Catalog=ioop;Integrated Security=True;TrustServerCertificate=True";
+        }
 
         public SQLConnect(string connectionString)
         {

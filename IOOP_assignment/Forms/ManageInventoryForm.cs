@@ -16,11 +16,13 @@ namespace IOOP_assignment.Forms
     public partial class ManageInventoryForm : Form
     {
         private DropdownAnimator _dropdownAnimator;
-        private string connectionString = "Data Source=localhost;Initial Catalog=ioop;Integrated Security=True;";
+        private SQLConnect _sqlConnect;
         public ManageInventoryForm()
         {
             InitializeComponent();
             _dropdownAnimator = new DropdownAnimator(DropdownPanel, 300, 10);
+
+            _sqlConnect = new SQLConnect();
         }
        
         private void ManageInventoryForm_Load(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace IOOP_assignment.Forms
         }
         private void LoadData()
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = _sqlConnect.GetConnection())
             {
                 connection.Open();
                 string query = "SELECT [IngredientID], [IngredientName], [Quantity] FROM [ioop].[dbo].[Ingredient]";
@@ -99,18 +101,11 @@ namespace IOOP_assignment.Forms
                 MessageBox.Show("Please enter a valid positive number for Quantity.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            using (SqlConnection connection = new SqlConnection(connectionString))
+
+            using (SqlConnection connection = _sqlConnect.GetConnection())
             {
                 connection.Open();
-                string query = "INSERT INTO [ioop].[dbo].[Ingredient] ([IngredientID], [IngredientName], [Quantity], [IngredientDetails]) VALUES (@IngredientID, @IngredientName, @Quantity, @IngredientDetails)";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@IngredientID", Guid.NewGuid());
-                    command.Parameters.AddWithValue("@IngredientName", txtIngredient.Text);
-                    command.Parameters.AddWithValue("@Quantity", Convert.ToDecimal(txtQuantity.Text));
-                    command.Parameters.AddWithValue("@IngredientDetails", ""); 
-                    command.ExecuteNonQuery();
-                }
+
                 string checkQuery = "SELECT COUNT(*) FROM [ioop].[dbo].[Ingredient] WHERE [IngredientName] = @IngredientName";
                 using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection))
                 {
@@ -123,7 +118,18 @@ namespace IOOP_assignment.Forms
                         return;
                     }
                 }
+
+                string query = "INSERT INTO [ioop].[dbo].[Ingredient] ([IngredientID], [IngredientName], [Quantity], [IngredientDetails]) VALUES (@IngredientID, @IngredientName, @Quantity, @IngredientDetails)";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@IngredientID", Guid.NewGuid());
+                    command.Parameters.AddWithValue("@IngredientName", txtIngredient.Text);
+                    command.Parameters.AddWithValue("@Quantity", Convert.ToDecimal(txtQuantity.Text));
+                    command.Parameters.AddWithValue("@IngredientDetails", "");
+                    command.ExecuteNonQuery();
+                }
             }
+
             LoadData();
         }
 
@@ -140,7 +146,7 @@ namespace IOOP_assignment.Forms
                 MessageBox.Show("Please enter a valid positive number for Quantity.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = _sqlConnect.GetConnection())
             {
                 connection.Open();
                 string query = "UPDATE [ioop].[dbo].[Ingredient] SET [Quantity] = @Quantity WHERE [IngredientName] = @IngredientName";
@@ -155,29 +161,33 @@ namespace IOOP_assignment.Forms
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
-        { if (string.IsNullOrWhiteSpace(txtIngredient.Text))
+        {
+            if (string.IsNullOrWhiteSpace(txtIngredient.Text))
             {
                 MessageBox.Show("Please enter the Ingredient.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             DialogResult dialogResult = MessageBox.Show(
-              $"Are you sure you want to delete {txtIngredient.Text}?",
-              "Confirm Delete",
-              MessageBoxButtons.YesNo,
-              MessageBoxIcon.Question);
+                $"Are you sure you want to delete {txtIngredient.Text}?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
 
             if (dialogResult == DialogResult.Yes)
-                using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.Open();
-                string query = "DELETE FROM [ioop].[dbo].[Ingredient] WHERE [IngredientName] = @IngredientName";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (SqlConnection connection = _sqlConnect.GetConnection())
                 {
-                    command.Parameters.AddWithValue("@IngredientName", txtIngredient.Text);
-                    command.ExecuteNonQuery();
+                    connection.Open();
+                    string query = "DELETE FROM [ioop].[dbo].[Ingredient] WHERE [IngredientName] = @IngredientName";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@IngredientName", txtIngredient.Text);
+                        command.ExecuteNonQuery();
+                    }
                 }
+                LoadData();
             }
-            LoadData();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
