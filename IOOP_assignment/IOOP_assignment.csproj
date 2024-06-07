@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,8 +12,6 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,20 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Configuration.ConfigurationBuilders.Base, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.Base.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Configuration.ConfigurationBuilders.UserSecrets, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -63,157 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\IDGenerator.cs" />
-    <Compile Include="Core\UserDatabaseManager.cs" />
-    <Compile Include="Core\Validation.cs" />
-    <Compile Include="Forms\AdminAddUser\AdminAddAdmin.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddAdmin.Designer.cs">
-      <DependentUpon>AdminAddAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddChef.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddChef.Designer.cs">
-      <DependentUpon>AdminAddChef.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddCustomer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddCustomer.Designer.cs">
-      <DependentUpon>AdminAddCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddManager.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddManager.Designer.cs">
-      <DependentUpon>AdminAddManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditAdmin.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditAdmin.Designer.cs">
-      <DependentUpon>AdminEditAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditChef.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditChef.Designer.cs">
-      <DependentUpon>AdminEditChef.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditCustomer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditCustomer.Designer.cs">
-      <DependentUpon>AdminEditCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditManager.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditManager.Designer.cs">
-      <DependentUpon>AdminEditManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminFeedback.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminFeedback.Designer.cs">
-      <DependentUpon>AdminFeedback.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminManageAccount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminManageAccount.Designer.cs">
-      <DependentUpon>AdminManageAccount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminManageUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminManageUser.Designer.cs">
-      <DependentUpon>AdminManageUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminSalesReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminSalesReport.Designer.cs">
-      <DependentUpon>AdminSalesReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminDashboard.Designer.cs">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ioopDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ioopDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ioopUser.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ioopUser.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\Chef.cs" />
-    <Compile Include="Models\UserRegistration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Core\DBManager.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>User.xsd</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Forms\AdminAddUser\AdminAddAdmin.resx">
-      <DependentUpon>AdminAddAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminAddUser\AdminAddChef.resx">
-      <DependentUpon>AdminAddChef.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminAddUser\AdminAddCustomer.resx">
-      <DependentUpon>AdminAddCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminAddUser\AdminAddManager.resx">
-      <DependentUpon>AdminAddManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminEditUser\AdminEditAdmin.resx">
-      <DependentUpon>AdminEditAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminEditUser\AdminEditChef.resx">
-      <DependentUpon>AdminEditChef.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminEditUser\AdminEditCustomer.resx">
-      <DependentUpon>AdminEditCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminEditUser\AdminEditManager.resx">
-      <DependentUpon>AdminEditManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminFeedback.resx">
-      <DependentUpon>AdminFeedback.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminManageAccount.resx">
-      <DependentUpon>AdminManageAccount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminManageUser.resx">
-      <DependentUpon>AdminManageUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminDashboard.resx">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminSalesReport.resx">
-      <DependentUpon>AdminSalesReport.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,29 +75,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ioop.ddl" />
-    <None Include="ioopDataSet.xsc">
-      <DependentUpon>ioopDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ioopDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ioopDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ioopDataSet.xss">
-      <DependentUpon>ioopDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ioopUser.xsc">
-      <DependentUpon>ioopUser.xsd</DependentUpon>
-    </None>
-    <None Include="ioopUser.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ioopUser.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ioopUser.xss">
-      <DependentUpon>ioopUser.xsd</DependentUpon>
-    </None>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -259,29 +84,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="User.xsc">
-      <DependentUpon>User.xsd</DependentUpon>
-    </None>
-    <None Include="User.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>User.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="User.xss">
-      <DependentUpon>User.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
-  </Target>
-  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
 </Project>
