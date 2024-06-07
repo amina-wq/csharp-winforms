@@ -15,14 +15,14 @@ namespace IOOP_assignment.Forms
 {
     public partial class ManageInventoryForm : Form
     {
+        private DropdownAnimator _dropdownAnimator;
         private string connectionString = "Data Source=localhost;Initial Catalog=ioop;Integrated Security=True;";
         public ManageInventoryForm()
         {
             InitializeComponent();
+            _dropdownAnimator = new DropdownAnimator(DropdownPanel, 300, 10);
         }
-        bool _DropDown = true;
-        public static bool IsHidden { get; private set; }
-
+       
         private void ManageInventoryForm_Load(object sender, EventArgs e)
         {
             LoadData();
@@ -42,27 +42,12 @@ namespace IOOP_assignment.Forms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (_DropDown == true)
-            {
-                DropdownPanel.Height += 10;
-                if (DropdownPanel.Height < 250) return;
-                timer1.Stop();
-                _DropDown = false;
-            }
-            else
-            {
-                {
-                    DropdownPanel.Height -= 10;
-                    if (DropdownPanel.Height > 10) return;
-                    timer1.Stop();
-                    _DropDown = true;
-                }
-            }
+           
         }
 
         private void DropDown_Click(object sender, EventArgs e)
         {
-            timer1.Start();
+            _dropdownAnimator.Toggle();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)

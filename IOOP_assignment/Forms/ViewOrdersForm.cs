@@ -1,4 +1,5 @@
 ﻿using IOOP_assignment.Forms;
+using IOOP_assignment.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +14,12 @@ namespace IOOP_assignment
 {
     public partial class ViewOrdersForm : Form
     {
+        private DropdownAnimator _dropdownAnimator;
         public ViewOrdersForm()
         {
             InitializeComponent();
+            _dropdownAnimator = new DropdownAnimator(DropdownPanel, 300, 10);
         }
-        bool _DropDown = true;
-        public static bool IsHidden {  get; private set; }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -55,27 +55,12 @@ namespace IOOP_assignment
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(_DropDown == true)
-            {
-                DropdownPanel.Height += 10;
-                if (DropdownPanel.Height < 300) return;
-                timer1.Stop();
-                _DropDown = false;
-            }
-            else
-            {
-                {
-                    DropdownPanel.Height -= 10;
-                    if (DropdownPanel.Height > 10) return;
-                    timer1.Stop();
-                    _DropDown = true;
-                }
-            }
+           
         }
 
         private void DropDown_Click(object sender, EventArgs e)
         {
-            timer1.Start();
+            _dropdownAnimator.Toggle();
         }
 
         private void DropdownPanel_Paint(object sender, PaintEventArgs e)

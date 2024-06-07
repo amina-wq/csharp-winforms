@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IOOP_assignment.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,14 +14,15 @@ namespace IOOP_assignment.Forms
 {
     public partial class OrderDetails : Form
     {
+        private DropdownAnimator _dropdownAnimator;
         private string connectionString = "Data Source=localhost;Initial Catalog=ioop;Integrated Security=True;";
         private int rowToShow;
 
-        // Constructor with one argument
         public OrderDetails(int rowToShow)
         {
             InitializeComponent();
             this.rowToShow = rowToShow;
+            _dropdownAnimator = new DropdownAnimator(DropdownPanel, 300, 10);
         }
 
         public void SetTableNumber(string tableNumber)
@@ -61,27 +63,12 @@ namespace IOOP_assignment.Forms
 
         private void DropDown_Click(object sender, EventArgs e)
         {
-            timer1.Start();
+            _dropdownAnimator.Toggle();
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            if (_DropDown == true)
-            {
-                DropdownPanel.Height += 10;
-                if (DropdownPanel.Height < 250) return;
-                timer1.Stop();
-                _DropDown = false;
-            }
-            else
-            {
-                {
-                    DropdownPanel.Height -= 10;
-                    if (DropdownPanel.Height > 10) return;
-                    timer1.Stop();
-                    _DropDown = true;
-                }
-            }
+            
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)

@@ -98,6 +98,7 @@
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\Chef.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DropdownAnimator.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\SQLConnect.cs" />
