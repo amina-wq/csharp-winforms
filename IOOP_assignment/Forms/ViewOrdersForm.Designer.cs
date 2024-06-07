@@ -68,7 +68,7 @@
             this.DropDown.BackColor = System.Drawing.Color.Transparent;
             this.DropDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DropDown.BackgroundImage")));
             this.DropDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DropDown.Location = new System.Drawing.Point(32, 9);
+            this.DropDown.Location = new System.Drawing.Point(43, 9);
             this.DropDown.Name = "DropDown";
             this.DropDown.Size = new System.Drawing.Size(61, 49);
             this.DropDown.TabIndex = 17;
@@ -252,6 +252,7 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ViewOrdersForm

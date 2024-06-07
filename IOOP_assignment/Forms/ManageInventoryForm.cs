@@ -44,7 +44,7 @@ namespace IOOP_assignment.Forms
         {
             if (_DropDown == true)
             {
-                DropdownPanel.Height += 30;
+                DropdownPanel.Height += 10;
                 if (DropdownPanel.Height < 250) return;
                 timer1.Stop();
                 _DropDown = false;
@@ -52,7 +52,7 @@ namespace IOOP_assignment.Forms
             else
             {
                 {
-                    DropdownPanel.Height -= 30;
+                    DropdownPanel.Height -= 10;
                     if (DropdownPanel.Height > 10) return;
                     timer1.Stop();
                     _DropDown = true;

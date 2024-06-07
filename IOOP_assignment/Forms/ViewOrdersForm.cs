@@ -57,7 +57,7 @@ namespace IOOP_assignment
         {
             if(_DropDown == true)
             {
-                DropdownPanel.Height += 30;
+                DropdownPanel.Height += 10;
                 if (DropdownPanel.Height < 300) return;
                 timer1.Stop();
                 _DropDown = false;
@@ -65,7 +65,7 @@ namespace IOOP_assignment
             else
             {
                 {
-                    DropdownPanel.Height -= 30;
+                    DropdownPanel.Height -= 10;
                     if (DropdownPanel.Height > 10) return;
                     timer1.Stop();
                     _DropDown = true;
@@ -128,6 +128,11 @@ namespace IOOP_assignment
             ChefDashboard chefDashboard = new ChefDashboard();
             chefDashboard.Show();
             this.Close();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }
