@@ -65,12 +65,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Category.Designer.cs">
-      <DependentUpon>Category.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,18 +77,19 @@
     <Compile Include="Manager Forms\Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manager Forms\HomePage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manager Forms\HomePage.Designer.cs">
-      <DependentUpon>HomePage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Manager Forms\Reservation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Manager Forms\Reservation.Designer.cs">
       <DependentUpon>Reservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager Forms\ViewProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager Forms\ViewProfile.Designer.cs">
+      <DependentUpon>ViewProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerClass.cs" />
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\Chef.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -109,11 +104,11 @@
     <EmbeddedResource Include="Manager Forms\Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manager Forms\HomePage.resx">
-      <DependentUpon>HomePage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Manager Forms\Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager Forms\ViewProfile.resx">
+      <DependentUpon>ViewProfile.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ioop.ddl" />
     <None Include="Properties\Settings.settings">

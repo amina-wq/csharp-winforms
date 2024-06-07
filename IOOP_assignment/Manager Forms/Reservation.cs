@@ -19,27 +19,95 @@ namespace IOOP_assignment.Manager_Forms
             InitializeComponent();
         }
        
-        private void button1_Click(object sender, EventArgs e)
+        
+        private void button1_Click(object sender, EventArgs e) 
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ReservationDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True;Encrypt=False");
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("INSERT INTO ReservationInfo(ReservationID, ReservationType, ReservationDetails, CustomerID, JoiningDate) VALUES (@ReservationID, @ReservationType, @ReservationDetails, @CustomerID, @JoiningDate)", con);
-            cmd.Parameters.AddWithValue("@ReservationID", textBox1.Text);
-            cmd.Parameters.AddWithValue("@ReservationType", comboBox1.Text);
-            cmd.Parameters.AddWithValue("@ReservationDetails", comboBox2.Text);
-            cmd.Parameters.AddWithValue("@CustomerID", textBox2.Text);
-            cmd.Parameters.AddWithValue("@JoiningDate", dateTimePicker1.Text);
+            SqlCommand cmd = new SqlCommand("INSERT INTO ReservationInfo(ReservationID, ReservationType, ReservationDetails, CustomerID, BookingDate) VALUES (@ReservationID, @ReservationType, @ReservationDetails, @CustomerID, @BookingDate)", con);
+            cmd.Parameters.AddWithValue("@ReservationID", txtboxReservID.Text);
+            cmd.Parameters.AddWithValue("@ReservationType", cmboxReservType.Text);
+            cmd.Parameters.AddWithValue("@ReservationDetails", cmboxReservDetails.Text);
+            cmd.Parameters.AddWithValue("@CustomerID", txtboxCusID.Text);
+            cmd.Parameters.AddWithValue("@BookingDate", DTPBookingDate.Value.ToString("MM/dd/yyyy"));
             cmd.ExecuteNonQuery();
             con.Close();
 
-            textBox1.Text = "";
-            comboBox1.Text = "";
-            comboBox2.Text = "";
-            textBox2.Text = "";
-            dateTimePicker1.Text = "";
+            txtboxReservID.Text = "";
+            cmboxReservType.Text = "";
+            cmboxReservDetails.Text = "";
+            txtboxCusID.Text = "";
+            DTPBookingDate.Text = "";
 
             MessageBox.Show("Succesfully Added!");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True;Encrypt=False");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("UPDATE ReservationInfo SET ReservationType=@ReservationType, ReservationDetails=@ReservationDetails, CustomerID=@CustomerID, BookingDate=@BookingDate WHERE ReservationID=@ReservationID", con);
+            cmd.Parameters.AddWithValue("@ReservationID", txtboxReservID.Text);
+            cmd.Parameters.AddWithValue("@ReservationType", cmboxReservType.Text);
+            cmd.Parameters.AddWithValue("@ReservationDetails", cmboxReservDetails.Text);
+            cmd.Parameters.AddWithValue("@CustomerID", txtboxCusID.Text);
+            cmd.Parameters.AddWithValue("@BookingDate", DTPBookingDate.Value.ToString("MM/dd/yyyy"));
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            txtboxReservID.Text = "";
+            cmboxReservType.Text = "";
+            cmboxReservDetails.Text = "";
+            txtboxCusID.Text = "";
+            DTPBookingDate.Text = "";
+
+            MessageBox.Show("Succesfully Updated!");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True;Encrypt=False");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("DELETE ReservationInfo WHERE ReservationID=@ReservationID", con);
+            cmd.Parameters.AddWithValue("@ReservationID", txtboxReservID.Text);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            txtboxReservID.Text = "";
+            cmboxReservType.Text = "";
+            cmboxReservDetails.Text = "";
+            txtboxCusID.Text = "";
+            DTPBookingDate.Text = "";
+
+            MessageBox.Show("Succesfully Deleted!");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True;Encrypt=False");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM ReservationInfo WHERE ReservationID=@ReservationID", con);
+            cmd.Parameters.AddWithValue("@ReservationID", txtboxReservID.Text);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt  = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void FrmReservation_Load(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True;Encrypt=False");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT* FROM ReservationInfo", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }

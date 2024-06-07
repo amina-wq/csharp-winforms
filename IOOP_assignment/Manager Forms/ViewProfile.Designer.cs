@@ -1,6 +1,6 @@
-﻿namespace IOOP_assignment
+﻿namespace IOOP_assignment.Manager_Forms
 {
-    partial class Category
+    partial class FrmViewProfile
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FrmViewProfile
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Category";
+            this.Name = "FrmViewProfile";
+            this.Text = "ViewProfile";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

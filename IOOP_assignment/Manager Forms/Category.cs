@@ -18,6 +18,8 @@ namespace IOOP_assignment.Manager_Forms
         {
             InitializeComponent();
         }
+        bool _Dropdown = true;
+        public static bool IsHidden { get; private set; }
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -25,19 +27,19 @@ namespace IOOP_assignment.Manager_Forms
             con.Open();
 
             SqlCommand cmd = new SqlCommand("INSERT INTO ItemProduct(ItemID,ItemName,Price,CategoryID,CategoryName) VALUES (@ItemID,@ItemName,@Price,@CategoryID,@CategoryName)", con);
-            cmd.Parameters.AddWithValue("@ItemID", textBox1.Text);
-            cmd.Parameters.AddWithValue("@ItemName", textBox3.Text);
-            cmd.Parameters.AddWithValue("@Price", textBox4.Text);
-            cmd.Parameters.AddWithValue("@CategoryID", textBox2.Text);
-            cmd.Parameters.AddWithValue("@CategoryName", textBox5.Text);
+            cmd.Parameters.AddWithValue("@ItemID", txtboxItemID.Text);
+            cmd.Parameters.AddWithValue("@ItemName", txtboxItemName.Text);
+            cmd.Parameters.AddWithValue("@Price", txtboxPrice.Text);
+            cmd.Parameters.AddWithValue("@CategoryID", txtboxCategoryID.Text);
+            cmd.Parameters.AddWithValue("@CategoryName", txtboxCategoryName.Text);
             cmd.ExecuteNonQuery();
             con.Close();
 
-            textBox1.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox2.Text = "";
-            textBox5.Text = "";
+            txtboxItemID.Text = "";
+            txtboxItemName.Text = "";
+            txtboxPrice.Text = "";
+            txtboxCategoryID.Text = "";
+            txtboxCategoryName.Text = "";
 
             MessageBox.Show("Succesfully Added!");
 
@@ -54,19 +56,19 @@ namespace IOOP_assignment.Manager_Forms
             con.Open();
 
             SqlCommand cmd = new SqlCommand("UPDATE ItemProduct SET ItemName=@ItemName, Price=@Price, CategoryID=@CategoryID, CategoryName=@CategoryName WHERE ItemID=@ItemID", con);
-            cmd.Parameters.AddWithValue("@ItemID", textBox1.Text);
-            cmd.Parameters.AddWithValue("@ItemName", textBox3.Text);
-            cmd.Parameters.AddWithValue("@Price", textBox4.Text);
-            cmd.Parameters.AddWithValue("@CategoryID", textBox2.Text);
-            cmd.Parameters.AddWithValue("@CategoryName", textBox5.Text);
+            cmd.Parameters.AddWithValue("@ItemID", txtboxItemID.Text);
+            cmd.Parameters.AddWithValue("@ItemName", txtboxItemName.Text);
+            cmd.Parameters.AddWithValue("@Price", txtboxPrice.Text);
+            cmd.Parameters.AddWithValue("@CategoryID", txtboxCategoryID.Text);
+            cmd.Parameters.AddWithValue("@CategoryName", txtboxCategoryName.Text);
             cmd.ExecuteNonQuery();
             con.Close();
 
-            textBox1.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox2.Text = "";
-            textBox5.Text = "";
+            txtboxItemID.Text = "";
+            txtboxItemName.Text = "";
+            txtboxPrice.Text = "";
+            txtboxCategoryID.Text = "";
+            txtboxCategoryName.Text = "";
 
             MessageBox.Show("Succesfully Updated!");
         }
@@ -77,15 +79,15 @@ namespace IOOP_assignment.Manager_Forms
             con.Open();
 
             SqlCommand cmd = new SqlCommand("DELETE ItemProduct WHERE ItemID=@ItemID", con);
-            cmd.Parameters.AddWithValue("@ItemID", int.Parse(textBox1.Text));
+            cmd.Parameters.AddWithValue("@ItemID", int.Parse(txtboxItemID.Text));
             cmd.ExecuteNonQuery();
             con.Close();
 
-            textBox1.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox2.Text = "";
-            textBox5.Text = "";
+            txtboxItemID.Text = "";
+            txtboxItemName.Text = "";
+            txtboxPrice.Text = "";
+            txtboxCategoryID.Text = "";
+            txtboxCategoryName.Text = "";
 
             MessageBox.Show("Succesfully Deleted!");
         }
@@ -107,11 +109,44 @@ namespace IOOP_assignment.Manager_Forms
             con.Open();
 
             SqlCommand cmd = new SqlCommand("SELECT * FROM ItemProduct WHERE ItemID=@ItemID", con);
-            cmd.Parameters.AddWithValue("@ItemID", int.Parse(textBox1.Text));
+            cmd.Parameters.AddWithValue("@ItemID", int.Parse(txtboxItemID.Text));
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(_Dropdown == true)
+            {
+                Dropdownlist.Height += 30;
+                if (Dropdownlist.Height < 300) return;
+                timer1.Stop();
+                _Dropdown = false;
+
+            }
+            else
+            {
+                {
+                    Dropdownlist.Height -= 30;
+                    if (Dropdownlist.Height > 10) return;
+                    timer1.Stop();
+                    _Dropdown = true;
+
+                }
+
+            }
+        }
+
+        private void Dropdown_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void Dropdownlist_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

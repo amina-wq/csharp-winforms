@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment.Manager_Forms
 {
-    public partial class HomePage : Form
+    public partial class FrmViewProfile : Form
     {
-        
+        public FrmViewProfile()
+        {
+            InitializeComponent();
+        }
     }
 }
