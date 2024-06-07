@@ -19,19 +19,18 @@ namespace IOOP_assignment.Forms
         public AdminSalesReport()
         {
             InitializeComponent();
-            PopulateSortCriteria(); // Populate sort criteria before loading orders
+            PopulateSortCriteria();       
 
             txtSearch.Text = "Search...";
             txtSearch.ForeColor = SystemColors.GrayText;
 
-            // Attach event handlers for GotFocus and LostFocus
             txtSearch.GotFocus += txtSearch_GotFocus;
             txtSearch.LostFocus += txtSearch_LostFocus;
 
-            LoadAllOrders(); // Load orders after initializing the form
+            LoadAllOrders();       
         }
 
-        private bool isInitialized = false; // Flag to track initialization
+        private bool isInitialized = false;     
 
         private void LoadAllOrders()
         {
@@ -62,31 +61,25 @@ namespace IOOP_assignment.Forms
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
-                    // Clear existing data in the DataGridView
                     dataGridViewSales.DataSource = null;
 
-                    // Populate the DataGridView with order details
                     dataGridViewSales.DataSource = dt;
 
-                    // Check if the ListBox is already populated and clear if necessary
                     if (!isInitialized)
                     {
                         listBoxOrders.Items.Clear();
                     }
 
-                    // Populate the ListBox with order IDs
                     foreach (DataRow row in dt.Rows)
                     {
                         string orderInfo = $"{row["OrderID"]} - {Convert.ToDateTime(row["OrderDateTime"]):yyyy-MM-dd HH:mm:ss} - Total: {Convert.ToDecimal(row["TotalAmount"]):C}";
 
-                        // Check if the item already exists in the ListBox before adding it
                         if (!listBoxOrders.Items.Contains(orderInfo))
                         {
                             listBoxOrders.Items.Add(orderInfo);
                         }
                     }
 
-                    // Set the flag to true after initializing
                     isInitialized = true;
                 }
             }
@@ -137,7 +130,6 @@ namespace IOOP_assignment.Forms
                     da.Fill(dt);
                     UpdateTotalAmount(dt);
 
-                    // Clear existing items in the ListBox only if it's not focused (clicked)
                     if (!listBoxOrders.Focused)
                     {
                         listBoxOrders.Items.Clear();
@@ -145,10 +137,8 @@ namespace IOOP_assignment.Forms
 
                     foreach (DataRow row in dt.Rows)
                     {
-                        // Concatenate OrderID, OrderDateTime, and TotalAmount into a single string
                         string orderInfo = $"{row["OrderID"]} - {Convert.ToDateTime(row["OrderDateTime"]):yyyy-MM-dd HH:mm:ss} - Total: {Convert.ToDecimal(row["TotalAmount"]):C}";
 
-                        // Add the concatenated string to the ListBox
                         listBoxOrders.Items.Add(orderInfo);
                     }
                 }
@@ -165,14 +155,12 @@ namespace IOOP_assignment.Forms
             {
                 string selectedItem = listBoxOrders.SelectedItem.ToString();
 
-                // Split the selected item string to extract the order ID
                 string[] parts = selectedItem.Split(new string[] { " - " }, StringSplitOptions.None);
 
                 if (parts.Length >= 1)
                 {
-                    string selectedOrderId = parts[0]; // Extract the order ID
+                    string selectedOrderId = parts[0];     
 
-                    // Check if the selected order ID string meets the expected format of a GUID
                     if (Guid.TryParse(selectedOrderId, out Guid orderId))
                     {
                         using (SqlConnection conn = new SqlConnection(connectionString))
@@ -218,13 +206,12 @@ namespace IOOP_assignment.Forms
             }
         }
 
-        //Textbox SearchBar
         private void txtSearch_GotFocus(object sender, EventArgs e)
         {
             if (txtSearch.Text == "Search...")
             {
                 txtSearch.Text = "";
-                txtSearch.ForeColor = SystemColors.WindowText; // Change text color to normal
+                txtSearch.ForeColor = SystemColors.WindowText;
             }
         }
 
@@ -233,11 +220,10 @@ namespace IOOP_assignment.Forms
             if (string.IsNullOrWhiteSpace(txtSearch.Text))
             {
                 txtSearch.Text = "Search...";
-                txtSearch.ForeColor = SystemColors.GrayText; // Change text color to gray
+                txtSearch.ForeColor = SystemColors.GrayText;
             }
         }
 
-        //Sort
         private bool ascendingOrder = true;
 
         private void btnSort_Click(object sender, EventArgs e)
@@ -247,10 +233,8 @@ namespace IOOP_assignment.Forms
                 string selectedCriteria = listBoxSort.SelectedItem.ToString();
                 string sortBy = selectedCriteria == "Order Date & Time" ? "OrderDateTime" : "TotalAmount";
 
-                // Toggle the sorting order
                 ascendingOrder = !ascendingOrder;
 
-                // Sort the orders based on the selected criteria and the current sorting order
                 SortOrders(sortBy, ascendingOrder);
             }
             else
@@ -261,14 +245,14 @@ namespace IOOP_assignment.Forms
 
         private void SortOrders(string sortBy, bool ascending)
         {
-            DataTable dt = (DataTable)dataGridViewSales.DataSource; // Get the current DataTable from the DataGridView
+            DataTable dt = (DataTable)dataGridViewSales.DataSource;        
 
             if (dt != null)
             {
-                string sortOrder = ascending ? "ASC" : "DESC"; // Determine sort order
-                dt.DefaultView.Sort = sortBy + " " + sortOrder; // Sort the DefaultView of the DataTable
+                string sortOrder = ascending ? "ASC" : "DESC";    
+                dt.DefaultView.Sort = sortBy + " " + sortOrder;       
 
-                dataGridViewSales.DataSource = dt; // Reassign the sorted DataTable to the DataGridView
+                dataGridViewSales.DataSource = dt;        
                 UpdateTotalAmount(dt);
             }
         }
@@ -279,7 +263,7 @@ namespace IOOP_assignment.Forms
             {
                 string selectedCriteria = listBoxSort.SelectedItem.ToString();
                 string sortBy = selectedCriteria == "Order Date & Time" ? "OrderDateTime" : "TotalAmount";
-                SortOrders(sortBy, ascendingOrder); // Pass the ascendingOrder variable
+                SortOrders(sortBy, ascendingOrder);     
             }
             else
             {
@@ -325,7 +309,6 @@ namespace IOOP_assignment.Forms
 
 
 
-        // Drop Down
         bool _adminDropDown = false;
 
         private void AdmimDropDown_Click(object sender, EventArgs e)

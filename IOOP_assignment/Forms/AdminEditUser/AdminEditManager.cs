@@ -33,8 +33,8 @@ namespace IOOP_assignment.Forms
 
         private void LoadUsernames()
         {
-            listBoxUsers.Items.Clear(); // Clear existing items
-            allUsernames.Clear(); // Clear the allUsernames list
+            listBoxUsers.Items.Clear();    
+            allUsernames.Clear();     
             string query = "SELECT UserName FROM [User] WHERE RoleID = @RoleID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -50,7 +50,7 @@ namespace IOOP_assignment.Forms
                     {
                         string username = reader["UserName"].ToString();
                         listBoxUsers.Items.Add(username);
-                        allUsernames.Add(username); // Add username to allUsernames list
+                        allUsernames.Add(username);      
                     }
                 }
                 catch (Exception ex)
@@ -98,7 +98,6 @@ namespace IOOP_assignment.Forms
                 string selectedUsername = listBoxUsers.SelectedItem.ToString();
                 string newPassword = txtPassword.Text;
 
-                // Validate password complexity
                 if (!PasswordValidator.IsPasswordComplex(newPassword))
                 {
                     MessageBox.Show("Password must contain at least 1 uppercase letter, 1 number, and 1 symbol.", "Validation Error",
@@ -132,7 +131,6 @@ namespace IOOP_assignment.Forms
 
         private bool UpdatePasswordInDatabase(string username, string newPassword)
         {
-            // Hash the new password
             byte[] hashedPassword = PasswordHasher.HashPassword(newPassword);
 
             string updateQuery = "UPDATE [User] SET Password = @NewPassword WHERE UserName = @Username";
@@ -181,7 +179,6 @@ namespace IOOP_assignment.Forms
                     return;
                 }
 
-                // Check for duplicate username
                 if (UserDatabaseManager.IsUsernameDuplicate(newUsername))
                 {
                     MessageBox.Show("Username already exists.", "Duplicate Username",
@@ -189,7 +186,6 @@ namespace IOOP_assignment.Forms
                     return;
                 }
 
-                // Check for duplicate email
                 if (UserDatabaseManager.IsEmailDuplicate(newEmail))
                 {
                     MessageBox.Show("Email already exists.", "Duplicate Email",
@@ -203,7 +199,7 @@ namespace IOOP_assignment.Forms
                     if (success)
                     {
                         MessageBox.Show("User details updated successfully.");
-                        LoadUsernames(); // Refresh the user list
+                        LoadUsernames();     
                     }
                     else
                     {
@@ -259,7 +255,7 @@ namespace IOOP_assignment.Forms
                     if (success)
                     {
                         MessageBox.Show("User deleted successfully.");
-                        LoadUsernames(); // Refresh the user list
+                        LoadUsernames();     
                     }
                     else
                     {
@@ -288,7 +284,6 @@ namespace IOOP_assignment.Forms
                     int rowsAffected = command.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        // Clear the text box after successfully deleting the user
                         txtUsername.Clear();
                         txtEmail.Clear();
                     }

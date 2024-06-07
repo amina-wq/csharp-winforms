@@ -52,7 +52,6 @@ namespace IOOP_assignment.Forms
                 listBoxSearch.Items.Clear();
                 while (reader.Read())
                 {
-                    // Display UserName and Email only in the ListBox
                     string displayText = $"{reader["UserName"]} - {reader["Email"]}";
                     listBoxSearch.Items.Add(displayText);
                 }
@@ -78,7 +77,6 @@ namespace IOOP_assignment.Forms
                     listBoxSearch.Items.Clear();
                     while (reader.Read())
                     {
-                        // Display UserName and Email only in the ListBox
                         string displayText = $"{reader["UserName"]} - {reader["Email"]}";
                         listBoxSearch.Items.Add(displayText);
                     }
@@ -97,12 +95,10 @@ namespace IOOP_assignment.Forms
             {
                 string selectedUsername = listBoxSearch.SelectedItem.ToString().Split('-')[0].Trim();
 
-                // Using block ensures proper disposal of resources, including the connection
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 
-                    // Construct the SQL query to retrieve feedback data for the selected username
                     string query = @"
                 SELECT 
                     [User].UserName AS UserName, 
@@ -118,21 +114,17 @@ namespace IOOP_assignment.Forms
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@username", selectedUsername);
 
-                    // Create a DataTable to hold the retrieved feedback data
                     DataTable dt = new DataTable();
 
-                    // Use a SqlDataAdapter to fill the DataTable with data from the query result
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
 
-                    // Bind the DataTable to the DataGridView to display the feedback data
                     dataGridViewFeedback.DataSource = dt;
                 } 
             }
         }
 
 
-        // Drop Down
         bool _adminDropDown = false;
 
         private void AdmimDropDown_Click(object sender, EventArgs e)

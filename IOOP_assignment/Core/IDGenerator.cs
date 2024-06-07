@@ -20,7 +20,6 @@ namespace IOOP_assignment.Core
 
         public Guid GenerateNewUserId()
         {
-            // Generate a new UUID (Guid) for the user ID
             return Guid.NewGuid();
         }
 

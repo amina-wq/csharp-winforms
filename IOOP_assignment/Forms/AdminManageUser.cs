@@ -27,7 +27,6 @@ namespace IOOP_assignment.Forms
 
             InitializeComponent();
 
-            // Initialize UserControls 
             adminAddManager = new AdminAddManager();
             adminAddChef = new AdminAddChef();
             adminAddCustomer = new AdminAddCustomer(); 
@@ -35,7 +34,6 @@ namespace IOOP_assignment.Forms
             adminEditChef = new AdminEditChef();
             adminEditCustomer = new AdminEditCustomer();
 
-            // Set properties for the UserControls
             adminAddManager.Dock = DockStyle.Fill;
             adminAddChef.Dock = DockStyle.Fill;
             adminAddCustomer.Dock = DockStyle.Fill;
@@ -43,7 +41,6 @@ namespace IOOP_assignment.Forms
             adminEditChef.Dock = DockStyle.Fill;
             adminEditCustomer.Dock = DockStyle.Fill;
 
-            // Add the UserControls to the form
             this.Controls.Add(adminAddManager);
             this.Controls.Add(adminAddChef);
             this.Controls.Add(adminAddCustomer);
@@ -51,7 +48,6 @@ namespace IOOP_assignment.Forms
             this.Controls.Add(adminEditChef);
             this.Controls.Add(adminEditCustomer);
 
-            // Initially hide all UserControls at start up
             adminAddManager.Visible = false;
             adminAddChef.Visible = false;
             adminAddCustomer.Visible = false;
@@ -59,11 +55,9 @@ namespace IOOP_assignment.Forms
             adminEditChef.Visible = false;
             adminEditCustomer.Visible = false;
 
-            //hide panel at start up
             AddUserPanel.Visible = false;
             EditUserPanel.Visible = false;
 
-            //detecting if mouse is in button or not for add user
             MUAddUser.MouseEnter += MUAddUser_MouseEnter;
             MUAddUser.MouseLeave += MUAddUser_MouseLeave;
 
@@ -80,7 +74,6 @@ namespace IOOP_assignment.Forms
             MUAddCustomer.MouseEnter += MUAddCustomer_MouseEnter;
             MUAddCustomer.MouseLeave += MUAddCustomer_MouseLeave;
 
-            //detecting if mouse is in button or not for edit user
             MUEditUser.MouseEnter += MUEditUser_MouseEnter;
             MUEditUser.MouseLeave += MUEditUser_MouseLeave;
 
@@ -97,11 +90,9 @@ namespace IOOP_assignment.Forms
             MUEditCustomer.MouseEnter += MUEditCustomer_MouseEnter;
             MUEditCustomer.MouseLeave += MUEditCustomer_MouseLeave;
 
-            //panel timer for add user
             AUPanelTimer.Interval = 400;
             AUPanelTimer.Tick += AUPanelTimer_Tick;
 
-            //panel timer for edit user
             EUPanelTimer.Interval = 400;
             EUPanelTimer.Tick += EUPanelTimer_Tick;
 
@@ -112,7 +103,6 @@ namespace IOOP_assignment.Forms
         {
 
         }
-         //Start of Add User 
         private void AUShowControl(UserControl control)
         {
             if (adminAddManager.Visible)
@@ -128,7 +118,6 @@ namespace IOOP_assignment.Forms
                 adminAddCustomer.Visible = false;
             }
 
-            // Show the selected UserControl
             control.Visible = true;
 
         }
@@ -199,7 +188,7 @@ namespace IOOP_assignment.Forms
 
         private void MUAddManager_Click(object sender, EventArgs e)
         {
-            adminAddManager.BringToFront(); // Bring user control to front
+            adminAddManager.BringToFront();      
             AUShowControl(adminAddManager);
         }
 
@@ -238,8 +227,6 @@ namespace IOOP_assignment.Forms
 
         
 
-        //Start of Edit User code
-
         private void EUShowControl(UserControl control)
         {
             EditUserPanel.Visible = false;
@@ -257,7 +244,6 @@ namespace IOOP_assignment.Forms
                 adminEditCustomer.Visible = false;
             }
 
-            // Show the selected UserControl
             control.Visible = true;
         }
 
@@ -330,7 +316,7 @@ namespace IOOP_assignment.Forms
 
         private void MUEditManager_Click(object sender, EventArgs e)
         {
-            adminEditManager.BringToFront(); // Bring user control to front
+            adminEditManager.BringToFront();      
             EUShowControl(adminEditManager);
         }
 
@@ -367,7 +353,6 @@ namespace IOOP_assignment.Forms
             EUShowControl(adminEditCustomer);
         }
 
-        // Drop Down
         bool _adminDropDown = false;
 
         private void AdmimDropDown_Click(object sender, EventArgs e)

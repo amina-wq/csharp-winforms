@@ -55,7 +55,6 @@ namespace IOOP_assignment.Forms
                 catch (Exception ex)
                 {
                     Console.WriteLine("An error occurred: " + ex.Message);
-                    // Handle the error appropriately
                 }
             }
         }
@@ -63,12 +62,10 @@ namespace IOOP_assignment.Forms
         private void btnAddChef_Click(object sender, EventArgs e)
         {
             UserDatabaseManager.SetConnectionString(connectionString);
-            // Get the username, email, and password from TextBox controls
             string username = txtUsername.Text.Trim();
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            // Validate input
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Username, Email, and Password cannot be empty.", "Validation Error",
@@ -76,7 +73,6 @@ namespace IOOP_assignment.Forms
                 return;
             }
 
-            // Validate email format
             if (!EmailValidator.IsValidEmail(email))
             {
                 MessageBox.Show("Email must be valid.", "Validation Error", MessageBoxButtons.OK,
@@ -84,7 +80,6 @@ namespace IOOP_assignment.Forms
                 return;
             }
 
-            // Validate password complexity
             if (!PasswordValidator.IsPasswordComplex(password))
             {
                 MessageBox.Show("Password must be atleast 8 and contain at least 1 uppercase letter, 1 number, and 1 symbol.", "Validation Error",
@@ -92,7 +87,6 @@ namespace IOOP_assignment.Forms
                 return;
             }
 
-            // Check for duplicate username
             if (UserDatabaseManager.IsUsernameDuplicate(username))
             {
                 MessageBox.Show("Username already exists.", "Duplicate Username",
@@ -100,7 +94,6 @@ namespace IOOP_assignment.Forms
                 return;
             }
 
-            // Check for duplicate email
             if (UserDatabaseManager.IsEmailDuplicate(email))
             {
                 MessageBox.Show("Email already exists.", "Duplicate Email",
@@ -111,18 +104,14 @@ namespace IOOP_assignment.Forms
             UserIdGenerator generator = new UserIdGenerator(connectionString);
             Guid newUserId = generator.GenerateNewUserId();
 
-            // Hardcode the manager role ID 
             Guid chefRoleId = new Guid("10000000-0000-1000-0000-000000000002");
 
-            // Hash the password
             byte[] hashedPassword = PasswordHasher.HashPassword(password);
 
-            // Insert the new user into the database
             InsertNewUser(newUserId, chefRoleId, username, email, hashedPassword);
 
             MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // Clear textboxes after input
             txtUsername.Clear();
             txtEmail.Clear();
             txtPassword.Clear();

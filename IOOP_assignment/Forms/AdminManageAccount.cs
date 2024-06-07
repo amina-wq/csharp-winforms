@@ -28,19 +28,15 @@ namespace IOOP_assignment.Forms
             InitializeComponent();
             UserDatabaseManager.SetConnectionString(connectionString);
 
-            // Initialize UserControls 
             adminAddAdmin = new AdminAddAdmin();
             adminEditAdmin = new AdminEditAdmin();
 
-            // Set properties for the UserControls
             adminAddAdmin.Dock = DockStyle.Fill;
             adminEditAdmin.Dock = DockStyle.Fill;
 
-            // Add the UserControls to the form
             this.Controls.Add(adminAddAdmin);
             this.Controls.Add(adminEditAdmin);
 
-            // Initially hide all UserControls at start up
             adminAddAdmin.Visible = false;
             adminEditAdmin.Visible = false;
         }
@@ -56,7 +52,6 @@ namespace IOOP_assignment.Forms
                 adminAddAdmin.Visible = false;
             }
 
-            // Show the selected UserControl
             control.Visible = true;
 
         }
@@ -81,7 +76,6 @@ namespace IOOP_assignment.Forms
             MAShowControl(adminEditAdmin);
         }
 
-        // Drop Down
         bool _adminDropDown = false;
 
         private void AdmimDropDown_Click(object sender, EventArgs e)

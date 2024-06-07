@@ -74,7 +74,7 @@
             // AdminExit
             // 
             this.AdminExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminExit.Location = new System.Drawing.Point(1587, 3);
+            this.AdminExit.Location = new System.Drawing.Point(1536, 38);
             this.AdminExit.Name = "AdminExit";
             this.AdminExit.Size = new System.Drawing.Size(60, 60);
             this.AdminExit.TabIndex = 28;
