@@ -150,5 +150,10 @@ namespace IOOP_assignment.Forms
             this.Close();
             fb.Show();
         }
+
+        private void MenuPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

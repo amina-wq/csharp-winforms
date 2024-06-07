@@ -47,14 +47,16 @@
             this.btnSort = new System.Windows.Forms.Button();
             this.listBoxSort = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // AdminExit
             // 
             this.AdminExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminExit.Location = new System.Drawing.Point(1578, 12);
+            this.AdminExit.Location = new System.Drawing.Point(1576, 17);
             this.AdminExit.Name = "AdminExit";
             this.AdminExit.Size = new System.Drawing.Size(60, 60);
             this.AdminExit.TabIndex = 39;
@@ -64,13 +66,14 @@
             // 
             // MenuPanel
             // 
+            this.MenuPanel.BackColor = System.Drawing.Color.Transparent;
             this.MenuPanel.Controls.Add(this.btnAdminDashboard);
             this.MenuPanel.Controls.Add(this.AdminLogOut);
             this.MenuPanel.Controls.Add(this.btnFeedback);
             this.MenuPanel.Controls.Add(this.btnSalesReport);
             this.MenuPanel.Controls.Add(this.btnManageUser);
             this.MenuPanel.Controls.Add(this.btnManageAccount);
-            this.MenuPanel.Location = new System.Drawing.Point(12, 72);
+            this.MenuPanel.Location = new System.Drawing.Point(2, 88);
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.Size = new System.Drawing.Size(331, 10);
             this.MenuPanel.TabIndex = 41;
@@ -200,12 +203,14 @@
             // 
             // btnSort
             // 
+            this.btnSort.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSort.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSort.Location = new System.Drawing.Point(1019, 213);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(233, 64);
             this.btnSort.TabIndex = 46;
             this.btnSort.Text = "Sort";
-            this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.UseVisualStyleBackColor = false;
             this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // listBoxSort
@@ -221,17 +226,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(832, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(398, 52);
             this.label1.TabIndex = 48;
             this.label1.Text = "View Sales Report";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.AdminExit);
+            this.panel1.Location = new System.Drawing.Point(-15, -5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1699, 87);
+            this.panel1.TabIndex = 49;
+            // 
             // AdminSalesReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1650, 900);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBoxSort);
@@ -240,14 +258,15 @@
             this.Controls.Add(this.lblTotalAmount);
             this.Controls.Add(this.dataGridViewSales);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.AdminExit);
             this.Controls.Add(this.MenuPanel);
             this.Controls.Add(this.AdmimDropDown);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminSalesReport";
             this.Text = "AdminSalesReport";
             this.MenuPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,5 +291,6 @@
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.ListBox listBoxSort;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -48,21 +48,24 @@
             this.ioopDataSet = new IOOP_assignment.ioopDataSet();
             this.feedbackTableAdapter = new IOOP_assignment.ioopDataSetTableAdapters.FeedbackTableAdapter();
             this.dataGridViewFeedback = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.feedbackBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ioopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFeedback)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuPanel
             // 
+            this.MenuPanel.BackColor = System.Drawing.Color.Transparent;
             this.MenuPanel.Controls.Add(this.btnAdminDashboard);
             this.MenuPanel.Controls.Add(this.AdminLogOut);
             this.MenuPanel.Controls.Add(this.btnFeedback);
             this.MenuPanel.Controls.Add(this.btnSalesReport);
             this.MenuPanel.Controls.Add(this.btnManageUser);
             this.MenuPanel.Controls.Add(this.btnManageAccount);
-            this.MenuPanel.Location = new System.Drawing.Point(12, 77);
+            this.MenuPanel.Location = new System.Drawing.Point(12, 90);
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.Size = new System.Drawing.Size(331, 10);
             this.MenuPanel.TabIndex = 38;
@@ -147,7 +150,7 @@
             // AdminExit
             // 
             this.AdminExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminExit.Location = new System.Drawing.Point(1578, 12);
+            this.AdminExit.Location = new System.Drawing.Point(1577, 21);
             this.AdminExit.Name = "AdminExit";
             this.AdminExit.Size = new System.Drawing.Size(60, 60);
             this.AdminExit.TabIndex = 35;
@@ -181,6 +184,7 @@
             // lblViewFeedback
             // 
             this.lblViewFeedback.AutoSize = true;
+            this.lblViewFeedback.BackColor = System.Drawing.Color.Transparent;
             this.lblViewFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblViewFeedback.Location = new System.Drawing.Point(853, 150);
             this.lblViewFeedback.Name = "lblViewFeedback";
@@ -225,19 +229,30 @@
             this.dataGridViewFeedback.Size = new System.Drawing.Size(1199, 515);
             this.dataGridViewFeedback.TabIndex = 43;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.AdminExit);
+            this.panel1.Location = new System.Drawing.Point(1, -9);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1675, 93);
+            this.panel1.TabIndex = 44;
+            // 
             // AdminFeedback
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1650, 900);
             this.Controls.Add(this.dataGridViewFeedback);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.lblViewFeedback);
             this.Controls.Add(this.listBoxSearch);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.AdminExit);
             this.Controls.Add(this.MenuPanel);
             this.Controls.Add(this.AdmimDropDown);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminFeedback";
             this.Text = "AdminFeedback";
@@ -246,6 +261,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.feedbackBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ioopDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFeedback)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,5 +287,6 @@
         private System.Windows.Forms.BindingSource feedbackBindingSource;
         private ioopDataSetTableAdapters.FeedbackTableAdapter feedbackTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewFeedback;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -54,6 +54,11 @@ namespace IOOP_assignment.Forms
             AdminFeedback fb = new AdminFeedback();
             fb.Show();
         }
+
+        private void AdminDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

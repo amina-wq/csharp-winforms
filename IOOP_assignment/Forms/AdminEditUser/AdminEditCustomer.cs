@@ -303,6 +303,11 @@ namespace IOOP_assignment.Forms
             var filteredUsernames = allUsernames.Where(u => u.ToLower().Contains(searchText)).ToArray();
             listBoxUsers.Items.AddRange(filteredUsernames);
         }
+
+        private void AdminEditCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

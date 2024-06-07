@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminAddAdmin));
             this.AdminExit = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -37,12 +39,14 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblAddAdmin = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dropdownTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // AdminExit
             // 
             this.AdminExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminExit.Location = new System.Drawing.Point(1575, 3);
+            this.AdminExit.Location = new System.Drawing.Point(1569, 24);
             this.AdminExit.Name = "AdminExit";
             this.AdminExit.Size = new System.Drawing.Size(60, 60);
             this.AdminExit.TabIndex = 30;
@@ -61,7 +65,9 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.Wheat;
             this.lblPassword.Location = new System.Drawing.Point(574, 451);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(155, 32);
@@ -70,12 +76,13 @@
             // 
             // btnAddManager
             // 
+            this.btnAddManager.BackColor = System.Drawing.Color.Wheat;
             this.btnAddManager.Location = new System.Drawing.Point(801, 503);
             this.btnAddManager.Name = "btnAddManager";
             this.btnAddManager.Size = new System.Drawing.Size(179, 78);
             this.btnAddManager.TabIndex = 42;
             this.btnAddManager.Text = "Add User";
-            this.btnAddManager.UseVisualStyleBackColor = true;
+            this.btnAddManager.UseVisualStyleBackColor = false;
             this.btnAddManager.Click += new System.EventHandler(this.btnAddManager_Click);
             // 
             // txtEmail
@@ -97,7 +104,9 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.Wheat;
             this.lblEmail.Location = new System.Drawing.Point(629, 420);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(100, 32);
@@ -107,7 +116,9 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Wheat;
             this.lblName.Location = new System.Drawing.Point(627, 388);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(102, 32);
@@ -117,17 +128,33 @@
             // lblAddAdmin
             // 
             this.lblAddAdmin.AutoSize = true;
+            this.lblAddAdmin.BackColor = System.Drawing.Color.Transparent;
             this.lblAddAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddAdmin.ForeColor = System.Drawing.Color.Wheat;
             this.lblAddAdmin.Location = new System.Drawing.Point(729, 320);
             this.lblAddAdmin.Name = "lblAddAdmin";
             this.lblAddAdmin.Size = new System.Drawing.Size(288, 59);
             this.lblAddAdmin.TabIndex = 37;
             this.lblAddAdmin.Text = "Add Admin";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Location = new System.Drawing.Point(0, -7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1675, 97);
+            this.panel1.TabIndex = 47;
+            // 
+            // dropdownTimer
+            // 
+            this.dropdownTimer.Interval = 15;
+            // 
             // AdminAddAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.btnAddManager);
@@ -137,6 +164,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblAddAdmin);
             this.Controls.Add(this.AdminExit);
+            this.Controls.Add(this.panel1);
             this.Name = "AdminAddAdmin";
             this.Size = new System.Drawing.Size(1650, 900);
             this.Load += new System.EventHandler(this.AdminAddAdmin_Load);
@@ -156,5 +184,7 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblAddAdmin;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Timer dropdownTimer;
     }
 }

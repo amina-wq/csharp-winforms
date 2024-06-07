@@ -43,23 +43,27 @@
             this.btnManageAccount = new System.Windows.Forms.Button();
             this.AdmimDropDown = new System.Windows.Forms.Button();
             this.dropdownTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.MenuPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MAEditUser
             // 
+            this.MAEditUser.BackColor = System.Drawing.Color.Wheat;
             this.MAEditUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MAEditUser.Location = new System.Drawing.Point(690, 485);
             this.MAEditUser.Name = "MAEditUser";
             this.MAEditUser.Size = new System.Drawing.Size(255, 94);
             this.MAEditUser.TabIndex = 33;
             this.MAEditUser.Text = "Edit User";
-            this.MAEditUser.UseVisualStyleBackColor = true;
+            this.MAEditUser.UseVisualStyleBackColor = false;
             this.MAEditUser.Click += new System.EventHandler(this.MAEditUser_Click);
             // 
             // lblManageAccount
             // 
             this.lblManageAccount.AutoSize = true;
+            this.lblManageAccount.BackColor = System.Drawing.Color.Transparent;
             this.lblManageAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManageAccount.Location = new System.Drawing.Point(637, 299);
             this.lblManageAccount.Name = "lblManageAccount";
@@ -69,19 +73,21 @@
             // 
             // MAAddUser
             // 
+            this.MAAddUser.BackColor = System.Drawing.Color.Wheat;
             this.MAAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MAAddUser.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MAAddUser.Location = new System.Drawing.Point(690, 372);
             this.MAAddUser.Name = "MAAddUser";
             this.MAAddUser.Size = new System.Drawing.Size(255, 94);
             this.MAAddUser.TabIndex = 32;
             this.MAAddUser.Text = "Add User";
-            this.MAAddUser.UseVisualStyleBackColor = true;
+            this.MAAddUser.UseVisualStyleBackColor = false;
             this.MAAddUser.Click += new System.EventHandler(this.MAAddUser_Click);
             // 
             // AdminExit
             // 
             this.AdminExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminExit.Location = new System.Drawing.Point(1578, 12);
+            this.AdminExit.Location = new System.Drawing.Point(1582, 15);
             this.AdminExit.Name = "AdminExit";
             this.AdminExit.Size = new System.Drawing.Size(60, 60);
             this.AdminExit.TabIndex = 34;
@@ -91,16 +97,18 @@
             // 
             // MenuPanel
             // 
+            this.MenuPanel.BackColor = System.Drawing.Color.Transparent;
             this.MenuPanel.Controls.Add(this.btnAdminDashboard);
             this.MenuPanel.Controls.Add(this.AdminLogOut);
             this.MenuPanel.Controls.Add(this.btnFeedback);
             this.MenuPanel.Controls.Add(this.btnSalesReport);
             this.MenuPanel.Controls.Add(this.btnManageUser);
             this.MenuPanel.Controls.Add(this.btnManageAccount);
-            this.MenuPanel.Location = new System.Drawing.Point(12, 74);
+            this.MenuPanel.Location = new System.Drawing.Point(12, 96);
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.Size = new System.Drawing.Size(331, 10);
             this.MenuPanel.TabIndex = 36;
+            this.MenuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuPanel_Paint);
             // 
             // btnAdminDashboard
             // 
@@ -184,21 +192,33 @@
             this.dropdownTimer.Interval = 15;
             this.dropdownTimer.Tick += new System.EventHandler(this.dropdownTimer_Tick);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.AdminExit);
+            this.panel1.Location = new System.Drawing.Point(-4, -3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1682, 93);
+            this.panel1.TabIndex = 45;
+            // 
             // AdminManageAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1650, 900);
             this.Controls.Add(this.MenuPanel);
             this.Controls.Add(this.AdmimDropDown);
-            this.Controls.Add(this.AdminExit);
             this.Controls.Add(this.MAEditUser);
             this.Controls.Add(this.lblManageAccount);
             this.Controls.Add(this.MAAddUser);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminManageAccount";
             this.Text = "AdminManageAccount";
             this.MenuPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +239,6 @@
         private System.Windows.Forms.Button btnManageAccount;
         private System.Windows.Forms.Button AdmimDropDown;
         private System.Windows.Forms.Timer dropdownTimer;
+        private System.Windows.Forms.Panel panel1;
     }
 }

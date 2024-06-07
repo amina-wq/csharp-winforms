@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.label1 = new System.Windows.Forms.Label();
             this.ManageUserOpen = new System.Windows.Forms.Button();
             this.ManageAccountOpen = new System.Windows.Forms.Button();
@@ -40,6 +41,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(893, 255);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(489, 64);
@@ -101,6 +103,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1650, 900);
             this.Controls.Add(this.AdminDashboardLogOut);
             this.Controls.Add(this.FeedbackOpen);
@@ -108,9 +113,11 @@
             this.Controls.Add(this.ManageAccountOpen);
             this.Controls.Add(this.ManageUserOpen);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDashboard";
             this.Text = "AdminDashboard";
+            this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

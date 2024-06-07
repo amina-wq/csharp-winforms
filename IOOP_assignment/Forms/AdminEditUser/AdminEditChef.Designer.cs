@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminEditChef));
             this.AdminExit = new System.Windows.Forms.Button();
             this.lblEditCustomer = new System.Windows.Forms.Label();
             this.btnChangePassword = new System.Windows.Forms.Button();
@@ -42,12 +43,15 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.listBoxUsers = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // AdminExit
             // 
             this.AdminExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminExit.Location = new System.Drawing.Point(1587, 3);
+            this.AdminExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.AdminExit.Location = new System.Drawing.Point(1554, 68);
             this.AdminExit.Name = "AdminExit";
             this.AdminExit.Size = new System.Drawing.Size(60, 60);
             this.AdminExit.TabIndex = 31;
@@ -58,7 +62,9 @@
             // lblEditCustomer
             // 
             this.lblEditCustomer.AutoSize = true;
+            this.lblEditCustomer.BackColor = System.Drawing.Color.Transparent;
             this.lblEditCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditCustomer.ForeColor = System.Drawing.Color.Wheat;
             this.lblEditCustomer.Location = new System.Drawing.Point(638, 164);
             this.lblEditCustomer.Name = "lblEditCustomer";
             this.lblEditCustomer.Size = new System.Drawing.Size(247, 59);
@@ -67,22 +73,26 @@
             // 
             // btnChangePassword
             // 
+            this.btnChangePassword.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnChangePassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnChangePassword.Location = new System.Drawing.Point(1066, 564);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(244, 33);
             this.btnChangePassword.TabIndex = 74;
             this.btnChangePassword.Text = "Change Password";
-            this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.UseVisualStyleBackColor = false;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // btnEdit
             // 
+            this.btnEdit.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEdit.Location = new System.Drawing.Point(915, 645);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(132, 35);
             this.btnEdit.TabIndex = 71;
             this.btnEdit.Text = "Save";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnSaveEdit_Click);
             // 
             // txtPassword
@@ -95,7 +105,9 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.Wheat;
             this.lblPassword.Location = new System.Drawing.Point(456, 560);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(155, 32);
@@ -119,7 +131,9 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.Wheat;
             this.lblEmail.Location = new System.Drawing.Point(511, 529);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(100, 32);
@@ -129,7 +143,9 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Wheat;
             this.lblName.Location = new System.Drawing.Point(509, 497);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(102, 32);
@@ -138,12 +154,14 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDelete.Location = new System.Drawing.Point(617, 645);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(132, 35);
             this.btnDelete.TabIndex = 72;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtSearch
@@ -167,17 +185,31 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Wheat;
             this.label1.Location = new System.Drawing.Point(479, 273);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 25);
             this.label1.TabIndex = 75;
             this.label1.Text = "Search Bar";
-            //
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.AdminExit);
+            this.panel1.Location = new System.Drawing.Point(-11, -25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1678, 143);
+            this.panel1.TabIndex = 77;
+            // 
             // AdminEditChef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.lblEditCustomer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnChangePassword);
@@ -191,9 +223,11 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.AdminExit);
+            this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.Wheat;
             this.Name = "AdminEditChef";
             this.Size = new System.Drawing.Size(1650, 900);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,5 +249,6 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ListBox listBoxUsers;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
