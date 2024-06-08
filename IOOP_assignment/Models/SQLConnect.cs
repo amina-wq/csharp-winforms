@@ -16,11 +16,6 @@ namespace IOOP_assignment.Models
             this.connectionString = "Data Source=localhost;Initial Catalog=ioop;Integrated Security=True;TrustServerCertificate=True";
         }
 
-        public SQLConnect(string connectionString)
-        {
-            this.connectionString = connectionString;
-        }
-
         public SqlConnection GetConnection()
         {
             return new SqlConnection(connectionString);
