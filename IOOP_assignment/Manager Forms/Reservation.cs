@@ -20,7 +20,7 @@ namespace IOOP_assignment.Manager_Forms
         }
        
         
-        private void button1_Click(object sender, EventArgs e) 
+        private void button1_Click(object sender, EventArgs e) // button1_Click = btnReservAdd //
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True;Encrypt=False");
             con.Open();
@@ -43,7 +43,7 @@ namespace IOOP_assignment.Manager_Forms
             MessageBox.Show("Succesfully Added!");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // button2_Click = btnReservEdit // 
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True;Encrypt=False");
             con.Open();
@@ -66,7 +66,7 @@ namespace IOOP_assignment.Manager_Forms
             MessageBox.Show("Succesfully Updated!");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // button3_Click = btnReservDelete // 
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True;Encrypt=False");
             con.Open();
@@ -85,7 +85,7 @@ namespace IOOP_assignment.Manager_Forms
             MessageBox.Show("Succesfully Deleted!");
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) // button4_Click = btnReservSearch //
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True;Encrypt=False");
             con.Open();

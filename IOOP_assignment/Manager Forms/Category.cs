@@ -18,10 +18,9 @@ namespace IOOP_assignment.Manager_Forms
         {
             InitializeComponent();
         }
-        bool _Dropdown = true;
-        public static bool IsHidden { get; private set; }
+        
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // button1_Click = btnCategoryAdd // 
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True");
             con.Open();
@@ -50,7 +49,7 @@ namespace IOOP_assignment.Manager_Forms
         }
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)  // button2_Click = btnCategoryEdit // 
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True");
             con.Open();
@@ -73,13 +72,13 @@ namespace IOOP_assignment.Manager_Forms
             MessageBox.Show("Succesfully Updated!");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // button3_Click = btnCategoryDelete // 
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True");
             con.Open();
 
             SqlCommand cmd = new SqlCommand("DELETE ItemProduct WHERE ItemID=@ItemID", con);
-            cmd.Parameters.AddWithValue("@ItemID", int.Parse(txtboxItemID.Text));
+            cmd.Parameters.AddWithValue("@ItemID", txtboxItemID.Text);
             cmd.ExecuteNonQuery();
             con.Close();
 
@@ -103,51 +102,22 @@ namespace IOOP_assignment.Manager_Forms
             dataGridView1.DataSource = dt;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) // button4_Click = btnCategorySearch //
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True");
             con.Open();
 
             SqlCommand cmd = new SqlCommand("SELECT * FROM ItemProduct WHERE ItemID=@ItemID", con);
-            cmd.Parameters.AddWithValue("@ItemID", int.Parse(txtboxItemID.Text));
+            cmd.Parameters.AddWithValue("@ItemID", txtboxItemID.Text);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if(_Dropdown == true)
-            {
-                Dropdownlist.Height += 30;
-                if (Dropdownlist.Height < 300) return;
-                timer1.Stop();
-                _Dropdown = false;
+        
 
-            }
-            else
-            {
-                {
-                    Dropdownlist.Height -= 30;
-                    if (Dropdownlist.Height > 10) return;
-                    timer1.Stop();
-                    _Dropdown = true;
-
-                }
-
-            }
-        }
-
-        private void Dropdown_Click(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
-
-        private void Dropdownlist_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 
 }   
