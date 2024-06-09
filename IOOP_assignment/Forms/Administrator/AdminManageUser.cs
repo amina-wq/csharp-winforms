@@ -392,6 +392,7 @@ namespace IOOP_assignment.Forms
         {
             this.Hide();
             LoginForm li = new LoginForm();
+            li.ShowDialog();
             li.Show();
         }
 

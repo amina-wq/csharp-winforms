@@ -113,7 +113,6 @@
             this.Controls.Add(this.ManageUserOpen);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDashboard";
             this.Text = "AdminDashboard";
             this.ResumeLayout(false);

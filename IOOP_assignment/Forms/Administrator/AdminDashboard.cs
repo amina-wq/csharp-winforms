@@ -12,6 +12,19 @@ namespace IOOP_assignment.Forms
 {
     public partial class AdminDashboard : BorderlessForm
     {
+        private static AdminDashboard instance;
+
+        public static AdminDashboard Instance
+        {
+            get
+            {
+                if (instance == null || instance.IsDisposed)
+                {
+                    instance = new AdminDashboard();
+                }
+                return instance;
+            }
+        }
         public AdminDashboard()
         {
             InitializeComponent();
@@ -20,8 +33,7 @@ namespace IOOP_assignment.Forms
         private void AdminDashboardLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LoginForm li = new LoginForm();
-            li.Show();
+            LoginForm.Instance.Show();
         }
 
         private void ManageUserOpen_Click(object sender, EventArgs e)

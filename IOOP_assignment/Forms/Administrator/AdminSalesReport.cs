@@ -290,7 +290,6 @@ namespace IOOP_assignment.Forms
 
         private void AdminExit_Click(object sender, EventArgs e)
         {
-
             AdminDashboard ad = new AdminDashboard();
             this.Close();
             ad.Visible = true;
@@ -321,6 +320,7 @@ namespace IOOP_assignment.Forms
         {
             this.Hide();
             LoginForm li = new LoginForm();
+            li.ShowDialog();
             li.Show();
         }
 
