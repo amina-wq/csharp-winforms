@@ -221,7 +221,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "AdminEditCustomer";
             this.Size = new System.Drawing.Size(1650, 900);
-            this.Load += new System.EventHandler(this.AdminEditCustomer_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

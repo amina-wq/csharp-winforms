@@ -27,6 +27,7 @@ namespace IOOP_assignment.Core
             return Regex.IsMatch(password, @"^(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$");
         }
     }
+
     public static class EmailValidator
     {
         public static bool IsValidEmail(string email)

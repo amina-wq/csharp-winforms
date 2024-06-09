@@ -22,7 +22,6 @@ namespace IOOP_assignment.Forms
             this.Hide();
             LoginForm li = new LoginForm();
             li.Show();
-
         }
 
         private void ManageUserOpen_Click(object sender, EventArgs e)
@@ -51,11 +50,6 @@ namespace IOOP_assignment.Forms
             this.Hide();
             AdminFeedback fb = new AdminFeedback();
             fb.Show();
-        }
-
-        private void AdminDashboard_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

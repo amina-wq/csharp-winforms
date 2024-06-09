@@ -21,6 +21,7 @@ namespace IOOP_assignment.Forms
             InitializeComponent();
             LoadCustomers();
         }
+
         public class ListItem
         {
             public string DisplayText { get; set; }
@@ -87,7 +88,6 @@ namespace IOOP_assignment.Forms
                 listBoxSearch.Items.Clear();
             }
         }
-
 
         private void listBoxSearch_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -162,7 +162,9 @@ namespace IOOP_assignment.Forms
 
         private void AdminLogOut_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            LoginForm li = new LoginForm();
+            li.Show();
         }
 
         private void btnAdminDashboard_Click(object sender, EventArgs e)
@@ -198,16 +200,6 @@ namespace IOOP_assignment.Forms
             AdminFeedback fb = new AdminFeedback();
             this.Close();
             fb.Show();
-        }
-
-        private void AdminFeedback_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewFeedback_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

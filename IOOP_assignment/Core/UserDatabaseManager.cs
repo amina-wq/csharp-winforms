@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IOOP_assignment.Models;
 
 namespace IOOP_assignment.Core
 {
@@ -19,14 +20,12 @@ namespace IOOP_assignment.Core
 
         public static string GetUserEmail(string username)
         {
-            // Check if connection string is initialized
             if (string.IsNullOrEmpty(connectionString))
             {
                 MessageBox.Show("Connection string is not initialized.");
                 return null;
             }
 
-            // Retrieve the email of the user from the database using their username
             string query = "SELECT Email FROM [User] WHERE UserName = @Username";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -55,20 +54,6 @@ namespace IOOP_assignment.Core
             }
         }
 
-        public static bool IsAdminWithUuid4Exists()
-        {
-            string query = "SELECT COUNT(*) FROM [User] WHERE UserID = @UserID";
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@UserID", new Guid("00000000-0000-0000-0000-000000000004"));
-                connection.Open();
-                int count = (int)command.ExecuteScalar();
-                return count > 0;
-            }
-        }
-
-        //XCheck for duplicate Username
         public static bool IsUsernameDuplicate(string username)
         {
             string query = "SELECT COUNT(*) FROM [User] WHERE UserName = @UserName";
@@ -82,7 +67,6 @@ namespace IOOP_assignment.Core
             }
         }
         
-        //XCheck for duplicate email
         public static bool IsEmailDuplicate(string email)
         {
             string query = "SELECT COUNT(*) FROM [User] WHERE Email = @Email";
@@ -96,14 +80,13 @@ namespace IOOP_assignment.Core
             }
         }
 
-        //Check for over 2 admin
         public static bool IsAdminDuplicate()
         {
             string query = "SELECT COUNT(*) FROM [User] WHERE RoleID = @RoleID";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@RoleID", new Guid("10000000-0000-1000-0000-000000000004"));
+                command.Parameters.AddWithValue("@RoleID", RoleUtility.ToUUID(Role.Administrator));
                 connection.Open();
                 int count = (int)command.ExecuteScalar();
                 return count >= 2;

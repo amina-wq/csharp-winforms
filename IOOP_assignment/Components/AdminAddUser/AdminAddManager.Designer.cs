@@ -98,7 +98,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(340, 26);
             this.txtUsername.TabIndex = 31;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -112,7 +111,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(340, 26);
             this.txtEmail.TabIndex = 33;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // btnAddManager
             // 
@@ -143,7 +141,6 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(340, 26);
             this.txtPassword.TabIndex = 36;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // panel1
             // 
@@ -173,7 +170,6 @@
             this.ForeColor = System.Drawing.Color.Wheat;
             this.Name = "AdminAddManager";
             this.Size = new System.Drawing.Size(1650, 850);
-            this.Load += new System.EventHandler(this.AdminAddManager_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

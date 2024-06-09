@@ -12,6 +12,7 @@ using System.Runtime.Remoting.Contexts;
 using IOOP_assignment.Core;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using System.Configuration;
 using IOOP_assignment.Models;
 
 namespace IOOP_assignment.Forms
@@ -118,26 +119,6 @@ namespace IOOP_assignment.Forms
         private void AdminExit_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminAddManager_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

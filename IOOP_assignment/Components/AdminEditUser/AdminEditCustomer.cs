@@ -17,8 +17,7 @@ namespace IOOP_assignment.Forms
 {
     public partial class AdminEditCustomer : UserControl
     {
-        private string connectionString =
-            ConfigurationManager.ConnectionStrings["ioop"].ToString();
+        private string connectionString = ConfigurationManager.ConnectionStrings["ioop"].ToString();
         private List<string> allUsernames = new List<string>();
         public AdminEditCustomer()
         {
@@ -302,11 +301,6 @@ namespace IOOP_assignment.Forms
             listBoxUsers.Items.Clear();
             var filteredUsernames = allUsernames.Where(u => u.ToLower().Contains(searchText)).ToArray();
             listBoxUsers.Items.AddRange(filteredUsernames);
-        }
-
-        private void AdminEditCustomer_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

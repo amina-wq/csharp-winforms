@@ -281,34 +281,6 @@ namespace IOOP_assignment.Forms
             listBoxSort.Items.Add("Total Amount");
         }
 
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         bool _adminDropDown = false;
 
         private void AdmimDropDown_Click(object sender, EventArgs e)
@@ -347,7 +319,9 @@ namespace IOOP_assignment.Forms
 
         private void AdminLogOut_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            LoginForm li = new LoginForm();
+            li.Show();
         }
 
         private void btnAdminDashboard_Click(object sender, EventArgs e)

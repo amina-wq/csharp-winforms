@@ -17,8 +17,7 @@ namespace IOOP_assignment.Forms
 {
     public partial class AdminEditChef : UserControl
     {
-        private string connectionString =
-            ConfigurationManager.ConnectionStrings["ioop"].ToString();
+        private string connectionString = ConfigurationManager.ConnectionStrings["ioop"].ToString();
         private List<string> allUsernames = new List<string>();
         public AdminEditChef()
         {

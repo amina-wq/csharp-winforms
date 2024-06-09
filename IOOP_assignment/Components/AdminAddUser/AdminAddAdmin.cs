@@ -120,25 +120,5 @@ namespace IOOP_assignment.Forms.AdminAddUser
         {
             this.Visible = false;
         }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminAddAdmin_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

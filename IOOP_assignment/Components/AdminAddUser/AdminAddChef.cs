@@ -114,31 +114,11 @@ namespace IOOP_assignment.Forms
             txtUsername.Clear();
             txtEmail.Clear();
             txtPassword.Clear();
-        }
 
+        }
         private void AdminExit_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminAddChef_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

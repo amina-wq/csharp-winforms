@@ -59,7 +59,6 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(340, 26);
             this.txtPassword.TabIndex = 52;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // lblPassword
             // 
@@ -91,7 +90,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(340, 26);
             this.txtEmail.TabIndex = 49;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtUsername
             // 
@@ -99,7 +97,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(340, 26);
             this.txtUsername.TabIndex = 48;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // lblEmail
             // 
@@ -163,7 +160,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "AdminAddChef";
             this.Size = new System.Drawing.Size(1650, 850);
-            this.Load += new System.EventHandler(this.AdminAddChef_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

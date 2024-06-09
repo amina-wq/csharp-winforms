@@ -269,7 +269,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminFeedback";
             this.Text = "AdminFeedback";
-            this.Load += new System.EventHandler(this.AdminFeedback_Load);
             this.MenuPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.feedbackBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ioopDataSet)).EndInit();
