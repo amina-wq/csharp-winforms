@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment.Forms
 {
-    public partial class AdminSalesReport : Form
+    public partial class AdminSalesReport : BorderlessForm
     {
         private string connectionString =
             ConfigurationManager.ConnectionStrings["ioop"].ToString();

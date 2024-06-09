@@ -15,7 +15,7 @@ namespace IOOP_assignment.Forms
 {
     internal partial class LoginForm : BorderlessForm
     {
-        public User UserData { get; set; }
+        public Models.User UserData { get; set; }
         public UserRepository _userRepository;
 
         public LoginForm()
@@ -30,8 +30,21 @@ namespace IOOP_assignment.Forms
             try
             {
                 UserData = _userRepository.Login(email: emailTextBox.Text, password: passwordTextBox.Text);
-                CustomerHomePage customerHomePage = new CustomerHomePage(UserData as Customer);
-                customerHomePage.Show();
+                switch (UserData.UserRole)
+                {
+                    case Role.Customer:
+                        CustomerHomePage customerHomePage = new CustomerHomePage(UserData as Customer);
+                        customerHomePage.Show();
+                        break;
+                    case Role.Administrator:
+                        AdminDashboard adminHomePage = new AdminDashboard();
+                        adminHomePage.Show();
+                        break;
+                    case Role.Chef:
+                        break;
+                    case Role.Manager:
+                        break;
+                } 
             }
             catch
             {

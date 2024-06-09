@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment.Forms
 {
-    public partial class AdminFeedback : Form
+    public partial class AdminFeedback : BorderlessForm
     {
         private string connectionString =
             ConfigurationManager.ConnectionStrings["ioop"].ToString();
@@ -103,7 +103,7 @@ namespace IOOP_assignment.Forms
                 SELECT 
                     [User].UserName AS UserName, 
                     [User].Email AS Email,
-                    Feedback.FeedbackDateTime AS FeedbackDateTime, 
+                    Feedback.FeedbakcDateTime AS FeedbackDateTime, 
                     Feedback.FeedbackMessage AS FeedbackMessage
                 FROM 
                     [Feedback] 

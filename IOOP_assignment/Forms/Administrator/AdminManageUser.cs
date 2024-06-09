@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment.Forms
 {
-    public partial class AdminManageUser : Form
+    public partial class AdminManageUser : BorderlessForm
     {
         public readonly Timer panelTimer = new Timer();
         private bool isMouseOverAddUserPanel = false;

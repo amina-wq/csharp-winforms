@@ -52,9 +52,10 @@
             // 
             this.MAEditUser.BackColor = System.Drawing.Color.Wheat;
             this.MAEditUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MAEditUser.Location = new System.Drawing.Point(690, 485);
+            this.MAEditUser.Location = new System.Drawing.Point(613, 388);
+            this.MAEditUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MAEditUser.Name = "MAEditUser";
-            this.MAEditUser.Size = new System.Drawing.Size(255, 94);
+            this.MAEditUser.Size = new System.Drawing.Size(227, 75);
             this.MAEditUser.TabIndex = 33;
             this.MAEditUser.Text = "Edit User";
             this.MAEditUser.UseVisualStyleBackColor = false;
@@ -65,9 +66,9 @@
             this.lblManageAccount.AutoSize = true;
             this.lblManageAccount.BackColor = System.Drawing.Color.Transparent;
             this.lblManageAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblManageAccount.Location = new System.Drawing.Point(637, 299);
+            this.lblManageAccount.Location = new System.Drawing.Point(566, 239);
             this.lblManageAccount.Name = "lblManageAccount";
-            this.lblManageAccount.Size = new System.Drawing.Size(400, 55);
+            this.lblManageAccount.Size = new System.Drawing.Size(335, 46);
             this.lblManageAccount.TabIndex = 31;
             this.lblManageAccount.Text = "Manage Account";
             // 
@@ -76,9 +77,10 @@
             this.MAAddUser.BackColor = System.Drawing.Color.Wheat;
             this.MAAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MAAddUser.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MAAddUser.Location = new System.Drawing.Point(690, 372);
+            this.MAAddUser.Location = new System.Drawing.Point(613, 298);
+            this.MAAddUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MAAddUser.Name = "MAAddUser";
-            this.MAAddUser.Size = new System.Drawing.Size(255, 94);
+            this.MAAddUser.Size = new System.Drawing.Size(227, 75);
             this.MAAddUser.TabIndex = 32;
             this.MAAddUser.Text = "Add User";
             this.MAAddUser.UseVisualStyleBackColor = false;
@@ -87,9 +89,10 @@
             // AdminExit
             // 
             this.AdminExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminExit.Location = new System.Drawing.Point(1582, 15);
+            this.AdminExit.Location = new System.Drawing.Point(1406, 12);
+            this.AdminExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdminExit.Name = "AdminExit";
-            this.AdminExit.Size = new System.Drawing.Size(60, 60);
+            this.AdminExit.Size = new System.Drawing.Size(53, 48);
             this.AdminExit.TabIndex = 34;
             this.AdminExit.Text = "X";
             this.AdminExit.UseVisualStyleBackColor = true;
@@ -104,18 +107,20 @@
             this.MenuPanel.Controls.Add(this.btnSalesReport);
             this.MenuPanel.Controls.Add(this.btnManageUser);
             this.MenuPanel.Controls.Add(this.btnManageAccount);
-            this.MenuPanel.Location = new System.Drawing.Point(12, 96);
+            this.MenuPanel.Location = new System.Drawing.Point(11, 77);
+            this.MenuPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(331, 10);
+            this.MenuPanel.Size = new System.Drawing.Size(294, 8);
             this.MenuPanel.TabIndex = 36;
             this.MenuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuPanel_Paint);
             // 
             // btnAdminDashboard
             // 
             this.btnAdminDashboard.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.btnAdminDashboard.Location = new System.Drawing.Point(21, 563);
+            this.btnAdminDashboard.Location = new System.Drawing.Point(19, 450);
+            this.btnAdminDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdminDashboard.Name = "btnAdminDashboard";
-            this.btnAdminDashboard.Size = new System.Drawing.Size(271, 106);
+            this.btnAdminDashboard.Size = new System.Drawing.Size(241, 85);
             this.btnAdminDashboard.TabIndex = 6;
             this.btnAdminDashboard.Text = "Admin Dashboard";
             this.btnAdminDashboard.UseVisualStyleBackColor = true;
@@ -124,9 +129,10 @@
             // AdminLogOut
             // 
             this.AdminLogOut.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.AdminLogOut.Location = new System.Drawing.Point(21, 698);
+            this.AdminLogOut.Location = new System.Drawing.Point(19, 558);
+            this.AdminLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdminLogOut.Name = "AdminLogOut";
-            this.AdminLogOut.Size = new System.Drawing.Size(271, 106);
+            this.AdminLogOut.Size = new System.Drawing.Size(241, 85);
             this.AdminLogOut.TabIndex = 5;
             this.AdminLogOut.Text = "Log Out";
             this.AdminLogOut.UseVisualStyleBackColor = true;
@@ -135,9 +141,10 @@
             // btnFeedback
             // 
             this.btnFeedback.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.btnFeedback.Location = new System.Drawing.Point(21, 277);
+            this.btnFeedback.Location = new System.Drawing.Point(19, 222);
+            this.btnFeedback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(271, 106);
+            this.btnFeedback.Size = new System.Drawing.Size(241, 85);
             this.btnFeedback.TabIndex = 4;
             this.btnFeedback.Text = "Feedback";
             this.btnFeedback.UseVisualStyleBackColor = true;
@@ -146,9 +153,10 @@
             // btnSalesReport
             // 
             this.btnSalesReport.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.btnSalesReport.Location = new System.Drawing.Point(21, 420);
+            this.btnSalesReport.Location = new System.Drawing.Point(19, 336);
+            this.btnSalesReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalesReport.Name = "btnSalesReport";
-            this.btnSalesReport.Size = new System.Drawing.Size(271, 106);
+            this.btnSalesReport.Size = new System.Drawing.Size(241, 85);
             this.btnSalesReport.TabIndex = 3;
             this.btnSalesReport.Text = "Sales Report";
             this.btnSalesReport.UseVisualStyleBackColor = true;
@@ -157,9 +165,10 @@
             // btnManageUser
             // 
             this.btnManageUser.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.btnManageUser.Location = new System.Drawing.Point(21, 22);
+            this.btnManageUser.Location = new System.Drawing.Point(19, 18);
+            this.btnManageUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageUser.Name = "btnManageUser";
-            this.btnManageUser.Size = new System.Drawing.Size(271, 106);
+            this.btnManageUser.Size = new System.Drawing.Size(241, 85);
             this.btnManageUser.TabIndex = 1;
             this.btnManageUser.Text = "Manage User";
             this.btnManageUser.UseVisualStyleBackColor = true;
@@ -168,9 +177,10 @@
             // btnManageAccount
             // 
             this.btnManageAccount.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageAccount.Location = new System.Drawing.Point(21, 146);
+            this.btnManageAccount.Location = new System.Drawing.Point(19, 117);
+            this.btnManageAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageAccount.Name = "btnManageAccount";
-            this.btnManageAccount.Size = new System.Drawing.Size(271, 106);
+            this.btnManageAccount.Size = new System.Drawing.Size(241, 85);
             this.btnManageAccount.TabIndex = 2;
             this.btnManageAccount.Text = "Manage Account";
             this.btnManageAccount.UseVisualStyleBackColor = true;
@@ -180,9 +190,10 @@
             // 
             this.AdmimDropDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdmimDropDown.BackgroundImage")));
             this.AdmimDropDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AdmimDropDown.Location = new System.Drawing.Point(12, 8);
+            this.AdmimDropDown.Location = new System.Drawing.Point(11, 6);
+            this.AdmimDropDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdmimDropDown.Name = "AdmimDropDown";
-            this.AdmimDropDown.Size = new System.Drawing.Size(60, 60);
+            this.AdmimDropDown.Size = new System.Drawing.Size(53, 48);
             this.AdmimDropDown.TabIndex = 35;
             this.AdmimDropDown.UseVisualStyleBackColor = true;
             this.AdmimDropDown.Click += new System.EventHandler(this.AdmimDropDown_Click);
@@ -196,25 +207,26 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Controls.Add(this.AdminExit);
-            this.panel1.Location = new System.Drawing.Point(-4, -3);
+            this.panel1.Location = new System.Drawing.Point(-4, -2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1682, 93);
+            this.panel1.Size = new System.Drawing.Size(1495, 74);
             this.panel1.TabIndex = 45;
             // 
             // AdminManageAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1650, 900);
+            this.ClientSize = new System.Drawing.Size(1467, 720);
             this.Controls.Add(this.MenuPanel);
             this.Controls.Add(this.AdmimDropDown);
             this.Controls.Add(this.MAEditUser);
             this.Controls.Add(this.lblManageAccount);
             this.Controls.Add(this.MAAddUser);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminManageAccount";
             this.Text = "AdminManageAccount";
             this.MenuPanel.ResumeLayout(false);

@@ -17,7 +17,7 @@ using IOOP_assignment.Models;
 
 namespace IOOP_assignment.Forms
 {
-    public partial class AdminManageAccount : Form
+    public partial class AdminManageAccount : BorderlessForm
     {
         private AdminAddAdmin adminAddAdmin;
         private AdminEditAdmin adminEditAdmin;

@@ -19,11 +19,11 @@ namespace IOOP_assignment.Forms
         // Remove after merging
         static List<Role> NavBarEnabledRoles = new List<Role>() { Role.Customer };
 
-        public User UserData { get; set; }
+        public Models.User UserData { get; set; }
         public UserRepository _userRepository;
         private CustomerNavBar _customerNavBar;
 
-        public UpdateProfile(User user)
+        public UpdateProfile(Models.User user)
         {
             DBManager database = new DBManager(ConfigurationManager.ConnectionStrings["ioop"].ToString());
             _userRepository = new UserRepository(database);

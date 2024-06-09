@@ -20,9 +20,9 @@ namespace IOOP_assignment.Core
             _database = database;
         }
 
-        public List<User> GetUsers()
+        public List<Models.User> GetUsers()
         {
-            List<User> users = new List<User>();
+            List<Models.User> users = new List<Models.User>();
             
             using (SqlConnection con = _database.GetConnection())
             {
@@ -34,7 +34,7 @@ namespace IOOP_assignment.Core
                 {
                     while (rd.Read())
                     {
-                        users.Add(User.FromDB(rd));
+                        users.Add(Models.User.FromDB(rd));
                     }
                 }
             }
@@ -69,9 +69,9 @@ namespace IOOP_assignment.Core
             }
         }
 
-        public User Login(string email, string password)
+        public Models.User Login(string email, string password)
         {
-            User user = null;
+            Models.User user = null;
 
             using (SqlConnection con = _database.GetConnection())
             {
@@ -94,7 +94,7 @@ namespace IOOP_assignment.Core
                     {
                         throw new Exception("Invalid email or password");
                     }
-                    user = User.FromDB(rd);
+                    user = Models.User.FromDB(rd);
                 }
             }
 
@@ -119,7 +119,7 @@ namespace IOOP_assignment.Core
 
         }
 
-        public User AddUser(string userName, string email, string password, Role role)
+        public Models.User AddUser(string userName, string email, string password, Role role)
         {
             Guid userId = Guid.NewGuid();
 
@@ -143,7 +143,7 @@ namespace IOOP_assignment.Core
                 }
             }
 
-            return new User(userId, userName, email, password, role);
+            return new Models.User(userId, userName, email, password, role);
         }
     }
 }

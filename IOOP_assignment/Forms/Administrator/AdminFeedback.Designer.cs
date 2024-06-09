@@ -65,17 +65,19 @@
             this.MenuPanel.Controls.Add(this.btnSalesReport);
             this.MenuPanel.Controls.Add(this.btnManageUser);
             this.MenuPanel.Controls.Add(this.btnManageAccount);
-            this.MenuPanel.Location = new System.Drawing.Point(12, 90);
+            this.MenuPanel.Location = new System.Drawing.Point(11, 72);
+            this.MenuPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(331, 10);
+            this.MenuPanel.Size = new System.Drawing.Size(294, 8);
             this.MenuPanel.TabIndex = 38;
             // 
             // btnAdminDashboard
             // 
             this.btnAdminDashboard.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.btnAdminDashboard.Location = new System.Drawing.Point(21, 563);
+            this.btnAdminDashboard.Location = new System.Drawing.Point(19, 450);
+            this.btnAdminDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdminDashboard.Name = "btnAdminDashboard";
-            this.btnAdminDashboard.Size = new System.Drawing.Size(271, 106);
+            this.btnAdminDashboard.Size = new System.Drawing.Size(241, 85);
             this.btnAdminDashboard.TabIndex = 6;
             this.btnAdminDashboard.Text = "Admin Dashboard";
             this.btnAdminDashboard.UseVisualStyleBackColor = true;
@@ -84,9 +86,10 @@
             // AdminLogOut
             // 
             this.AdminLogOut.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.AdminLogOut.Location = new System.Drawing.Point(21, 698);
+            this.AdminLogOut.Location = new System.Drawing.Point(19, 558);
+            this.AdminLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdminLogOut.Name = "AdminLogOut";
-            this.AdminLogOut.Size = new System.Drawing.Size(271, 106);
+            this.AdminLogOut.Size = new System.Drawing.Size(241, 85);
             this.AdminLogOut.TabIndex = 5;
             this.AdminLogOut.Text = "Log Out";
             this.AdminLogOut.UseVisualStyleBackColor = true;
@@ -95,9 +98,10 @@
             // btnFeedback
             // 
             this.btnFeedback.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.btnFeedback.Location = new System.Drawing.Point(21, 277);
+            this.btnFeedback.Location = new System.Drawing.Point(19, 222);
+            this.btnFeedback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(271, 106);
+            this.btnFeedback.Size = new System.Drawing.Size(241, 85);
             this.btnFeedback.TabIndex = 4;
             this.btnFeedback.Text = "Feedback";
             this.btnFeedback.UseVisualStyleBackColor = true;
@@ -106,9 +110,10 @@
             // btnSalesReport
             // 
             this.btnSalesReport.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.btnSalesReport.Location = new System.Drawing.Point(21, 420);
+            this.btnSalesReport.Location = new System.Drawing.Point(19, 336);
+            this.btnSalesReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalesReport.Name = "btnSalesReport";
-            this.btnSalesReport.Size = new System.Drawing.Size(271, 106);
+            this.btnSalesReport.Size = new System.Drawing.Size(241, 85);
             this.btnSalesReport.TabIndex = 3;
             this.btnSalesReport.Text = "Sales Report";
             this.btnSalesReport.UseVisualStyleBackColor = true;
@@ -117,9 +122,10 @@
             // btnManageUser
             // 
             this.btnManageUser.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.btnManageUser.Location = new System.Drawing.Point(21, 22);
+            this.btnManageUser.Location = new System.Drawing.Point(19, 18);
+            this.btnManageUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageUser.Name = "btnManageUser";
-            this.btnManageUser.Size = new System.Drawing.Size(271, 106);
+            this.btnManageUser.Size = new System.Drawing.Size(241, 85);
             this.btnManageUser.TabIndex = 1;
             this.btnManageUser.Text = "Manage User";
             this.btnManageUser.UseVisualStyleBackColor = true;
@@ -128,9 +134,10 @@
             // btnManageAccount
             // 
             this.btnManageAccount.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageAccount.Location = new System.Drawing.Point(21, 146);
+            this.btnManageAccount.Location = new System.Drawing.Point(19, 117);
+            this.btnManageAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageAccount.Name = "btnManageAccount";
-            this.btnManageAccount.Size = new System.Drawing.Size(271, 106);
+            this.btnManageAccount.Size = new System.Drawing.Size(241, 85);
             this.btnManageAccount.TabIndex = 2;
             this.btnManageAccount.Text = "Manage Account";
             this.btnManageAccount.UseVisualStyleBackColor = true;
@@ -140,9 +147,10 @@
             // 
             this.AdmimDropDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdmimDropDown.BackgroundImage")));
             this.AdmimDropDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AdmimDropDown.Location = new System.Drawing.Point(12, 11);
+            this.AdmimDropDown.Location = new System.Drawing.Point(11, 9);
+            this.AdmimDropDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdmimDropDown.Name = "AdmimDropDown";
-            this.AdmimDropDown.Size = new System.Drawing.Size(60, 60);
+            this.AdmimDropDown.Size = new System.Drawing.Size(53, 48);
             this.AdmimDropDown.TabIndex = 37;
             this.AdmimDropDown.UseVisualStyleBackColor = true;
             this.AdmimDropDown.Click += new System.EventHandler(this.AdmimDropDown_Click);
@@ -150,9 +158,10 @@
             // AdminExit
             // 
             this.AdminExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminExit.Location = new System.Drawing.Point(1577, 21);
+            this.AdminExit.Location = new System.Drawing.Point(1402, 17);
+            this.AdminExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdminExit.Name = "AdminExit";
-            this.AdminExit.Size = new System.Drawing.Size(60, 60);
+            this.AdminExit.Size = new System.Drawing.Size(53, 48);
             this.AdminExit.TabIndex = 35;
             this.AdminExit.Text = "X";
             this.AdminExit.UseVisualStyleBackColor = true;
@@ -165,19 +174,21 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(750, 211);
+            this.txtSearch.Location = new System.Drawing.Point(667, 169);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(579, 26);
+            this.txtSearch.Size = new System.Drawing.Size(515, 22);
             this.txtSearch.TabIndex = 39;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // listBoxSearch
             // 
             this.listBoxSearch.FormattingEnabled = true;
-            this.listBoxSearch.ItemHeight = 20;
-            this.listBoxSearch.Location = new System.Drawing.Point(750, 243);
+            this.listBoxSearch.ItemHeight = 16;
+            this.listBoxSearch.Location = new System.Drawing.Point(667, 194);
+            this.listBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxSearch.Name = "listBoxSearch";
-            this.listBoxSearch.Size = new System.Drawing.Size(579, 104);
+            this.listBoxSearch.Size = new System.Drawing.Size(515, 84);
             this.listBoxSearch.TabIndex = 40;
             this.listBoxSearch.SelectedIndexChanged += new System.EventHandler(this.listBoxSearch_SelectedIndexChanged);
             // 
@@ -186,9 +197,9 @@
             this.lblViewFeedback.AutoSize = true;
             this.lblViewFeedback.BackColor = System.Drawing.Color.Transparent;
             this.lblViewFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViewFeedback.Location = new System.Drawing.Point(853, 150);
+            this.lblViewFeedback.Location = new System.Drawing.Point(758, 120);
             this.lblViewFeedback.Name = "lblViewFeedback";
-            this.lblViewFeedback.Size = new System.Drawing.Size(352, 55);
+            this.lblViewFeedback.Size = new System.Drawing.Size(294, 46);
             this.lblViewFeedback.TabIndex = 41;
             this.lblViewFeedback.Text = "ViewFeedback";
             // 
@@ -196,9 +207,9 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(642, 211);
+            this.lblSearch.Location = new System.Drawing.Point(571, 169);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(102, 29);
+            this.lblSearch.Size = new System.Drawing.Size(88, 25);
             this.lblSearch.TabIndex = 42;
             this.lblSearch.Text = "Search:";
             // 
@@ -221,30 +232,32 @@
             this.dataGridViewFeedback.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewFeedback.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewFeedback.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.dataGridViewFeedback.Location = new System.Drawing.Point(402, 354);
+            this.dataGridViewFeedback.Location = new System.Drawing.Point(357, 283);
+            this.dataGridViewFeedback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewFeedback.Name = "dataGridViewFeedback";
             this.dataGridViewFeedback.ReadOnly = true;
             this.dataGridViewFeedback.RowHeadersWidth = 62;
             this.dataGridViewFeedback.RowTemplate.Height = 28;
-            this.dataGridViewFeedback.Size = new System.Drawing.Size(1199, 515);
+            this.dataGridViewFeedback.Size = new System.Drawing.Size(1066, 412);
             this.dataGridViewFeedback.TabIndex = 43;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Controls.Add(this.AdminExit);
-            this.panel1.Location = new System.Drawing.Point(1, -9);
+            this.panel1.Location = new System.Drawing.Point(1, -7);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1675, 93);
+            this.panel1.Size = new System.Drawing.Size(1489, 74);
             this.panel1.TabIndex = 44;
             // 
             // AdminFeedback
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1650, 900);
+            this.ClientSize = new System.Drawing.Size(1467, 720);
             this.Controls.Add(this.dataGridViewFeedback);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.lblViewFeedback);
@@ -253,7 +266,7 @@
             this.Controls.Add(this.MenuPanel);
             this.Controls.Add(this.AdmimDropDown);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminFeedback";
             this.Text = "AdminFeedback";
             this.Load += new System.EventHandler(this.AdminFeedback_Load);

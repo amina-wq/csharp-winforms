@@ -68,9 +68,9 @@ namespace IOOP_assignment.Forms
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(639, 281);
+            this.label1.Location = new System.Drawing.Point(568, 225);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(375, 59);
+            this.label1.Size = new System.Drawing.Size(318, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Users";
             // 
@@ -79,9 +79,10 @@ namespace IOOP_assignment.Forms
             this.MUAddUser.BackColor = System.Drawing.Color.Wheat;
             this.MUAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MUAddUser.ForeColor = System.Drawing.Color.Black;
-            this.MUAddUser.Location = new System.Drawing.Point(709, 365);
+            this.MUAddUser.Location = new System.Drawing.Point(630, 292);
+            this.MUAddUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MUAddUser.Name = "MUAddUser";
-            this.MUAddUser.Size = new System.Drawing.Size(255, 94);
+            this.MUAddUser.Size = new System.Drawing.Size(227, 75);
             this.MUAddUser.TabIndex = 1;
             this.MUAddUser.Text = "Add User";
             this.MUAddUser.UseVisualStyleBackColor = false;
@@ -93,9 +94,10 @@ namespace IOOP_assignment.Forms
             this.AddUserPanel.Controls.Add(this.MUAddManager);
             this.AddUserPanel.Controls.Add(this.MUAddChef);
             this.AddUserPanel.Controls.Add(this.MUAddCustomer);
-            this.AddUserPanel.Location = new System.Drawing.Point(969, 354);
+            this.AddUserPanel.Location = new System.Drawing.Point(861, 283);
+            this.AddUserPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddUserPanel.Name = "AddUserPanel";
-            this.AddUserPanel.Size = new System.Drawing.Size(292, 10);
+            this.AddUserPanel.Size = new System.Drawing.Size(260, 8);
             this.AddUserPanel.TabIndex = 2;
             this.AddUserPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AddUserPanel_Paint);
             // 
@@ -103,9 +105,10 @@ namespace IOOP_assignment.Forms
             // 
             this.MUAddManager.BackColor = System.Drawing.Color.Wheat;
             this.MUAddManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MUAddManager.Location = new System.Drawing.Point(13, 11);
+            this.MUAddManager.Location = new System.Drawing.Point(12, 9);
+            this.MUAddManager.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MUAddManager.Name = "MUAddManager";
-            this.MUAddManager.Size = new System.Drawing.Size(264, 94);
+            this.MUAddManager.Size = new System.Drawing.Size(235, 75);
             this.MUAddManager.TabIndex = 4;
             this.MUAddManager.Text = "Add Manager";
             this.MUAddManager.UseVisualStyleBackColor = false;
@@ -115,9 +118,10 @@ namespace IOOP_assignment.Forms
             // 
             this.MUAddChef.BackColor = System.Drawing.Color.Wheat;
             this.MUAddChef.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MUAddChef.Location = new System.Drawing.Point(13, 102);
+            this.MUAddChef.Location = new System.Drawing.Point(12, 82);
+            this.MUAddChef.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MUAddChef.Name = "MUAddChef";
-            this.MUAddChef.Size = new System.Drawing.Size(264, 94);
+            this.MUAddChef.Size = new System.Drawing.Size(235, 75);
             this.MUAddChef.TabIndex = 3;
             this.MUAddChef.Text = "Add Chef";
             this.MUAddChef.UseVisualStyleBackColor = false;
@@ -127,9 +131,10 @@ namespace IOOP_assignment.Forms
             // 
             this.MUAddCustomer.BackColor = System.Drawing.Color.Wheat;
             this.MUAddCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MUAddCustomer.Location = new System.Drawing.Point(13, 190);
+            this.MUAddCustomer.Location = new System.Drawing.Point(12, 152);
+            this.MUAddCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MUAddCustomer.Name = "MUAddCustomer";
-            this.MUAddCustomer.Size = new System.Drawing.Size(264, 94);
+            this.MUAddCustomer.Size = new System.Drawing.Size(235, 75);
             this.MUAddCustomer.TabIndex = 2;
             this.MUAddCustomer.Text = "Add Customer";
             this.MUAddCustomer.UseVisualStyleBackColor = false;
@@ -144,9 +149,10 @@ namespace IOOP_assignment.Forms
             // 
             this.AdmimDropDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdmimDropDown.BackgroundImage")));
             this.AdmimDropDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AdmimDropDown.Location = new System.Drawing.Point(12, 6);
+            this.AdmimDropDown.Location = new System.Drawing.Point(11, 5);
+            this.AdmimDropDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdmimDropDown.Name = "AdmimDropDown";
-            this.AdmimDropDown.Size = new System.Drawing.Size(60, 60);
+            this.AdmimDropDown.Size = new System.Drawing.Size(53, 48);
             this.AdmimDropDown.TabIndex = 3;
             this.AdmimDropDown.UseVisualStyleBackColor = true;
             this.AdmimDropDown.Click += new System.EventHandler(this.AdmimDropDown_Click);
@@ -160,17 +166,19 @@ namespace IOOP_assignment.Forms
             this.MenuPanel.Controls.Add(this.btnSalesReport);
             this.MenuPanel.Controls.Add(this.btnManageUser);
             this.MenuPanel.Controls.Add(this.btnManageAccount);
-            this.MenuPanel.Location = new System.Drawing.Point(12, 72);
+            this.MenuPanel.Location = new System.Drawing.Point(11, 58);
+            this.MenuPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(331, 10);
+            this.MenuPanel.Size = new System.Drawing.Size(294, 8);
             this.MenuPanel.TabIndex = 4;
             // 
             // btnAdminDashboard
             // 
             this.btnAdminDashboard.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.btnAdminDashboard.Location = new System.Drawing.Point(21, 563);
+            this.btnAdminDashboard.Location = new System.Drawing.Point(19, 450);
+            this.btnAdminDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdminDashboard.Name = "btnAdminDashboard";
-            this.btnAdminDashboard.Size = new System.Drawing.Size(271, 106);
+            this.btnAdminDashboard.Size = new System.Drawing.Size(241, 85);
             this.btnAdminDashboard.TabIndex = 6;
             this.btnAdminDashboard.Text = "Admin Dashboard";
             this.btnAdminDashboard.UseVisualStyleBackColor = true;
@@ -179,9 +187,10 @@ namespace IOOP_assignment.Forms
             // AdminLogOut
             // 
             this.AdminLogOut.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.AdminLogOut.Location = new System.Drawing.Point(21, 698);
+            this.AdminLogOut.Location = new System.Drawing.Point(19, 558);
+            this.AdminLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdminLogOut.Name = "AdminLogOut";
-            this.AdminLogOut.Size = new System.Drawing.Size(271, 106);
+            this.AdminLogOut.Size = new System.Drawing.Size(241, 85);
             this.AdminLogOut.TabIndex = 5;
             this.AdminLogOut.Text = "Log Out";
             this.AdminLogOut.UseVisualStyleBackColor = true;
@@ -190,9 +199,10 @@ namespace IOOP_assignment.Forms
             // btnFeedback
             // 
             this.btnFeedback.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.btnFeedback.Location = new System.Drawing.Point(21, 277);
+            this.btnFeedback.Location = new System.Drawing.Point(19, 222);
+            this.btnFeedback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(271, 106);
+            this.btnFeedback.Size = new System.Drawing.Size(241, 85);
             this.btnFeedback.TabIndex = 4;
             this.btnFeedback.Text = "Feedback";
             this.btnFeedback.UseVisualStyleBackColor = true;
@@ -201,9 +211,10 @@ namespace IOOP_assignment.Forms
             // btnSalesReport
             // 
             this.btnSalesReport.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.btnSalesReport.Location = new System.Drawing.Point(21, 420);
+            this.btnSalesReport.Location = new System.Drawing.Point(19, 336);
+            this.btnSalesReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalesReport.Name = "btnSalesReport";
-            this.btnSalesReport.Size = new System.Drawing.Size(271, 106);
+            this.btnSalesReport.Size = new System.Drawing.Size(241, 85);
             this.btnSalesReport.TabIndex = 3;
             this.btnSalesReport.Text = "Sales Report";
             this.btnSalesReport.UseVisualStyleBackColor = true;
@@ -212,9 +223,10 @@ namespace IOOP_assignment.Forms
             // btnManageUser
             // 
             this.btnManageUser.Font = new System.Drawing.Font("Times New Roman", 16F);
-            this.btnManageUser.Location = new System.Drawing.Point(21, 22);
+            this.btnManageUser.Location = new System.Drawing.Point(19, 18);
+            this.btnManageUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageUser.Name = "btnManageUser";
-            this.btnManageUser.Size = new System.Drawing.Size(271, 106);
+            this.btnManageUser.Size = new System.Drawing.Size(241, 85);
             this.btnManageUser.TabIndex = 1;
             this.btnManageUser.Text = "Manage User";
             this.btnManageUser.UseVisualStyleBackColor = true;
@@ -223,9 +235,10 @@ namespace IOOP_assignment.Forms
             // btnManageAccount
             // 
             this.btnManageAccount.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageAccount.Location = new System.Drawing.Point(21, 146);
+            this.btnManageAccount.Location = new System.Drawing.Point(19, 117);
+            this.btnManageAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManageAccount.Name = "btnManageAccount";
-            this.btnManageAccount.Size = new System.Drawing.Size(271, 106);
+            this.btnManageAccount.Size = new System.Drawing.Size(241, 85);
             this.btnManageAccount.TabIndex = 2;
             this.btnManageAccount.Text = "Manage Account";
             this.btnManageAccount.UseVisualStyleBackColor = true;
@@ -240,9 +253,10 @@ namespace IOOP_assignment.Forms
             // 
             this.AdminExit.BackColor = System.Drawing.Color.Transparent;
             this.AdminExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminExit.Location = new System.Drawing.Point(1588, 24);
+            this.AdminExit.Location = new System.Drawing.Point(1412, 19);
+            this.AdminExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdminExit.Name = "AdminExit";
-            this.AdminExit.Size = new System.Drawing.Size(60, 60);
+            this.AdminExit.Size = new System.Drawing.Size(53, 48);
             this.AdminExit.TabIndex = 29;
             this.AdminExit.Text = "X";
             this.AdminExit.UseVisualStyleBackColor = false;
@@ -252,9 +266,10 @@ namespace IOOP_assignment.Forms
             // 
             this.MUEditUser.BackColor = System.Drawing.Color.Wheat;
             this.MUEditUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MUEditUser.Location = new System.Drawing.Point(709, 478);
+            this.MUEditUser.Location = new System.Drawing.Point(630, 382);
+            this.MUEditUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MUEditUser.Name = "MUEditUser";
-            this.MUEditUser.Size = new System.Drawing.Size(255, 94);
+            this.MUEditUser.Size = new System.Drawing.Size(227, 75);
             this.MUEditUser.TabIndex = 30;
             this.MUEditUser.Text = "Edit User";
             this.MUEditUser.UseVisualStyleBackColor = false;
@@ -266,9 +281,10 @@ namespace IOOP_assignment.Forms
             this.EditUserPanel.Controls.Add(this.MUEditManager);
             this.EditUserPanel.Controls.Add(this.MUEditChef);
             this.EditUserPanel.Controls.Add(this.MUEditCustomer);
-            this.EditUserPanel.Location = new System.Drawing.Point(969, 466);
+            this.EditUserPanel.Location = new System.Drawing.Point(861, 373);
+            this.EditUserPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EditUserPanel.Name = "EditUserPanel";
-            this.EditUserPanel.Size = new System.Drawing.Size(267, 10);
+            this.EditUserPanel.Size = new System.Drawing.Size(237, 8);
             this.EditUserPanel.TabIndex = 5;
             this.EditUserPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.EditUserPanel_Paint);
             // 
@@ -276,9 +292,10 @@ namespace IOOP_assignment.Forms
             // 
             this.MUEditManager.BackColor = System.Drawing.Color.Wheat;
             this.MUEditManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MUEditManager.Location = new System.Drawing.Point(3, 12);
+            this.MUEditManager.Location = new System.Drawing.Point(3, 10);
+            this.MUEditManager.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MUEditManager.Name = "MUEditManager";
-            this.MUEditManager.Size = new System.Drawing.Size(264, 94);
+            this.MUEditManager.Size = new System.Drawing.Size(235, 75);
             this.MUEditManager.TabIndex = 4;
             this.MUEditManager.Text = "Edit Manager";
             this.MUEditManager.UseVisualStyleBackColor = false;
@@ -288,9 +305,10 @@ namespace IOOP_assignment.Forms
             // 
             this.MUEditChef.BackColor = System.Drawing.Color.Wheat;
             this.MUEditChef.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MUEditChef.Location = new System.Drawing.Point(3, 101);
+            this.MUEditChef.Location = new System.Drawing.Point(3, 81);
+            this.MUEditChef.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MUEditChef.Name = "MUEditChef";
-            this.MUEditChef.Size = new System.Drawing.Size(264, 94);
+            this.MUEditChef.Size = new System.Drawing.Size(235, 75);
             this.MUEditChef.TabIndex = 3;
             this.MUEditChef.Text = "Edit Chef";
             this.MUEditChef.UseVisualStyleBackColor = false;
@@ -300,9 +318,10 @@ namespace IOOP_assignment.Forms
             // 
             this.MUEditCustomer.BackColor = System.Drawing.Color.Wheat;
             this.MUEditCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MUEditCustomer.Location = new System.Drawing.Point(3, 188);
+            this.MUEditCustomer.Location = new System.Drawing.Point(3, 150);
+            this.MUEditCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MUEditCustomer.Name = "MUEditCustomer";
-            this.MUEditCustomer.Size = new System.Drawing.Size(264, 94);
+            this.MUEditCustomer.Size = new System.Drawing.Size(235, 75);
             this.MUEditCustomer.TabIndex = 2;
             this.MUEditCustomer.Text = "Edit Customer";
             this.MUEditCustomer.UseVisualStyleBackColor = false;
@@ -317,18 +336,19 @@ namespace IOOP_assignment.Forms
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Controls.Add(this.AdminExit);
-            this.panel1.Location = new System.Drawing.Point(-10, -12);
+            this.panel1.Location = new System.Drawing.Point(-9, -10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1675, 84);
+            this.panel1.Size = new System.Drawing.Size(1489, 67);
             this.panel1.TabIndex = 31;
             // 
             // AdminManageUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1650, 900);
+            this.ClientSize = new System.Drawing.Size(1467, 720);
             this.Controls.Add(this.EditUserPanel);
             this.Controls.Add(this.MUEditUser);
             this.Controls.Add(this.MenuPanel);
@@ -337,7 +357,7 @@ namespace IOOP_assignment.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MUAddUser);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminManageUser";
             this.Text = "AdminManageUser";
             this.Load += new System.EventHandler(this.AdminManageUser_Load);

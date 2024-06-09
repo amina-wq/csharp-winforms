@@ -889,7 +889,7 @@ SELECT UserID, UserName, Email, Password, RoleID FROM [User] WHERE (UserID = @Us
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::IOOP_assignment.Properties.Settings.Default.ConnectionString;
+            this._connection.ConnectionString = global::IOOP_assignment.Properties.Settings.Default.ioopConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment.Forms
 {
-    public partial class AdminDashboard : Form
+    public partial class AdminDashboard : BorderlessForm
     {
         public AdminDashboard()
         {
