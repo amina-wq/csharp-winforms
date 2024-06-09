@@ -49,7 +49,7 @@ CREATE TABLE [dbo].[Reservation](
 	[CustomerID] [uniqueidentifier] NOT NULL,
 	[ReservationDateTime] [datetime] NOT NULL,
 	[ReservationType] [nvarchar](50) NOT NULL,
-	[ReservationDetails] [nvarchar](100) NULL,
+	[ReservationDetails] [nvarchar](3000) NULL,
  CONSTRAINT [PK_Reservations] PRIMARY KEY CLUSTERED 
 (
 	[ReservationID] ASC
@@ -67,7 +67,7 @@ GO
 CREATE TABLE [dbo].[Feedback](
 	[FeedbackID] [uniqueidentifier] NOT NULL,
 	[CustomerID] [uniqueidentifier] NOT NULL,
-	[FeedbackMessage] [nvarchar](100) NOT NULL,
+	[FeedbackMessage] [nvarchar](3000) NOT NULL,
 	[FeedbakcDateTime] [datetime] NOT NULL,
  CONSTRAINT [PK_Feedback] PRIMARY KEY CLUSTERED 
 (
@@ -110,6 +110,7 @@ CREATE TABLE [dbo].[MenuItem](
 	[ItemName] [nvarchar](50) NOT NULL,
 	[CategoryID] [uniqueidentifier] NOT NULL,
 	[Price] [decimal](10, 2) NOT NULL,
+	[Image] [nvarchar](MAX),
  CONSTRAINT [PK_MenuItems] PRIMARY KEY CLUSTERED 
 (
 	[ItemID] ASC

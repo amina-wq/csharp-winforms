@@ -33,9 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,40 +48,135 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\CustomerNavBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CustomerNavBar.Designer.cs">
+      <DependentUpon>CustomerNavBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\DBManager.cs" />
+    <Compile Include="Core\FeedbackRepository.cs" />
+    <Compile Include="Core\MenuRepository.cs" />
+    <Compile Include="Core\OrderRepository.cs" />
+    <Compile Include="Core\MenuItemsContainer.cs" />
+    <Compile Include="Core\ReservationRepository.cs" />
+    <Compile Include="Core\UserRepository.cs" />
+    <Compile Include="Forms\BorderlessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BorderlessForm.Designer.cs">
+      <DependentUpon>BorderlessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CartForm.Designer.cs">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerFeedback.Designer.cs">
+      <DependentUpon>CustomerFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerHomePage.Designer.cs">
+      <DependentUpon>CustomerHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerMenu.Designer.cs">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerOrders.Designer.cs">
+      <DependentUpon>CustomerOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerReservations.Designer.cs">
+      <DependentUpon>CustomerReservations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UpdateProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateProfile.Designer.cs">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Administrator.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Chef.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Core\DBManager.cs" />
+    <Compile Include="Models\Feedback.cs" />
+    <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\Manager.cs" />
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Components\CustomerNavBar.resx">
+      <DependentUpon>CustomerNavBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BorderlessForm.resx">
+      <DependentUpon>BorderlessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CartForm.resx">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerFeedback.resx">
+      <DependentUpon>CustomerFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerHomePage.resx">
+      <DependentUpon>CustomerHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerMenu.resx">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerOrders.resx">
+      <DependentUpon>CustomerOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerReservations.resx">
+      <DependentUpon>CustomerReservations.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateProfile.resx">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="ioop.ddl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -88,6 +186,32 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\128-1280406_view-user-icon-png-user-circle-icon-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurants-at-the-corners-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_button_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingCart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ioop img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ioop img1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updateProfileBackground.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
