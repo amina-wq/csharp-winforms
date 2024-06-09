@@ -39,7 +39,7 @@ namespace IOOP_assignment.Forms.AdminEditUser
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@RoleID", "10000000-0000-1000-0000-000000000004");
+                command.Parameters.AddWithValue("@RoleID", "2b1fa860-fabb-4d8e-850d-a4dfec450263");
 
                 try
                 {

@@ -30,7 +30,7 @@ namespace IOOP_assignment.Forms.AdminAddUser
                 (ConfigurationManager.ConnectionStrings["ioop"].ToString());
         }
 
-        private void InsertNewUser(Guid newUserId, Guid managerRoleId, string username, string email,
+        private void InsertNewUser(Guid newUserId, Guid adminRoleId, string username, string email,
             byte[] hashedPassword)
         {
             string connectionString =
@@ -42,7 +42,7 @@ namespace IOOP_assignment.Forms.AdminAddUser
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@UserID", newUserId);
-                command.Parameters.AddWithValue("@RoleID", managerRoleId);
+                command.Parameters.AddWithValue("@RoleID", adminRoleId);
                 command.Parameters.AddWithValue("@UserName", username);
                 command.Parameters.AddWithValue("@Email", email);
                 command.Parameters.AddWithValue("@Password", hashedPassword);
@@ -103,11 +103,11 @@ namespace IOOP_assignment.Forms.AdminAddUser
             }
 
             Guid newUserId = Guid.NewGuid();
-            Guid managerRoleId = RoleUtility.ToUUID(Role.Manager);
+            Guid adminRoleId = RoleUtility.ToUUID(Role.Administrator);
 
             byte[] hashedPassword = PasswordHasher.HashPassword(password);
 
-            InsertNewUser(newUserId, managerRoleId, username, email, hashedPassword);
+            InsertNewUser(newUserId, adminRoleId, username, email, hashedPassword);
 
             MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

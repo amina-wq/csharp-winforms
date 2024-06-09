@@ -37,6 +37,7 @@ namespace IOOP_assignment.Forms
                         customerHomePage.Show();
                         break;
                     case Role.Administrator:
+                        this.Hide();
                         AdminDashboard adminHomePage = new AdminDashboard();
                         adminHomePage.Show();
                         break;
@@ -55,7 +56,7 @@ namespace IOOP_assignment.Forms
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

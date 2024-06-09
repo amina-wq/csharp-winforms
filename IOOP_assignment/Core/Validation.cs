@@ -12,9 +12,9 @@ namespace IOOP_assignment.Core
     {
         public static byte[] HashPassword(string password)
         {
-            using (SHA256 sha256 = SHA256.Create())
+            using (MD5 md5 = MD5.Create())
             {
-                return sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return md5.ComputeHash(Encoding.UTF8.GetBytes(password));
             }
         }
     }

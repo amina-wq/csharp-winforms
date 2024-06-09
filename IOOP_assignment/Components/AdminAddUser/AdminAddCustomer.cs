@@ -30,7 +30,7 @@ namespace IOOP_assignment.Forms
                 (ConfigurationManager.ConnectionStrings["ioop"].ToString());
         }
 
-        private void InsertNewUser(Guid newUserId, Guid managerRoleId, string username, string email,
+        private void InsertNewUser(Guid newUserId, Guid customerRoleId, string username, string email,
             byte[] hashedPassword)
         {
             string connectionString =
@@ -42,7 +42,7 @@ namespace IOOP_assignment.Forms
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@UserID", newUserId);
-                command.Parameters.AddWithValue("@RoleID", managerRoleId);
+                command.Parameters.AddWithValue("@RoleID", customerRoleId);
                 command.Parameters.AddWithValue("@UserName", username);
                 command.Parameters.AddWithValue("@Email", email);
                 command.Parameters.AddWithValue("@Password", hashedPassword);

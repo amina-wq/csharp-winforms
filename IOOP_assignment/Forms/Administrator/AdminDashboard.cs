@@ -19,7 +19,10 @@ namespace IOOP_assignment.Forms
 
         private void AdminDashboardLogOut_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            LoginForm li = new LoginForm();
+            li.Show();
+
         }
 
         private void ManageUserOpen_Click(object sender, EventArgs e)
