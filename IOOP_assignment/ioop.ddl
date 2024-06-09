@@ -24,7 +24,7 @@ VALUES ('2b1fa860-fabb-4d8e-850d-a4dfec450263', 'Administrator'),
 ('f2c0795c-0aa5-489d-90f5-21a07d1deda9', 'Customer');
 
 
-CREATE TABLE [dbo].[User](
+CREATE TABLE [dbo].[Users](
 	[UserID] [uniqueidentifier] NOT NULL,
 	[UserName] [nvarchar](50) NOT NULL,
 	[Email] [nvarchar](50) NOT NULL,

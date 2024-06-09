@@ -17,22 +17,7 @@ namespace IOOP_assignment
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            /*
-            DBManager database = new DBManager(ConfigurationManager.ConnectionStrings["ioop"].ToString());
-            UserRepository userRepository = new UserRepository(database);
-            User user = userRepository.AddUser("admin", "admin@gmail.com", "admin", Role.Customer);
-            Application.Run(new CustomerMenu(new Customer(user.UserID, user.UserName, user.Email, user.Password)));
-            */
-
-            /*
-            DBManager database = new DBManager(ConfigurationManager.ConnectionStrings["ioop"].ToString());
-            UserRepository userRepository = new UserRepository(database);
-            Customer customer = userRepository.Login("admin@gmail.com", "admin") as Customer; 
-            */
             Application.Run(new LoginForm());
-
-
         }
     }
 }

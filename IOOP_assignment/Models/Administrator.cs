@@ -8,6 +8,8 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using IOOP_assignment.Models;
 
 namespace IOOP_assignment.Models
 {
@@ -16,25 +18,7 @@ namespace IOOP_assignment.Models
         public Administrator(Guid userID, string userName, string email, string password)
         : base(userID, userName, email, password, Role.Administrator)
         {
-            
-        }
-
-        public static User EditUser(User user)
-        {
-            return user;
-        }
-
-        public static User AddUser(string userName, string email, string password, Role role)
-        {
-            return new User(Guid.NewGuid(), userName, email, password, role);
-        }
-
-        public void DeleteUser(string userID)
-        {
 
         }
-
-        
-
     }
 }

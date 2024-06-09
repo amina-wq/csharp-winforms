@@ -71,7 +71,7 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(195, 32);
             this.emailTextBox.TabIndex = 2;
-            this.emailTextBox.Text = "admin@gmail.com";
+            this.emailTextBox.Text = "customer";
             // 
             // passwordTextBox
             // 
@@ -81,7 +81,7 @@
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(195, 32);
             this.passwordTextBox.TabIndex = 3;
-            this.passwordTextBox.Text = "admin";
+            this.passwordTextBox.Text = "customer";
             this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // loginButton
