@@ -100,7 +100,6 @@
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(265, 37);
             this.passwordTextBox.TabIndex = 11;
-            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // submitButton
             // 
