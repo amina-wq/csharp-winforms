@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IOOP_assignment.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,15 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace IOOP_assignment.Manager_Forms
 {
     public partial class FrmReservation : Form
+
+        
     {
         public FrmReservation()
         {
             InitializeComponent();
+           
         }
        
         
@@ -25,14 +28,14 @@ namespace IOOP_assignment.Manager_Forms
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True;Encrypt=False");
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("INSERT INTO ReservationInfo(ReservationID, ReservationType, ReservationDetails, CustomerID, BookingDate) VALUES (@ReservationID, @ReservationType, @ReservationDetails, @CustomerID, @BookingDate)", con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO ReservationInfo(ReservationID,ReservationType,ReservationDetails,CustomerID,BookingDate) VALUES (@ReservationID,@ReservationType,@ReservationDetails,@CustomerID,@BookingDate)", con);
             cmd.Parameters.AddWithValue("@ReservationID", txtboxReservID.Text);
             cmd.Parameters.AddWithValue("@ReservationType", cmboxReservType.Text);
             cmd.Parameters.AddWithValue("@ReservationDetails", cmboxReservDetails.Text);
             cmd.Parameters.AddWithValue("@CustomerID", txtboxCusID.Text);
             cmd.Parameters.AddWithValue("@BookingDate", DTPBookingDate.Value.ToString("MM/dd/yyyy"));
             cmd.ExecuteNonQuery();
-            con.Close();
+            
 
             txtboxReservID.Text = "";
             cmboxReservType.Text = "";
@@ -41,6 +44,10 @@ namespace IOOP_assignment.Manager_Forms
             DTPBookingDate.Text = "";
 
             MessageBox.Show("Succesfully Added!");
+            con.Close();
+            showdata();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e) // button2_Click = btnReservEdit // 
@@ -103,11 +110,35 @@ namespace IOOP_assignment.Manager_Forms
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True;Encrypt=False");
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("SELECT* FROM ReservationInfo", con);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM ReservationInfo" , con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm back = new LoginForm();
+            back.Show();
+        }
+
+        public void showdata()
+        {
+
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True;Encrypt=False");
+            
+
+            SqlDataAdapter adpt = new SqlDataAdapter("select * from ReservationInfo", con);
+
+            DataTable dt = new DataTable();
+
+            adpt.Fill(dt);
+            dataGridView1.DataSource  = dt;
+
+
         }
     }
 }

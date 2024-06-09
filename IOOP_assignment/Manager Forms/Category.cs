@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IOOP_assignment.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,7 +33,7 @@ namespace IOOP_assignment.Manager_Forms
             cmd.Parameters.AddWithValue("@CategoryID", txtboxCategoryID.Text);
             cmd.Parameters.AddWithValue("@CategoryName", txtboxCategoryName.Text);
             cmd.ExecuteNonQuery();
-            con.Close();
+            
 
             txtboxItemID.Text = "";
             txtboxItemName.Text = "";
@@ -41,6 +42,8 @@ namespace IOOP_assignment.Manager_Forms
             txtboxCategoryName.Text = "";
 
             MessageBox.Show("Succesfully Added!");
+            con.Close();
+            showdata();
 
 
 
@@ -89,7 +92,9 @@ namespace IOOP_assignment.Manager_Forms
             txtboxCategoryName.Text = "";
 
             MessageBox.Show("Succesfully Deleted!");
+
         }
+        
         private void FrmCategory_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True");
@@ -115,9 +120,29 @@ namespace IOOP_assignment.Manager_Forms
             dataGridView1.DataSource = dt;
         }
 
-        
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm back = new LoginForm();
+            back.Show();
 
-        
+        }
+        public void showdata()
+        {
+
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UIM3V3L;Initial Catalog=ItemDB;Integrated Security=True;Encrypt=False");
+
+
+            SqlDataAdapter adpt = new SqlDataAdapter("select * from ItemProduct", con);
+
+            DataTable dt = new DataTable();
+
+            adpt.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+
+        }
     }
+   
 
 }   

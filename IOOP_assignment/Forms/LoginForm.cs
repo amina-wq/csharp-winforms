@@ -23,6 +23,13 @@ namespace IOOP_assignment.Forms
             FrmCategory cg = new FrmCategory();
             this.Hide();
             cg.Show();
+
+            var newForm = new FrmCategory();
+            newForm.Show();
+            this.Hide();
+
+            
+
         }
 
         private void btnManageReserv_Click(object sender, EventArgs e)
@@ -30,6 +37,13 @@ namespace IOOP_assignment.Forms
             FrmReservation cg = new FrmReservation();
             this.Hide();
             cg.Show();
+
+            var nextForm = new FrmReservation();
+            nextForm.Show();
+            this.Hide();
+
+
+
         }
 
         private void btnViewProfile_Click(object sender, EventArgs e)
@@ -37,6 +51,15 @@ namespace IOOP_assignment.Forms
             FrmViewProfile cg = new FrmViewProfile();
             this.Hide();
             cg.Show();
+        }
+
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to Logout?", "Exit message", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReservation));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,12 +46,23 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnReservSearch = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(280, 22);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -81,7 +93,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(644, 323);
+            this.label1.Location = new System.Drawing.Point(508, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 18);
             this.label1.TabIndex = 6;
@@ -128,7 +140,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(574, 371);
+            this.label4.Location = new System.Drawing.Point(441, 74);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 18);
             this.label4.TabIndex = 10;
@@ -136,6 +148,7 @@
             // 
             // btnReservAdd
             // 
+            this.btnReservAdd.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnReservAdd.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservAdd.ForeColor = System.Drawing.Color.Black;
             this.btnReservAdd.Location = new System.Drawing.Point(140, 22);
@@ -143,11 +156,12 @@
             this.btnReservAdd.Size = new System.Drawing.Size(134, 55);
             this.btnReservAdd.TabIndex = 11;
             this.btnReservAdd.Text = "Add";
-            this.btnReservAdd.UseVisualStyleBackColor = true;
+            this.btnReservAdd.UseVisualStyleBackColor = false;
             this.btnReservAdd.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnReservEdit
             // 
+            this.btnReservEdit.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnReservEdit.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservEdit.ForeColor = System.Drawing.Color.Black;
             this.btnReservEdit.Location = new System.Drawing.Point(140, 92);
@@ -155,11 +169,12 @@
             this.btnReservEdit.Size = new System.Drawing.Size(134, 55);
             this.btnReservEdit.TabIndex = 12;
             this.btnReservEdit.Text = "Edit";
-            this.btnReservEdit.UseVisualStyleBackColor = true;
+            this.btnReservEdit.UseVisualStyleBackColor = false;
             this.btnReservEdit.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnReservDelete
             // 
+            this.btnReservDelete.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnReservDelete.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservDelete.ForeColor = System.Drawing.Color.Black;
             this.btnReservDelete.Location = new System.Drawing.Point(140, 162);
@@ -167,7 +182,7 @@
             this.btnReservDelete.Size = new System.Drawing.Size(134, 55);
             this.btnReservDelete.TabIndex = 13;
             this.btnReservDelete.Text = "Delete";
-            this.btnReservDelete.UseVisualStyleBackColor = true;
+            this.btnReservDelete.UseVisualStyleBackColor = false;
             this.btnReservDelete.Click += new System.EventHandler(this.button3_Click);
             // 
             // cmboxReservDetails
@@ -201,6 +216,7 @@
             // 
             // btnReservSearch
             // 
+            this.btnReservSearch.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnReservSearch.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservSearch.ForeColor = System.Drawing.Color.Black;
             this.btnReservSearch.Location = new System.Drawing.Point(140, 236);
@@ -208,7 +224,7 @@
             this.btnReservSearch.Size = new System.Drawing.Size(134, 55);
             this.btnReservSearch.TabIndex = 16;
             this.btnReservSearch.Text = "Search";
-            this.btnReservSearch.UseVisualStyleBackColor = true;
+            this.btnReservSearch.UseVisualStyleBackColor = false;
             this.btnReservSearch.Click += new System.EventHandler(this.button4_Click);
             // 
             // label6
@@ -222,13 +238,36 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "Reservation";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(140, 297);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(861, 221);
+            this.panel1.TabIndex = 18;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnBack.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.Black;
+            this.btnBack.Location = new System.Drawing.Point(0, 486);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(134, 46);
+            this.btnBack.TabIndex = 19;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // FrmReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1013, 494);
+            this.ClientSize = new System.Drawing.Size(1016, 544);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnReservSearch);
             this.Controls.Add(this.cmboxReservDetails);
@@ -236,21 +275,22 @@
             this.Controls.Add(this.btnReservDelete);
             this.Controls.Add(this.btnReservEdit);
             this.Controls.Add(this.btnReservAdd);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.DTPBookingDate);
             this.Controls.Add(this.cmboxReservType);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtboxCusID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtboxReservID);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmReservation";
             this.Text = "Reservation";
             this.Load += new System.EventHandler(this.FrmReservation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,5 +314,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnReservSearch;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

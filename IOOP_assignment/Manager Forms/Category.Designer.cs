@@ -46,6 +46,7 @@
             this.btnCategoryDelete = new System.Windows.Forms.Button();
             this.btnCategorySearch = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -163,46 +164,50 @@
             // 
             // btnCategoryAdd
             // 
+            this.btnCategoryAdd.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnCategoryAdd.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoryAdd.Location = new System.Drawing.Point(346, 507);
             this.btnCategoryAdd.Name = "btnCategoryAdd";
             this.btnCategoryAdd.Size = new System.Drawing.Size(126, 30);
             this.btnCategoryAdd.TabIndex = 11;
             this.btnCategoryAdd.Text = "Add";
-            this.btnCategoryAdd.UseVisualStyleBackColor = true;
+            this.btnCategoryAdd.UseVisualStyleBackColor = false;
             this.btnCategoryAdd.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCategoryEdit
             // 
+            this.btnCategoryEdit.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnCategoryEdit.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoryEdit.Location = new System.Drawing.Point(478, 507);
             this.btnCategoryEdit.Name = "btnCategoryEdit";
             this.btnCategoryEdit.Size = new System.Drawing.Size(126, 30);
             this.btnCategoryEdit.TabIndex = 12;
             this.btnCategoryEdit.Text = "Edit";
-            this.btnCategoryEdit.UseVisualStyleBackColor = true;
+            this.btnCategoryEdit.UseVisualStyleBackColor = false;
             this.btnCategoryEdit.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnCategoryDelete
             // 
+            this.btnCategoryDelete.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnCategoryDelete.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoryDelete.Location = new System.Drawing.Point(610, 507);
             this.btnCategoryDelete.Name = "btnCategoryDelete";
             this.btnCategoryDelete.Size = new System.Drawing.Size(126, 30);
             this.btnCategoryDelete.TabIndex = 13;
             this.btnCategoryDelete.Text = "Delete";
-            this.btnCategoryDelete.UseVisualStyleBackColor = true;
+            this.btnCategoryDelete.UseVisualStyleBackColor = false;
             this.btnCategoryDelete.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnCategorySearch
             // 
+            this.btnCategorySearch.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnCategorySearch.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategorySearch.Location = new System.Drawing.Point(742, 507);
             this.btnCategorySearch.Name = "btnCategorySearch";
             this.btnCategorySearch.Size = new System.Drawing.Size(126, 30);
             this.btnCategorySearch.TabIndex = 14;
             this.btnCategorySearch.Text = "Search";
-            this.btnCategorySearch.UseVisualStyleBackColor = true;
+            this.btnCategorySearch.UseVisualStyleBackColor = false;
             this.btnCategorySearch.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel1
@@ -211,8 +216,20 @@
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(138, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(832, 329);
+            this.panel1.Size = new System.Drawing.Size(832, 551);
             this.panel1.TabIndex = 2;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnBack.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(6, 518);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(126, 30);
+            this.btnBack.TabIndex = 15;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // FrmCategory
             // 
@@ -220,11 +237,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(982, 566);
+            this.ClientSize = new System.Drawing.Size(982, 560);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnCategorySearch);
             this.Controls.Add(this.btnCategoryDelete);
             this.Controls.Add(this.btnCategoryEdit);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCategoryAdd);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtboxItemID);
@@ -236,6 +253,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtboxItemName);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCategory";
             this.Text = "Category";
@@ -249,7 +267,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer1;
+        
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtboxItemID;
@@ -267,5 +285,6 @@
         private System.Windows.Forms.Button btnCategoryDelete;
         private System.Windows.Forms.Button btnCategorySearch;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

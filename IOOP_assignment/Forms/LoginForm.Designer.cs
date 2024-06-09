@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnLogout = new System.Windows.Forms.Button();
             this.btnViewProfile = new System.Windows.Forms.Button();
             this.btnManageReserv = new System.Windows.Forms.Button();
             this.btnManageCategory = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnLogout);
             this.panel1.Controls.Add(this.btnViewProfile);
             this.panel1.Controls.Add(this.btnManageReserv);
             this.panel1.Controls.Add(this.btnManageCategory);
@@ -51,50 +51,55 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(449, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(351, 450);
+            this.panel1.Size = new System.Drawing.Size(351, 442);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // BtnLogout
             // 
-            this.button1.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(230, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 37);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnLogout.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.BtnLogout.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogout.Location = new System.Drawing.Point(230, 3);
+            this.BtnLogout.Name = "BtnLogout";
+            this.BtnLogout.Size = new System.Drawing.Size(118, 37);
+            this.BtnLogout.TabIndex = 4;
+            this.BtnLogout.Text = "Logout";
+            this.BtnLogout.UseVisualStyleBackColor = false;
+            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
             // btnViewProfile
             // 
+            this.btnViewProfile.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnViewProfile.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewProfile.Location = new System.Drawing.Point(74, 309);
             this.btnViewProfile.Name = "btnViewProfile";
             this.btnViewProfile.Size = new System.Drawing.Size(204, 43);
             this.btnViewProfile.TabIndex = 3;
             this.btnViewProfile.Text = "View Profile";
-            this.btnViewProfile.UseVisualStyleBackColor = true;
+            this.btnViewProfile.UseVisualStyleBackColor = false;
             this.btnViewProfile.Click += new System.EventHandler(this.btnViewProfile_Click);
             // 
             // btnManageReserv
             // 
+            this.btnManageReserv.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnManageReserv.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageReserv.Location = new System.Drawing.Point(74, 238);
             this.btnManageReserv.Name = "btnManageReserv";
             this.btnManageReserv.Size = new System.Drawing.Size(204, 43);
             this.btnManageReserv.TabIndex = 2;
             this.btnManageReserv.Text = "Manage Reservation";
-            this.btnManageReserv.UseVisualStyleBackColor = true;
+            this.btnManageReserv.UseVisualStyleBackColor = false;
             this.btnManageReserv.Click += new System.EventHandler(this.btnManageReserv_Click);
             // 
             // btnManageCategory
             // 
+            this.btnManageCategory.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.btnManageCategory.Font = new System.Drawing.Font("Sylfaen", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageCategory.Location = new System.Drawing.Point(74, 166);
             this.btnManageCategory.Name = "btnManageCategory";
             this.btnManageCategory.Size = new System.Drawing.Size(204, 43);
             this.btnManageCategory.TabIndex = 1;
             this.btnManageCategory.Text = "Manage Category";
-            this.btnManageCategory.UseVisualStyleBackColor = true;
+            this.btnManageCategory.UseVisualStyleBackColor = false;
             this.btnManageCategory.Click += new System.EventHandler(this.btnManageCategory_Click);
             // 
             // label1
@@ -102,11 +107,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sylfaen", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(104, 95);
+            this.label1.Location = new System.Drawing.Point(17, 95);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 43);
+            this.label1.Size = new System.Drawing.Size(316, 43);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Manager";
+            this.label1.Text = "Manager Dashboard";
             // 
             // pictureBox1
             // 
@@ -122,7 +127,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 442);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -142,7 +147,7 @@
         private System.Windows.Forms.Button btnManageReserv;
         private System.Windows.Forms.Button btnManageCategory;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnLogout;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

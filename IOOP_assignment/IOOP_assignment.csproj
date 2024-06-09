@@ -89,7 +89,6 @@
     <Compile Include="Manager Forms\ViewProfile.Designer.cs">
       <DependentUpon>ViewProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagerClass.cs" />
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\Chef.cs" />
     <Compile Include="Models\Customer.cs" />
