@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IOOP_assignment.Models
 {
-    internal enum Role
+    public enum Role
     {
        Administrator,
        Manager,

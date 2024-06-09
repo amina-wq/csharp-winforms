@@ -15,8 +15,8 @@ namespace IOOP_assignment.Models
 {
     internal class Administrator : User
     {
-        public Administrator(string userID, string userName, string email, string password)
-            : base(userID, userName, email, password, Role.Administrator)
+        public Administrator(Guid userID, string userName, string email, string password)
+        : base(userID, userName, email, password, Role.Administrator)
         {
 
         }

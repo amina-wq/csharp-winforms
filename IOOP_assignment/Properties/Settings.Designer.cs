@@ -26,11 +26,11 @@ namespace IOOP_assignment.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-GHUMDV20;Initial Catalog=ioop;Integrated Security=True;TrustSe" +
-            "rverCertificate=True")]
-        public string ConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=ioop;Integrated Security=True;TrustServerCe" +
+            "rtificate=True")]
+        public string ioopConnectionString {
             get {
-                return ((string)(this["ConnectionString"]));
+                return ((string)(this["ioopConnectionString"]));
             }
         }
     }
