@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using IOOP_assignment.Core;
+using IOOP_assignment.Models;
 
 namespace IOOP_assignment.Forms.AdminEditUser
 {
@@ -39,7 +40,7 @@ namespace IOOP_assignment.Forms.AdminEditUser
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@RoleID", "2b1fa860-fabb-4d8e-850d-a4dfec450263");
+                command.Parameters.AddWithValue("@RoleID", RoleUtility.ToUUID(Role.Administrator));
 
                 try
                 {

@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using IOOP_assignment.Core;
+using IOOP_assignment.Models;
 
 namespace IOOP_assignment.Forms
 {
@@ -39,7 +40,7 @@ namespace IOOP_assignment.Forms
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@RoleID", "31f1e389-3856-4fa1-a29e-f3d9831c1b65");
+                command.Parameters.AddWithValue("@RoleID", RoleUtility.ToUUID(Role.Chef));
 
                 try
                 {
