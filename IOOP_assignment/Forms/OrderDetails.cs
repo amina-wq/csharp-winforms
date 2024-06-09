@@ -59,11 +59,6 @@ namespace IOOP_assignment.Forms
             _dropdownAnimator.Toggle();
         }
 
-        private void timer1_Tick_1(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             ChefDashboard chefDashboard = new ChefDashboard();
@@ -85,21 +80,11 @@ namespace IOOP_assignment.Forms
             this.Close();
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             ViewOrdersForm viewOrdersForm = new ViewOrdersForm();
             viewOrdersForm.Show();
             this.Close();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void btnComplete_Click(object sender, EventArgs e)

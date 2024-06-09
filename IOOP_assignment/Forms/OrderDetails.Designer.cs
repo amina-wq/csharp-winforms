@@ -88,7 +88,6 @@
             this.btnProfile.TabIndex = 22;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnViewOrder
             // 
@@ -144,7 +143,6 @@
             // timer1
             // 
             this.timer1.Interval = 20;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
             // btnBack
             // 
@@ -238,7 +236,6 @@
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.Size = new System.Drawing.Size(569, 266);
             this.dataGridView.TabIndex = 26;
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // lblTableNum
             // 

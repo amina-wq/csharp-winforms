@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace IOOP_assignment.Models
 {
@@ -26,7 +27,12 @@ namespace IOOP_assignment.Models
                 using (SqlConnection connection = _sqlConnect.GetConnection())
                 {
                     connection.Open();
-                    string query = "SELECT [FoodOrder], [OrderDateTime], [OrderStatus], [OrderID] FROM [ioop].[dbo].[Order]";
+                    string query = @"
+                    SELECT [Order].OrderID, [Order].OrderDateTime, MenuItem.ItemName,[Order].OrderStatus FROM [Order]
+                    INNER JOIN 
+                        OrderItem ON [Order].OrderID = OrderItem.OrderID
+                    INNER JOIN 
+                        MenuItem ON OrderItem.ItemID = MenuItem.ItemID";
                     SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
                     adapter.Fill(table);
                 }

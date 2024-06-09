@@ -42,11 +42,6 @@ namespace IOOP_assignment.Forms
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-           
-        }
-
         private void DropDown_Click(object sender, EventArgs e)
         {
             _dropdownAnimator.Toggle();
@@ -71,21 +66,11 @@ namespace IOOP_assignment.Forms
             MessageBox.Show("You're already in this page.");
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             ViewOrdersForm viewOrdersForm = new ViewOrdersForm();
             viewOrdersForm.Show();
             this.Close();
-        }
-
-        private void lbl1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -190,16 +175,6 @@ namespace IOOP_assignment.Forms
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtIngredient_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtIngredient_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -214,11 +189,6 @@ namespace IOOP_assignment.Forms
             {
                 e.Handled = true;
             }
-        }
-
-        private void tbSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
         }
 
         private void tbSearch_TextChanged(object sender, EventArgs e)

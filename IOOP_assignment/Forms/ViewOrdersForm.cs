@@ -20,11 +20,7 @@ namespace IOOP_assignment
             InitializeComponent();
             _dropdownAnimator = new DropdownAnimator(DropdownPanel, 300, 10);
         }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void ViewOrdersForm_Load(object sender, EventArgs e)
         {
             btnTb1.Tag = "1";
@@ -48,24 +44,9 @@ namespace IOOP_assignment
             btnTb9.Click += btnTable_Click;
         }
        
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-           
-        }
-
         private void DropDown_Click(object sender, EventArgs e)
         {
             _dropdownAnimator.Toggle();
-        }
-
-        private void DropdownPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -87,15 +68,6 @@ namespace IOOP_assignment
             this.Close();
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnTb1_Click(object sender, EventArgs e)
-        {
-           
-        }
         private void btnTable_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;

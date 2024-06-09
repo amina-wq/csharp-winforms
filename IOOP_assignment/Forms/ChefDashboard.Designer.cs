@@ -50,7 +50,6 @@
             this.lbl1.Size = new System.Drawing.Size(342, 51);
             this.lbl1.TabIndex = 9;
             this.lbl1.Text = "Chef Dashboard";
-            this.lbl1.Click += new System.EventHandler(this.lbl1_Click);
             // 
             // btnViewOrders
             // 
@@ -89,7 +88,6 @@
             this.btnProfile.TabIndex = 13;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnLogout
             // 
@@ -141,7 +139,6 @@
             this.Controls.Add(this.lbl1);
             this.Name = "ChefDashboard";
             this.Text = "ChefDashboard";
-            this.Load += new System.EventHandler(this.ChefDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

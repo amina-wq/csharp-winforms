@@ -94,7 +94,6 @@
             this.btnProfile.TabIndex = 22;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnViewOrder
             // 
@@ -138,7 +137,6 @@
             // timer1
             // 
             this.timer1.Interval = 20;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pictureBox1
             // 
@@ -160,7 +158,6 @@
             this.lbl1.Size = new System.Drawing.Size(325, 48);
             this.lbl1.TabIndex = 26;
             this.lbl1.Text = "Manage Inventory";
-            this.lbl1.Click += new System.EventHandler(this.lbl1_Click);
             // 
             // dataGridView
             // 
@@ -204,7 +201,6 @@
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.Size = new System.Drawing.Size(620, 274);
             this.dataGridView.TabIndex = 27;
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // lbl2
             // 
@@ -237,7 +233,6 @@
             this.txtIngredient.Name = "txtIngredient";
             this.txtIngredient.Size = new System.Drawing.Size(161, 30);
             this.txtIngredient.TabIndex = 30;
-            this.txtIngredient.TextChanged += new System.EventHandler(this.txtIngredient_TextChanged);
             this.txtIngredient.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIngredient_KeyPress);
             // 
             // txtQuantity
@@ -259,7 +254,6 @@
             this.tbSearch.TabIndex = 32;
             this.tbSearch.Text = "Search for ingredient";
             this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
-            this.tbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSearch_KeyPress);
             // 
             // btnAdd
             // 

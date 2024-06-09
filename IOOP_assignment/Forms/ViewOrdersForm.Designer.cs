@@ -61,7 +61,6 @@
             this.lbl1.Size = new System.Drawing.Size(246, 48);
             this.lbl1.TabIndex = 0;
             this.lbl1.Text = "View Orders";
-            this.lbl1.Click += new System.EventHandler(this.label1_Click);
             // 
             // DropDown
             // 
@@ -87,7 +86,6 @@
             this.DropdownPanel.Name = "DropdownPanel";
             this.DropdownPanel.Size = new System.Drawing.Size(171, 13);
             this.DropdownPanel.TabIndex = 18;
-            this.DropdownPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DropdownPanel_Paint);
             // 
             // btnProfile
             // 
@@ -100,7 +98,6 @@
             this.btnProfile.TabIndex = 22;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnViewOrder
             // 
@@ -152,7 +149,6 @@
             this.btnTb1.TabIndex = 23;
             this.btnTb1.Text = "TABLE 1";
             this.btnTb1.UseVisualStyleBackColor = false;
-            this.btnTb1.Click += new System.EventHandler(this.btnTb1_Click);
             // 
             // btnTb2
             // 
@@ -253,7 +249,6 @@
             // timer1
             // 
             this.timer1.Interval = 20;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ViewOrdersForm
             // 
