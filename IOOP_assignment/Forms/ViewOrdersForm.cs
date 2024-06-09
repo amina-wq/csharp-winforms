@@ -73,8 +73,7 @@ namespace IOOP_assignment
             Button clickedButton = sender as Button;
             string tableNumber = clickedButton.Tag.ToString();
             int rowNumber = int.Parse(tableNumber) - 1;
-
-            OrderDetails orderDetailsForm = new OrderDetails(rowNumber);
+            OrderDetails orderDetailsForm = new OrderDetails();
             orderDetailsForm.SetTableNumber(tableNumber);
             orderDetailsForm.Show();
             this.Close();

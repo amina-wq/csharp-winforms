@@ -17,12 +17,10 @@ namespace IOOP_assignment.Forms
         private DropdownAnimator _dropdownAnimator;
         private Manage_Order_Status _manageOrderStatus;
         private OrderLoader _orderLoader;
-        private int rowToShow;
 
-        public OrderDetails(int rowToShow)
+        public OrderDetails()
         {
             InitializeComponent();
-            this.rowToShow = rowToShow;
             _dropdownAnimator = new DropdownAnimator(DropdownPanel, 300, 10);
             _manageOrderStatus = new Manage_Order_Status(new SQLConnect());
             _orderLoader = new OrderLoader(new SQLConnect());
@@ -40,18 +38,6 @@ namespace IOOP_assignment.Forms
         {
             DataTable table = _orderLoader.GetOrders();
             dataGridView.DataSource = table;
-
-            if (rowToShow >= 0 && rowToShow < table.Rows.Count)
-            {
-                DataRow row = table.Rows[rowToShow];
-                DataTable filteredTable = table.Clone();
-                filteredTable.ImportRow(row);
-                dataGridView.DataSource = filteredTable;
-            }
-            else
-            {
-                MessageBox.Show("Invalid row number.");
-            }
         }
 
         private void DropDown_Click(object sender, EventArgs e)
