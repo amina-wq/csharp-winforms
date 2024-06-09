@@ -378,7 +378,7 @@ namespace IOOP_assignment {
             if ((initTable == true)) {
                 if ((this.tableIngredient != null)) {
                     this.tableIngredient.InitVars();
-                }
+        }
             }
             this.tableItemIngredient = ((ItemIngredientDataTable)(base.Tables["ItemIngredient"]));
             if ((initTable == true)) {
@@ -767,16 +767,13 @@ namespace IOOP_assignment {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FeedbackRow AddFeedbackRow(System.Guid FeedbackID, UserRow parentUserRowByFK_Feedback_User, string FeedbackMessage, System.DateTime FeedbakcDateTime) {
+            public FeedbackRow AddFeedbackRow(System.Guid FeedbackID, System.Guid CustomerID, string FeedbackMessage, System.DateTime FeedbakcDateTime) {
                 FeedbackRow rowFeedbackRow = ((FeedbackRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FeedbackID,
-                        null,
+                        CustomerID,
                         FeedbackMessage,
                         FeedbakcDateTime};
-                if ((parentUserRowByFK_Feedback_User != null)) {
-                    columnValuesArray[1] = parentUserRowByFK_Feedback_User[0];
-                }
                 rowFeedbackRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFeedbackRow);
                 return rowFeedbackRow;
@@ -4595,14 +4592,14 @@ namespace IOOP_assignment {
             public MenuItemRowChangeEvent(MenuItemRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
-            }
+    }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public MenuItemRow Row {
                 get {
                     return this.eventRow;
-                }
+}
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

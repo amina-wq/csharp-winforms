@@ -10,8 +10,22 @@ using System.Windows.Forms;
 
 namespace IOOP_assignment.Forms
 {
-    public partial class ChefDashboard : Form
+    public partial class ChefDashboard : BorderlessForm
     {
+        private static ChefDashboard instance;
+
+        public static ChefDashboard Instance
+        {
+            get
+            {
+                if (instance == null || instance.IsDisposed)
+                {
+                    instance = new ChefDashboard();
+                }
+                return instance;
+            }
+        }
+
         public ChefDashboard()
         {
             InitializeComponent();

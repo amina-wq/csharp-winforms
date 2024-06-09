@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace IOOP_assignment.Models
 {
-    internal class Customer : User
+    public class Customer : User
     {
-        public Customer(string userID, string userName, string email, string password) : base(userID, userName, email, password, Role.Customer)
+        public Customer(Guid userID, string userName, string email, string password) : base(userID, userName, email, password, Role.Customer)
         {
         }
+   
     }
 }

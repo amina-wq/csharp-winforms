@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace IOOP_assignment.Models
 {    internal class Chef : User
     {
-        public Chef(string userID, string userName, string email, string password) : base(userID, userName, email, password, Role.Chef)
+        public Chef(Guid userID, string userName, string email, string password) : base(userID, userName, email, password, Role.Chef)
         {
         }
     }

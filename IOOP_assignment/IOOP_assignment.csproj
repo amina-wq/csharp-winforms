@@ -48,7 +48,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -61,12 +64,148 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\ChefDashboard.cs">
+    <Compile Include="Components\CustomerNavBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CustomerNavBar.Designer.cs">
+      <DependentUpon>CustomerNavBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\DBManager.cs" />
+    <Compile Include="Core\FeedbackRepository.cs" />
+    <Compile Include="Core\MenuRepository.cs" />
+    <Compile Include="Core\OrderRepository.cs" />
+    <Compile Include="Core\MenuItemsContainer.cs" />
+    <Compile Include="Core\ReservationRepository.cs" />
+    <Compile Include="Core\UserRepository.cs" />
+    <Compile Include="Forms\BorderlessForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ChefDashboard.Designer.cs">
+    <Compile Include="Forms\BorderlessForm.Designer.cs">
+      <DependentUpon>BorderlessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CartForm.Designer.cs">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerFeedback.Designer.cs">
+      <DependentUpon>CustomerFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerHomePage.Designer.cs">
+      <DependentUpon>CustomerHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerMenu.Designer.cs">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerOrders.Designer.cs">
+      <DependentUpon>CustomerOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerReservations.Designer.cs">
+      <DependentUpon>CustomerReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\UserDatabaseManager.cs" />
+    <Compile Include="Core\Validation.cs" />
+    <Compile Include="Components\AdminAddUser\AdminAddAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminAddUser\AdminAddAdmin.Designer.cs">
+      <DependentUpon>AdminAddAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminAddUser\AdminAddChef.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminAddUser\AdminAddChef.Designer.cs">
+      <DependentUpon>AdminAddChef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminAddUser\AdminAddCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminAddUser\AdminAddCustomer.Designer.cs">
+      <DependentUpon>AdminAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminAddUser\AdminAddManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminAddUser\AdminAddManager.Designer.cs">
+      <DependentUpon>AdminAddManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminEditUser\AdminEditAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminEditUser\AdminEditAdmin.Designer.cs">
+      <DependentUpon>AdminEditAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminEditUser\AdminEditChef.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminEditUser\AdminEditChef.Designer.cs">
+      <DependentUpon>AdminEditChef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminEditUser\AdminEditCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminEditUser\AdminEditCustomer.Designer.cs">
+      <DependentUpon>AdminEditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminEditUser\AdminEditManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminEditUser\AdminEditManager.Designer.cs">
+      <DependentUpon>AdminEditManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrator\AdminFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\AdminFeedback.Designer.cs">
+      <DependentUpon>AdminFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrator\AdminManageAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\AdminManageAccount.Designer.cs">
+      <DependentUpon>AdminManageAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrator\AdminManageUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\AdminManageUser.Designer.cs">
+      <DependentUpon>AdminManageUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrator\AdminSalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\AdminSalesReport.Designer.cs">
+      <DependentUpon>AdminSalesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrator\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Chef\ChefDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Chef\ChefDashboard.Designer.cs">
       <DependentUpon>ChefDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
@@ -75,16 +214,32 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ManageInventoryForm.cs">
+    <Compile Include="Forms\UpdateProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ManageInventoryForm.Designer.cs">
+    <Compile Include="Forms\UpdateProfile.Designer.cs">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ioopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ioopDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ioopUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ioopUser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Chef\ManageInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Chef\ManageInventoryForm.Designer.cs">
       <DependentUpon>ManageInventoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OrderDetails.cs">
+    <Compile Include="Forms\Chef\OrderDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\OrderDetails.Designer.cs">
+    <Compile Include="Forms\Chef\OrderDetails.Designer.cs">
       <DependentUpon>OrderDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="ioopDataSet.cs">
@@ -96,42 +251,122 @@
       <DependentUpon>ioopDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Models\Administrator.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Chef.cs" />
+    <Compile Include="Models\UserRegistration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Feedback.cs" />
+    <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\DropdownAnimator.cs" />
     <Compile Include="Models\Manage Order Status.cs" />
     <Compile Include="Models\Manager.cs" />
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\OrderLoader.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\SQLConnect.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\ViewOrdersForm.cs">
+    <Compile Include="User.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>User.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Components\AdminAddUser\AdminAddAdmin.resx">
+      <DependentUpon>AdminAddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminAddUser\AdminAddChef.resx">
+      <DependentUpon>AdminAddChef.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminAddUser\AdminAddCustomer.resx">
+      <DependentUpon>AdminAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminAddUser\AdminAddManager.resx">
+      <DependentUpon>AdminAddManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminEditUser\AdminEditAdmin.resx">
+      <DependentUpon>AdminEditAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminEditUser\AdminEditChef.resx">
+      <DependentUpon>AdminEditChef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminEditUser\AdminEditCustomer.resx">
+      <DependentUpon>AdminEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminEditUser\AdminEditManager.resx">
+      <DependentUpon>AdminEditManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\AdminFeedback.resx">
+      <DependentUpon>AdminFeedback.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\AdminManageAccount.resx">
+      <DependentUpon>AdminManageAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\AdminManageUser.resx">
+      <DependentUpon>AdminManageUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\AdminSalesReport.resx">
+      <DependentUpon>AdminSalesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\CustomerNavBar.resx">
+      <DependentUpon>CustomerNavBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BorderlessForm.resx">
+      <DependentUpon>BorderlessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CartForm.resx">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerFeedback.resx">
+      <DependentUpon>CustomerFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerHomePage.resx">
+      <DependentUpon>CustomerHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerMenu.resx">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerOrders.resx">
+      <DependentUpon>CustomerOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerReservations.resx">
+      <DependentUpon>CustomerReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Forms\Chef\ViewOrdersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ViewOrdersForm.Designer.cs">
+    <Compile Include="Forms\Chef\ViewOrdersForm.Designer.cs">
       <DependentUpon>ViewOrdersForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\ChefDashboard.resx">
+    <EmbeddedResource Include="Forms\Chef\ChefDashboard.resx">
       <DependentUpon>ChefDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ManageInventoryForm.resx">
+    <EmbeddedResource Include="Forms\UpdateProfile.resx">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Chef\ManageInventoryForm.resx">
       <DependentUpon>ManageInventoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OrderDetails.resx">
+    <EmbeddedResource Include="Forms\Chef\OrderDetails.resx">
       <DependentUpon>OrderDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ViewOrdersForm.resx">
+    <EmbeddedResource Include="Forms\Chef\ViewOrdersForm.resx">
       <DependentUpon>ViewOrdersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -150,22 +385,86 @@
     <None Include="ioopDataSet.xss">
       <DependentUpon>ioopDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ioopUser.xsc">
+      <DependentUpon>ioopUser.xsd</DependentUpon>
+    </None>
+    <None Include="ioopUser.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ioopUser.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ioopUser.xss">
+      <DependentUpon>ioopUser.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="ioopDataSet.xsc">
+      <DependentUpon>ioopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ioopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ioopDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ioopDataSet.xss">
+      <DependentUpon>ioopDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="User.xsc">
+      <DependentUpon>User.xsd</DependentUpon>
+    </None>
+    <None Include="User.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>User.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="User.xss">
+      <DependentUpon>User.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\" />
+    <None Include="Resources\128-1280406_view-user-icon-png-user-circle-icon-png.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurants-at-the-corners-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_button_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingCart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ioop img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ioop img1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updateProfileBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\IOOP.jpg" />
   </ItemGroup>

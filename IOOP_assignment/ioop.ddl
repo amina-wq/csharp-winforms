@@ -24,7 +24,7 @@ VALUES ('2b1fa860-fabb-4d8e-850d-a4dfec450263', 'Administrator'),
 ('f2c0795c-0aa5-489d-90f5-21a07d1deda9', 'Customer');
 
 
-CREATE TABLE [dbo].[User](
+CREATE TABLE [dbo].[Users](
 	[UserID] [uniqueidentifier] NOT NULL,
 	[UserName] [nvarchar](50) NOT NULL,
 	[Email] [nvarchar](50) NOT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE [dbo].[Reservation](
 	[CustomerID] [uniqueidentifier] NOT NULL,
 	[ReservationDateTime] [datetime] NOT NULL,
 	[ReservationType] [nvarchar](50) NOT NULL,
-	[ReservationDetails] [nvarchar](100) NULL,
+	[ReservationDetails] [nvarchar](3000) NULL,
  CONSTRAINT [PK_Reservations] PRIMARY KEY CLUSTERED 
 (
 	[ReservationID] ASC
@@ -67,7 +67,7 @@ GO
 CREATE TABLE [dbo].[Feedback](
 	[FeedbackID] [uniqueidentifier] NOT NULL,
 	[CustomerID] [uniqueidentifier] NOT NULL,
-	[FeedbackMessage] [nvarchar](100) NOT NULL,
+	[FeedbackMessage] [nvarchar](3000) NOT NULL,
 	[FeedbakcDateTime] [datetime] NOT NULL,
  CONSTRAINT [PK_Feedback] PRIMARY KEY CLUSTERED 
 (
@@ -110,6 +110,7 @@ CREATE TABLE [dbo].[MenuItem](
 	[ItemName] [nvarchar](50) NOT NULL,
 	[CategoryID] [uniqueidentifier] NOT NULL,
 	[Price] [decimal](10, 2) NOT NULL,
+	[Image] [nvarchar](MAX),
  CONSTRAINT [PK_MenuItems] PRIMARY KEY CLUSTERED 
 (
 	[ItemID] ASC
