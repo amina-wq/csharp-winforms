@@ -17,11 +17,6 @@ namespace IOOP_assignment.Forms
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AdminDashboardLogOut_Click(object sender, EventArgs e)
         {
             Application.Exit();

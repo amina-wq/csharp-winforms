@@ -13,16 +13,17 @@ using IOOP_assignment.Core;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Configuration;
+using IOOP_assignment.Models;
 
-namespace IOOP_assignment.Forms
+namespace IOOP_assignment.Forms.AdminAddUser
 {
-    public partial class AdminAddCustomer : UserControl
+    public partial class AdminAddAdmin : UserControl
     {
         private string connectionString;
         private SqlConnection c = new SqlConnection(
                 ConfigurationManager.ConnectionStrings["ioop"].ToString());
 
-        public AdminAddCustomer()
+        public AdminAddAdmin()
         {
             InitializeComponent();
             connectionString =
@@ -59,7 +60,7 @@ namespace IOOP_assignment.Forms
             }
         }
 
-        private void btnAddCustomer_Click(object sender, EventArgs e)
+        private void btnAddManager_Click(object sender, EventArgs e)
         {
             UserDatabaseManager.SetConnectionString(connectionString);
             string username = txtUsername.Text.Trim();
@@ -101,14 +102,12 @@ namespace IOOP_assignment.Forms
                 return;
             }
 
-            UserIdGenerator generator = new UserIdGenerator(connectionString);
-            Guid newUserId = generator.GenerateNewUserId();
-
-            Guid customerRoleId = new Guid("10000000-0000-1000-0000-000000000003");
+            Guid newUserId = Guid.NewGuid();
+            Guid managerRoleId = RoleUtility.ToUUID(Role.Manager);
 
             byte[] hashedPassword = PasswordHasher.HashPassword(password);
 
-            InsertNewUser(newUserId, customerRoleId, username, email, hashedPassword);
+            InsertNewUser(newUserId, managerRoleId, username, email, hashedPassword);
 
             MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -137,7 +136,7 @@ namespace IOOP_assignment.Forms
 
         }
 
-        private void AdminAddCustomer_Load(object sender, EventArgs e)
+        private void AdminAddAdmin_Load(object sender, EventArgs e)
         {
 
         }

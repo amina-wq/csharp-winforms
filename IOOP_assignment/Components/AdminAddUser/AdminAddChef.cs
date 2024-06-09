@@ -13,16 +13,17 @@ using IOOP_assignment.Core;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Configuration;
+using IOOP_assignment.Models;
 
-namespace IOOP_assignment.Forms.AdminAddUser
+namespace IOOP_assignment.Forms
 {
-    public partial class AdminAddAdmin : UserControl
+    public partial class AdminAddChef : UserControl
     {
         private string connectionString;
         private SqlConnection c = new SqlConnection(
                 ConfigurationManager.ConnectionStrings["ioop"].ToString());
 
-        public AdminAddAdmin()
+        public AdminAddChef()
         {
             InitializeComponent();
             connectionString =
@@ -59,7 +60,7 @@ namespace IOOP_assignment.Forms.AdminAddUser
             }
         }
 
-        private void btnAddManager_Click(object sender, EventArgs e)
+        private void btnAddChef_Click(object sender, EventArgs e)
         {
             UserDatabaseManager.SetConnectionString(connectionString);
             string username = txtUsername.Text.Trim();
@@ -101,14 +102,12 @@ namespace IOOP_assignment.Forms.AdminAddUser
                 return;
             }
 
-            UserIdGenerator generator = new UserIdGenerator(connectionString);
-            Guid newUserId = generator.GenerateNewUserId();
-
-            Guid managerRoleId = new Guid("10000000-0000-1000-0000-000000000004");
+            Guid newUserId = Guid.NewGuid();
+            Guid chefRoleId = RoleUtility.ToUUID(Role.Chef);
 
             byte[] hashedPassword = PasswordHasher.HashPassword(password);
 
-            InsertNewUser(newUserId, managerRoleId, username, email, hashedPassword);
+            InsertNewUser(newUserId, chefRoleId, username, email, hashedPassword);
 
             MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -137,7 +136,7 @@ namespace IOOP_assignment.Forms.AdminAddUser
 
         }
 
-        private void AdminAddAdmin_Load(object sender, EventArgs e)
+        private void AdminAddChef_Load(object sender, EventArgs e)
         {
 
         }

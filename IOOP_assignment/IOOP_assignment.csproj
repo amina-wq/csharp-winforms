@@ -63,85 +63,84 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\IDGenerator.cs" />
     <Compile Include="Core\UserDatabaseManager.cs" />
     <Compile Include="Core\Validation.cs" />
-    <Compile Include="Forms\AdminAddUser\AdminAddAdmin.cs">
+    <Compile Include="Components\AdminAddUser\AdminAddAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddAdmin.Designer.cs">
+    <Compile Include="Components\AdminAddUser\AdminAddAdmin.Designer.cs">
       <DependentUpon>AdminAddAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddChef.cs">
+    <Compile Include="Components\AdminAddUser\AdminAddChef.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddChef.Designer.cs">
+    <Compile Include="Components\AdminAddUser\AdminAddChef.Designer.cs">
       <DependentUpon>AdminAddChef.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddCustomer.cs">
+    <Compile Include="Components\AdminAddUser\AdminAddCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddCustomer.Designer.cs">
+    <Compile Include="Components\AdminAddUser\AdminAddCustomer.Designer.cs">
       <DependentUpon>AdminAddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddManager.cs">
+    <Compile Include="Components\AdminAddUser\AdminAddManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\AdminAddUser\AdminAddManager.Designer.cs">
+    <Compile Include="Components\AdminAddUser\AdminAddManager.Designer.cs">
       <DependentUpon>AdminAddManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditAdmin.cs">
+    <Compile Include="Components\AdminEditUser\AdminEditAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditAdmin.Designer.cs">
+    <Compile Include="Components\AdminEditUser\AdminEditAdmin.Designer.cs">
       <DependentUpon>AdminEditAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditChef.cs">
+    <Compile Include="Components\AdminEditUser\AdminEditChef.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditChef.Designer.cs">
+    <Compile Include="Components\AdminEditUser\AdminEditChef.Designer.cs">
       <DependentUpon>AdminEditChef.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditCustomer.cs">
+    <Compile Include="Components\AdminEditUser\AdminEditCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditCustomer.Designer.cs">
+    <Compile Include="Components\AdminEditUser\AdminEditCustomer.Designer.cs">
       <DependentUpon>AdminEditCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditManager.cs">
+    <Compile Include="Components\AdminEditUser\AdminEditManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\AdminEditUser\AdminEditManager.Designer.cs">
+    <Compile Include="Components\AdminEditUser\AdminEditManager.Designer.cs">
       <DependentUpon>AdminEditManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminFeedback.cs">
+    <Compile Include="Forms\Administrator\AdminFeedback.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminFeedback.Designer.cs">
+    <Compile Include="Forms\Administrator\AdminFeedback.Designer.cs">
       <DependentUpon>AdminFeedback.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminManageAccount.cs">
+    <Compile Include="Forms\Administrator\AdminManageAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminManageAccount.Designer.cs">
+    <Compile Include="Forms\Administrator\AdminManageAccount.Designer.cs">
       <DependentUpon>AdminManageAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminManageUser.cs">
+    <Compile Include="Forms\Administrator\AdminManageUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminManageUser.Designer.cs">
+    <Compile Include="Forms\Administrator\AdminManageUser.Designer.cs">
       <DependentUpon>AdminManageUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminSalesReport.cs">
+    <Compile Include="Forms\Administrator\AdminSalesReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminSalesReport.Designer.cs">
+    <Compile Include="Forms\Administrator\AdminSalesReport.Designer.cs">
       <DependentUpon>AdminSalesReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminDashboard.cs">
+    <Compile Include="Forms\Administrator\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminDashboard.Designer.cs">
+    <Compile Include="Forms\Administrator\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
@@ -174,44 +173,45 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>User.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\AdminAddUser\AdminAddAdmin.resx">
+    <EmbeddedResource Include="Components\AdminAddUser\AdminAddAdmin.resx">
       <DependentUpon>AdminAddAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminAddUser\AdminAddChef.resx">
+    <EmbeddedResource Include="Components\AdminAddUser\AdminAddChef.resx">
       <DependentUpon>AdminAddChef.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminAddUser\AdminAddCustomer.resx">
+    <EmbeddedResource Include="Components\AdminAddUser\AdminAddCustomer.resx">
       <DependentUpon>AdminAddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminAddUser\AdminAddManager.resx">
+    <EmbeddedResource Include="Components\AdminAddUser\AdminAddManager.resx">
       <DependentUpon>AdminAddManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminEditUser\AdminEditAdmin.resx">
+    <EmbeddedResource Include="Components\AdminEditUser\AdminEditAdmin.resx">
       <DependentUpon>AdminEditAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminEditUser\AdminEditChef.resx">
+    <EmbeddedResource Include="Components\AdminEditUser\AdminEditChef.resx">
       <DependentUpon>AdminEditChef.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminEditUser\AdminEditCustomer.resx">
+    <EmbeddedResource Include="Components\AdminEditUser\AdminEditCustomer.resx">
       <DependentUpon>AdminEditCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminEditUser\AdminEditManager.resx">
+    <EmbeddedResource Include="Components\AdminEditUser\AdminEditManager.resx">
       <DependentUpon>AdminEditManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminFeedback.resx">
+    <EmbeddedResource Include="Forms\Administrator\AdminFeedback.resx">
       <DependentUpon>AdminFeedback.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminManageAccount.resx">
+    <EmbeddedResource Include="Forms\Administrator\AdminManageAccount.resx">
       <DependentUpon>AdminManageAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminManageUser.resx">
+    <EmbeddedResource Include="Forms\Administrator\AdminManageUser.resx">
       <DependentUpon>AdminManageUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminDashboard.resx">
+    <EmbeddedResource Include="Forms\Administrator\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminSalesReport.resx">
+    <EmbeddedResource Include="Forms\Administrator\AdminSalesReport.resx">
       <DependentUpon>AdminSalesReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">

@@ -12,6 +12,7 @@ using System.Runtime.Remoting.Contexts;
 using IOOP_assignment.Core;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using IOOP_assignment.Models;
 
 namespace IOOP_assignment.Forms
 {
@@ -100,10 +101,8 @@ namespace IOOP_assignment.Forms
                 return;
             }
 
-            UserIdGenerator generator = new UserIdGenerator(connectionString);
-            Guid newUserId = generator.GenerateNewUserId();
-
-            Guid managerRoleId = new Guid("10000000-0000-1000-0000-000000000001");
+            Guid newUserId = Guid.NewGuid();
+            Guid managerRoleId = RoleUtility.ToUUID(Role.Manager);
 
             byte[] hashedPassword = PasswordHasher.HashPassword(password);
 

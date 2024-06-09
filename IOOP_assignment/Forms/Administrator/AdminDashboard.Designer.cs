@@ -47,7 +47,6 @@
             this.label1.Size = new System.Drawing.Size(489, 64);
             this.label1.TabIndex = 2;
             this.label1.Text = "Admin Dashboard";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ManageUserOpen
             // 

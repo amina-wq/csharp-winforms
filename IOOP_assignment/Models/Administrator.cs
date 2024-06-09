@@ -20,21 +20,5 @@ namespace IOOP_assignment.Models
         {
 
         }
-
-        public static User EditUser(User user)
-        {
-            return user;
-        }
-
-        public static User AddUser(string userName, string email, string password, Role role)
-        {
-            return new User("93bf2433-f4cf-450e-9cbc-0e853b098143", userName, email, password, role);
-        }
-
-        public void DeleteUser(string userID)
-        {
-
-        }
-
     }
 }
