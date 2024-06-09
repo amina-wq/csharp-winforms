@@ -58,7 +58,8 @@ namespace IOOP_assignment.Forms
                         AdminDashboard.Instance.Show();
                         break;
                     case Role.Chef:
-                        // Handle Chef case
+                        this.Hide();
+                        ChefDashboard.Instance.Show();
                         break;
                     case Role.Manager:
                         // Handle Manager case

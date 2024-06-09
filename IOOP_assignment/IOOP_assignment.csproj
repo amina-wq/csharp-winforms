@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -39,6 +54,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -186,6 +202,12 @@
     <Compile Include="Forms\Administrator\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Chef\ChefDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Chef\ChefDashboard.Designer.cs">
+      <DependentUpon>ChefDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +230,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ioopUser.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Chef\ManageInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Chef\ManageInventoryForm.Designer.cs">
+      <DependentUpon>ManageInventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Chef\OrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Chef\OrderDetails.Designer.cs">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ioopDataSet.cs">
+      <DependentUpon>ioopDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ioopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ioopDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Chef.cs" />
@@ -215,11 +257,15 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\Ingredient.cs" />
+    <Compile Include="Models\DropdownAnimator.cs" />
+    <Compile Include="Models\Manage Order Status.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\OrderLoader.cs" />
     <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\SQLConnect.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -293,17 +339,40 @@
     <EmbeddedResource Include="Forms\Customer\CustomerReservations.resx">
       <DependentUpon>CustomerReservations.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="Forms\Chef\ViewOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Chef\ViewOrdersForm.Designer.cs">
+      <DependentUpon>ViewOrdersForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Chef\ChefDashboard.resx">
+      <DependentUpon>ChefDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UpdateProfile.resx">
       <DependentUpon>UpdateProfile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Chef\ManageInventoryForm.resx">
+      <DependentUpon>ManageInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Chef\OrderDetails.resx">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Chef\ViewOrdersForm.resx">
+      <DependentUpon>ViewOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <None Include="ioop.ddl" />
     <None Include="ioopDataSet.xsc">
       <DependentUpon>ioopDataSet.xsd</DependentUpon>
@@ -328,6 +397,17 @@
       <DependentUpon>ioopUser.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="ioopDataSet.xsc">
+      <DependentUpon>ioopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ioopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ioopDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ioopDataSet.xss">
+      <DependentUpon>ioopDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -383,6 +463,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\updateProfileBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\IOOP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Garlic-Prawn-Spaghetti1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flat-lay-frame-with-grains-stucco-background_23-2148287506.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1021596.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChefDashboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
