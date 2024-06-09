@@ -137,7 +137,7 @@ namespace IOOP_assignment.Core
                     cmd.Parameters.AddWithValue("@UserName", userName);
                     cmd.Parameters.AddWithValue("@Email", email);
                     cmd.Parameters.AddWithValue("@Password", hashedPasswordBytes);
-                    cmd.Parameters.AddWithValue("@Role", RoleUtility.ToUUID(role));
+                    cmd.Parameters.AddWithValue("@Role", RoleUtility.ToUUID(role).ToString());
 
                     int number = cmd.ExecuteNonQuery();
                 }
